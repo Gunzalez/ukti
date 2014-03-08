@@ -1,20 +1,6 @@
-/*  MAKE LAYOUT RESPONSIVE at 1024px FOR SMALLER SCREENS ================================================================ */
+/*  MAKE LAYOUT RESPONSIVE at 1024px and lower (usually empty) ================================================================ */
 
 
 	
-		header {
-			width: 940px; /* 960px / 1024px */
-		}
-
-		#maincontent{
-			width: 940px; /* 960px / 1024px */
-		}
 		
-		.maincontent{
-			width: 940px; /* 960px / 1024px */
-		}
-
-		footer {
-			width: 940px; /* 960px / 1024px */
-		}
 		
