@@ -1,0 +1,384 @@
+
+
+body {
+	margin: 0;
+	padding: 0;
+	font-size: small;
+	font-family: arial, verdana;
+}
+
+#wrapper {
+	width: 940px;
+	margin: 0 auto;
+}
+
+
+
+
+
+/* header */
+#header {
+	height: 140px;
+	position: relative;
+	background: url(../images/bg-header-nav.png) top right no-repeat;
+}
+
+#header h1 {
+	position: absolute;
+	left: 0;
+	top: 5px;
+	margin: 0;
+	padding: 0;
+}
+
+#header h1 a {
+	display: block;
+	width: 271px;
+	height: 106px;
+	background: url(../images/logo.png) 0 0 no-repeat;
+	text-decoration: none;
+	text-indent: -9000px;
+}
+
+#header .top-nav {
+	position: absolute;
+	top: 0;
+	right: 0;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+#header .top-nav li {
+	float: left;
+	margin: 0;
+	padding: 0;
+	border-right: 1px solid #fff;
+}
+
+#header .top-nav li a {
+	color: #fff;
+	text-decoration: none;
+	font-size: 0.85em;
+	padding: 0 10px;
+	line-height: 1.9;
+}
+
+
+#header .top-nav li form {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	
+}
+
+#header .top-nav li form label {
+	display: none;
+}
+
+#header .top-nav li form .text {
+	font-family: arial, verdana;
+	font-size: 0.85em;
+	color: #79714f;
+	padding: 3px 6px;	
+	margin: 0;
+	border: 0;
+	outline: 0;
+}
+
+#header .top-nav li form .submit {	
+	margin: 0;
+	width: 27px;
+	height: 18px;
+	text-indent: -9000px;
+	border: 0;
+	background: url(../images/bg-search-button.png) center center no-repeat;
+	cursor: pointer;
+	
+}
+
+#header .tea-count {	
+	position: absolute;
+	top: 30px;
+	right: 0;	
+}
+
+#header .tea-count span {
+	display: block;
+	font-size: 0.8em;
+	color: #A7A7A7;
+	text-align: right;
+}
+
+#header .tea-count .figure {
+	font-size: 2.7em;
+	color: #ff790d;
+	letter-spacing: 2px;
+}
+
+#header .main-nav {
+	position: absolute;
+	top: 88px;
+	right: 0;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+#header .main-nav li {
+	float: left;
+	border-left: 1px solid #ccc;
+}
+
+#header .main-nav li a {
+	display: block;
+	font-size: 1.5em;
+	line-height: 99%;
+	text-decoration: none;
+	padding: 0 18px;
+	padding-top: 12px;
+	color: #79714f;
+}
+
+#header .main-nav li a:hover {
+	color: #333;
+}
+
+
+#header .main-nav li:last-child a {
+	padding-right: 0;
+}
+
+#header .main-nav li:first-child {
+	padding-right: 0;
+	border-left: none;
+}
+
+
+
+.content {
+	padding-bottom: 20px;
+	width: 940px;
+	overflow: hidden;
+}
+
+
+
+
+
+
+
+
+
+/* Carousel */
+#carousel {
+	height: 301px;
+	overflow: hidden;
+	background: url(../images/bg-carousel.jpg) 0 0 no-repeat;	
+	-webkit-transition: background 0.2s ease-in-out;
+  	-moz-transition: background 0.2s ease-in-out;
+  	-o-transition: background 0.2s ease-in-out;
+  	transition: background 0.2s ease-in-out;
+}
+
+#carousel.bg-pos-0 { background-position: 0 0; }
+#carousel.bg-pos-1 { background-position: 0 107px; }
+#carousel.bg-pos-2 { background-position: 0 214px; }
+
+#carousel .stage {
+	overflow: hidden;
+	width: 700px;	
+	height: 301px;
+	float: left;
+}
+
+#carousel .stage .slides {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	width: 700px;
+	height: 301px;
+	margin-top: -602px;	
+	-webkit-transition: margin 0.5s ease-in-out;
+  	-moz-transition: margin 0.5s ease-in-out;
+  	-o-transition: margin 0.5s ease-in-out;
+  	transition: margin 0.5s ease-in-out;
+}
+
+#carousel .stage .slides li {
+	width: 700px;
+	height: 301px;
+}
+
+#carousel .controls {
+	float: right;
+}
+
+#carousel .controls ul {
+	width: 220px;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+#carousel .controls ul li {
+	padding-bottom: 20px;
+}
+
+#carousel .controls a {
+	display: block;
+	width: 220px;
+	height: 87px;
+	text-indent: -9000px;
+	text-decoration: none;
+	outline: none;
+}
+
+#carousel .controls .button-1 {	background: url(../images/slide1-small.jpg) 0 0 no-repeat; }
+#carousel .controls .button-2 { background: url(../images/slide2-small.jpg) 0 0 no-repeat; }
+#carousel .controls .button-3 { background: url(../images/slide3-small.jpg) 0 0 no-repeat; }
+
+
+/* content */
+.content-row {
+	width: 960px;
+	height: 258px;
+}
+
+.content-block {
+	width: 300px;
+	height: 258px;
+	float: left;
+	margin-right: 20px;
+}
+
+.block h2 {
+	color: #fff;
+	margin: 0;
+	padding: 0;
+	font-weight: normal;
+	background: url(../images/bg-block-h2.png) right center no-repeat;
+}
+
+.tea-news {
+	height: 258px;
+	background: url(../images/bg-block-tea-news.png) 0 0 no-repeat;
+	position: relative;
+}
+
+.tea-news h2 a {
+	display: block;
+	text-decoration: none;
+	color: #fff;
+	padding: 0 15px;
+	line-height: 180%;
+	font-size: 1.1em;
+}
+
+.tea-news ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+}
+
+.tea-news ul li a {
+	display: block;
+	text-decoration: none;
+	padding: 10px 15px;
+	color: #333;
+	border-bottom: 1px solid #cc4949;
+	background: url(../images/bg-block-li-a.png) center right no-repeat #fff;
+}
+
+.tea-news ul li a:hover {
+	color: #000;
+	background-color: #f7f7f7;
+}
+
+.tea-news ul li:last-child a {
+	border-bottom: 1px solid #fff;
+}
+
+.tea-news ul li a span {
+	display: block;
+	line-height: 130%;
+}
+
+.tea-news ul li a .title {
+	font-weight: bold;
+}
+
+
+.tea-facts a {
+	text-decoration: none;
+	display: block;
+	height: 258px;
+	background: url(../images/bg-block-tea-facts.png) 0 0 no-repeat;
+}
+
+.tea-facts h2 {
+	padding: 0 15px;
+	line-height: 180%;
+}
+
+.tea-list {
+	height: 258px;
+	background: url(../images/bg-block-tea-list.png) 0 0 no-repeat;
+	color: #fff;
+}
+
+.tea-list h2 {
+	padding: 0 15px;
+	line-height: 180%;
+	background: none;
+}
+
+.tea-list p {
+	padding: 10px 155px 30px 15px;
+	margin: 0;
+}
+
+.tea-list form {
+	margin: 0 15px;
+}
+
+.tea-list form label {
+	display: none;
+}
+
+.tea-list form .select {
+	font-family: arial, verdana;
+	font-size: 0.85em;
+	color: #79714f;
+	padding: 3px 6px;
+	width: 230px;
+	margin: 0;
+	border: 0;
+	outline: 0;
+	cursor: pointer;
+	display: block;
+	border: 1px solid #fff;
+}
+
+.tea-list form .submit {
+	background-color: transparent;
+	color: #f7f7f7;
+	border: none;
+	padding: 3px 6px;
+	cursor: pointer;
+	margin: 5px 5px 5px 0;
+	border: 1px solid #f7f7f7;
+	outline: none;
+}
+
+.tea-list form .submit:hover {
+	color: #fff;
+	border: 1px solid #fff;
+}
+
+
