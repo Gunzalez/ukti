@@ -12,6 +12,8 @@ body {
 	margin: 0 auto;
 }
 
+.cleft { clear: left; }
+
 /* fonts */
 
 @font-face {
@@ -147,9 +149,12 @@ body {
 }
 
 #header .tea-count .figure {
-	font-size: 2.7em;
+	font-size: 2.8em;
 	color: #ff790d;
-	letter-spacing: 2px;
+	letter-spacing: 1px;
+	font-family: time_romannormal;
+	font-weight: bold;
+	
 }
 
 #header .main-nav {
@@ -174,6 +179,7 @@ body {
 	padding: 0 18px;
 	padding-top: 12px;
 	color: #79714f;
+	font-family: 'Sri-TSCRegular';
 }
 
 #header .main-nav li a:hover {
@@ -308,7 +314,7 @@ body {
 	margin-right: 20px;
 }
 
-.block h2 {
+.content-row h2 {
 	color: #fff;
 	margin: 0;
 	padding: 0;
@@ -327,7 +333,7 @@ body {
 	display: block;
 	text-decoration: none;
 	color: #fff;
-	padding: 0 15px;
+	padding: 0 10px;
 	line-height: 180%;
 	font-size: 1.1em;
 }
@@ -345,7 +351,7 @@ body {
 .tea-news ul li a {
 	display: block;
 	text-decoration: none;
-	padding: 10px 15px;
+	padding: 10px;
 	color: #333;
 	border-bottom: 1px solid #cc4949;
 	background: url(../images/bg-block-li-a.png) center right no-repeat #fff;
@@ -378,7 +384,7 @@ body {
 }
 
 .tea-facts h2 {
-	padding: 0 15px;
+	padding: 0 10px;
 	line-height: 180%;
 }
 
@@ -389,18 +395,18 @@ body {
 }
 
 .tea-list h2 {
-	padding: 0 15px;
+	padding: 0 10px;
 	line-height: 180%;
 	background: none;
 }
 
 .tea-list p {
-	padding: 10px 155px 30px 15px;
+	padding: 10px 155px 30px 12px;
 	margin: 0;
 }
 
 .tea-list form {
-	margin: 0 15px;
+	margin: 0 12px;
 }
 
 .tea-list form label {
@@ -435,6 +441,65 @@ body {
 .tea-list form .submit:hover {
 	color: #fff;
 	border: 1px solid #fff;
+}
+
+
+.content-row.double {
+	height: auto;
+	width: 940px;
+}
+
+.content-half {
+	width: 50%;
+	float: left;
+	background-color: #62d29a;
+}
+
+.content-half h2 {
+	display: block;
+	text-decoration: none;
+	color: #fff;
+}
+
+.content-half h2 a {
+	display: block;
+	text-decoration: none;
+	color: #fff;
+	line-height: 180%;
+	font-size: 1.1em;
+	padding: 0 10px;
+}
+
+.content-half .copy {
+	margin: 0 12px 12px 12px;
+	padding: 162px 10px 10px 10px;
+	background-color: #fff;
+}
+
+.copy.magic-of-tea { background: url(../images/bg-magic-of-tea.jpg) top right no-repeat #fff; }
+.copy.tea-smugglers { background: url(../images/bg-tea-smugglers.jpg) top right no-repeat #fff; }
+
+.content-half h3 {
+	padding: 0;
+	margin: 0;
+	color: #79714f;
+	font-family: 'Sri-TSCRegular';
+	font-size: 1.0em;
+}
+
+.content-half p {
+	padding: 8px 0 0 0;
+	margin: 0;
+	color: #444;
+}
+
+.content-half p a {
+	color: #3c9acb;
+	text-decoration: none;
+}
+
+.content-half p a:hover {
+	text-decoration: underline;
 }
 
 
