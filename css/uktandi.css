@@ -12,6 +12,41 @@ body {
 	margin: 0 auto;
 }
 
+/* fonts */
+
+@font-face {
+    font-family: 'rock_saltregular';
+    src: url('fonts/rocksalt-webfont.eot');
+    src: url('fonts/rocksalt-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/rocksalt-webfont.woff') format('woff'),
+         url('fonts/rocksalt-webfont.ttf') format('truetype'),
+         url('fonts/rocksalt-webfont.svg#rock_saltregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'time_romannormal';
+    src: url('fonts/time_roman-webfont.eot');
+    src: url('fonts/time_roman-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/time_roman-webfont.woff') format('woff'),
+         url('fonts/time_roman-webfont.ttf') format('truetype'),
+         url('fonts/time_roman-webfont.svg#time_romannormal') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+ @font-face {
+    font-family: 'Sri-TSCRegular';
+    src: url('fonts/sri-tsc-webfont.eot');
+    src: url('fonts/sri-tsc-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/sri-tsc-webfont.woff') format('woff'),
+         url('fonts/sri-tsc-webfont.ttf') format('truetype'),
+         url('fonts/sri-tsc-webfont.svg#Sri-TSCRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
 
 
 
@@ -211,6 +246,23 @@ body {
 	height: 301px;
 }
 
+#carousel .stage .slide-1 { background: url(../images/slide1.jpg) 0 0 no-repeat; }
+#carousel .stage .slide-2 { background: url(../images/slide2.jpg) 0 0 no-repeat; }
+#carousel .stage .slide-3 { background: url(../images/slide3.jpg) 0 0 no-repeat; }
+
+#carousel .stage .slide h2 {
+	margin: 0;
+	padding: 15px 30px;
+	font-family: rock_saltregular;
+	font-size: 2.5em;
+	color: #fff;
+	text-align: right;
+}
+
+#carousel .stage .slide-3 h2 { color: #81F542; line-height: 130%; }
+#carousel .stage .slide-2 h2 { color: #333; }
+#carousel .stage .slide-1 h2 { color: #fff; }
+
 #carousel .controls {
 	float: right;
 }
@@ -240,6 +292,9 @@ body {
 #carousel .controls .button-3 { background: url(../images/slide3-small.jpg) 0 0 no-repeat; }
 
 
+
+
+
 /* content */
 .content-row {
 	width: 960px;
@@ -259,6 +314,7 @@ body {
 	padding: 0;
 	font-weight: normal;
 	background: url(../images/bg-block-h2.png) right center no-repeat;
+	font-family: Sri-TSCRegular;
 }
 
 .tea-news {
