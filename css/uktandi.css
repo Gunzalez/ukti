@@ -5,6 +5,7 @@ body {
 	padding: 0;
 	font-size: small;
 	font-family: arial, verdana;
+	color: #555;
 }
 
 #wrapper {
@@ -206,12 +207,6 @@ body {
 
 
 
-
-
-
-
-
-
 /* Carousel */
 #carousel {
 	height: 301px;
@@ -323,6 +318,8 @@ body {
 	font-family: Sri-TSCRegular;
 }
 
+
+/* Homepage */
 .tea-news {
 	height: 258px;
 	background: url(../images/bg-block-tea-news.png) 0 0 no-repeat;
@@ -352,14 +349,17 @@ body {
 	display: block;
 	text-decoration: none;
 	padding: 10px;
-	color: #333;
+	color: #555;
 	border-bottom: 1px solid #cc4949;
 	background: url(../images/bg-block-li-a.png) center right no-repeat #fff;
 }
 
 .tea-news ul li a:hover {
-	color: #000;
 	background-color: #f7f7f7;
+}
+
+.tea-news ul li a:hover .title {
+	color: #000;
 }
 
 .tea-news ul li:last-child a {
@@ -373,8 +373,8 @@ body {
 
 .tea-news ul li a .title {
 	font-weight: bold;
+	font-family: 'Sri-TSCRegular';
 }
-
 
 .tea-facts a {
 	text-decoration: none;
@@ -443,7 +443,6 @@ body {
 	border: 1px solid #fff;
 }
 
-
 .content-row.double {
 	height: auto;
 	width: 940px;
@@ -471,7 +470,7 @@ body {
 }
 
 .content-half .copy {
-	margin: 0 12px 12px 12px;
+	margin: 0 11px 11px 11px;
 	padding: 162px 10px 10px 10px;
 	background-color: #fff;
 }
@@ -482,15 +481,14 @@ body {
 .content-half h3 {
 	padding: 0;
 	margin: 0;
-	color: #79714f;
+	color: #333;
 	font-family: 'Sri-TSCRegular';
 	font-size: 1.0em;
 }
 
 .content-half p {
-	padding: 8px 0 0 0;
+	padding: 6px 0 0 0;
 	margin: 0;
-	color: #444;
 }
 
 .content-half p a {
@@ -503,3 +501,58 @@ body {
 }
 
 
+
+/* footer */
+.footer .footer-nav {
+	margin: 0;
+	padding: 0 0 15px 0;
+	list-style: none;
+	float: right;
+}
+
+.footer .footer-nav li {
+	float: left;
+	border-left: 1px solid #ccc;
+}
+
+.footer .footer-nav li a {
+	display: block;
+	font-size: 1.2em;
+	line-height: 99%;
+	text-decoration: none;
+	padding: 6px 18px;
+	color: #79714f;
+	font-family: 'Sri-TSCRegular';
+}
+
+.footer .footer-nav li a:hover {
+	color: #333;
+}
+
+.footer .footer-nav li:last-child a {
+	padding-right: 0;
+}
+
+.footer .footer-nav li:first-child {
+	padding-right: 0;
+	border-left: none;
+}
+
+.footer .footer-copy {
+	clear: right;
+	text-align: right;
+}
+
+.footer .footer-copy p {
+	padding: 0 0 3px 0;
+	margin: 0;
+	line-height: 130%;
+}
+
+.footer .footer-copy p a {
+	color: #000;
+}
+
+.footer .footer-copy p a:hover {
+	text-decoration: none;
+}

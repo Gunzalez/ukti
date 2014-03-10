@@ -11,7 +11,7 @@ Date: 08.03.2014
 		
 		/* properties */		
 		timer: '',
-		delay: 7000,
+		delay: 12000,
 		$html : $('#carousel'),
 		$slides : $('.slides', this.$html),
 		$buttons: $('.controls a', this.$html),		
@@ -30,7 +30,7 @@ Date: 08.03.2014
 			self.$html.removeAttr('class');
 			self.$html.addClass('bg-pos-'+index);
 			
-			// adjust slides css
+			// adjust slides position css
 			var newTop = $(button).attr('data-slide-pos');
 			self.$slides.css('margin-top', newTop+'px');
 		
