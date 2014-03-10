@@ -3,7 +3,7 @@
 body {
 	margin: 0;
 	padding: 0;
-	font-size: small;
+	font-size: 12px;
 	font-family: arial, verdana;
 	color: #555;
 }
@@ -314,9 +314,15 @@ body {
 	margin: 0;
 	padding: 0;
 	font-weight: normal;
-	background: url(../images/bg-block-h2.png) right center no-repeat;
+	background: url(../images/bg-block-h2.png) right 11px no-repeat;
 	font-family: Sri-TSCRegular;
 }
+
+.content-row h2:hover {
+	background-position: right -123px;
+}
+
+
 
 
 /* Homepage */
@@ -374,6 +380,7 @@ body {
 .tea-news ul li a .title {
 	font-weight: bold;
 	font-family: 'Sri-TSCRegular';
+	font-size: 1.2em;
 }
 
 .tea-facts a {
@@ -415,7 +422,7 @@ body {
 
 .tea-list form .select {
 	font-family: arial, verdana;
-	font-size: 0.85em;
+	font-size: 0.9em;
 	color: #79714f;
 	padding: 3px 6px;
 	width: 230px;
@@ -483,7 +490,7 @@ body {
 	margin: 0;
 	color: #333;
 	font-family: 'Sri-TSCRegular';
-	font-size: 1.0em;
+	font-size: 1.2em;
 }
 
 .content-half p {
@@ -505,7 +512,7 @@ body {
 /* footer */
 .footer .footer-nav {
 	margin: 0;
-	padding: 0 0 15px 0;
+	padding: 0 0 10px 0;
 	list-style: none;
 	float: right;
 }
@@ -541,6 +548,8 @@ body {
 .footer .footer-copy {
 	clear: right;
 	text-align: right;
+	color: #999;
+	font-size: 11px;
 }
 
 .footer .footer-copy p {
@@ -550,7 +559,7 @@ body {
 }
 
 .footer .footer-copy p a {
-	color: #000;
+	color: #666;
 }
 
 .footer .footer-copy p a:hover {
