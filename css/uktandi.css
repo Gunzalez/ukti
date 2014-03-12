@@ -13,6 +13,10 @@ input {
     border-radius: 0;
 }
 
+image {
+	border: none;
+}
+
 #wrapper {
 	width: 940px;
 	margin: 0 auto;
@@ -308,7 +312,6 @@ input {
 }
 
 .content-row h2 {
-	color: #fff;
 	margin: 0;
 	padding: 0;
 	font-weight: normal;
@@ -391,6 +394,7 @@ input {
 .tea-facts h2 {
 	padding: 0 10px;
 	line-height: 180%;
+	color: #fff;
 }
 
 .tea-list {
@@ -403,6 +407,7 @@ input {
 	padding: 0 10px;
 	line-height: 180%;
 	background: none;
+	color: #fff;
 }
 
 .tea-list p {
@@ -447,6 +452,7 @@ input {
 	color: #fff;
 	border: 1px solid #fff;
 }
+
 
 .content-row.double {
 	height: auto;
@@ -504,6 +510,11 @@ input {
 .content-half p a:hover {
 	text-decoration: underline;
 }
+
+
+
+
+
 
 
 /* article page */
@@ -613,6 +624,180 @@ input {
 	display: block;
 	border: none;
 }
+
+
+/* list page */
+.list .story {
+	width: 620px;
+}
+
+.list .story .heading {
+	border-bottom: 1px solid #ccc;
+	margin-bottom: 15px;
+}
+
+.list .story .heading:after {
+   content: "."; 
+   visibility: hidden; 
+   display: block; 
+   height: 0; 
+   clear: both;
+}
+
+.list .story h1 {
+	margin: 0;
+	padding: 0;
+	color: #79714f;
+	font-family: 'Sri-TSCRegular';
+	font-weight: normal;
+	font-size: 2.8em;
+	float: left;
+}
+
+.list .story .type {
+	float: right;
+	font-family: 'Sri-TSCRegular';
+	color: #999;
+	font-size: 1.4em;
+	padding-top: 15px;
+	text-align: right;
+}
+
+.list .story .contact-details {
+	min-height: 169px;
+}
+
+.list .story .contact-details address {
+	float: left;
+	font-style: normal;
+}
+
+.list .story .contact-details address a {
+	color: #3366cc;
+	text-decoration: none;
+}
+
+.list .story .contact-details address a:hover {
+	text-decoration: underline;
+}
+
+
+.list .story .contact-details .logo {
+	float: right;
+}
+
+.list .section .heading {
+	margin-left: 45px;
+}
+
+.list .section {
+	margin-bottom: 20px;
+}
+
+.list .section.gallery {
+	background: url(../images/bg-secton-gallery.png) 0 0 no-repeat #fff;
+}
+.list .section.introduction {
+	background: url(../images/bg-secton-introduction.png) 0 0 no-repeat #fff;
+}
+.list .section.afternoon-tea {
+	background: url(../images/bg-secton-afternoon-tea.png) 0 0 no-repeat #fff;
+}
+
+
+.list .section .heading h2 {
+	float: left;
+	margin: 0;
+	padding: 2px 0 3px 0;
+	font-size: 1.6em;
+}
+
+.list .section .heading .action {
+	float: right;
+	color: #999;
+	font-size: 1.2em;
+	padding-top: 2px;
+}
+
+.list .section .heading .action p {
+	padding: 0;
+	margin: 0;
+}
+
+.list .section .heading .action a {
+	color: #999;
+	text-decoration: none;
+}
+
+.list .section .heading .action a:hover {
+	color: #333;
+}
+
+.list .section .detail {
+	width: 620px;
+	overflow: hidden;
+}
+
+.list .section.gallery ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	float: left;
+	width: 640px;
+}
+
+.list .section.gallery ul li {
+	width: 140px;
+	float: left;
+	padding-right: 20px;
+}
+
+
+
+
+
+
+
+
+
+.list .side-bar {
+	width: 300px;
+	background-color:transparent;
+}
+
+.list .side-bar .tea-list h2  {
+	color: #fff;
+}
+
+.list .side-bar .main-image {
+	width: 300px;
+	height: 258px;
+	margin-bottom: 10px;
+	position: relative;
+}
+
+.list .side-bar .main-image .title {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	display: block;
+	padding: 10px 15px;
+	color: #333;
+	background-color: #fff;
+	width: 300px;
+	box-sizing: border-box;
+	font-size: 1.3em;
+	background: rgb(255, 255, 255);
+	background: rgba(255, 255, 255, 0.8);	
+}
+
+
+
+
+
+
+
+
 
 
 
