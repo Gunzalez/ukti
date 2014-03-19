@@ -664,7 +664,7 @@ image {
 }
 
 .list .story .contact-details {
-	min-height: 169px;
+	min-height: 163px;
 }
 
 .list .story .contact-details address {
@@ -688,6 +688,7 @@ image {
 
 .list .section .heading {
 	margin-left: 45px;
+	line-height: 30px;
 }
 
 .list .section {
@@ -791,6 +792,32 @@ image {
 	background: rgba(255, 255, 255, 0.8);	
 }
 
+.accordion .detail {
+	-webkit-transition: height 0.2s ease-in-out;
+  	-moz-transition: height 0.2s ease-in-out;
+  	-o-transition: height 0.2s ease-in-out;
+  	transition: height 0.2s ease-in-out;
+}
+
+.accordion .detail p,
+.accordion .detail li {
+	display: none;
+	margin: 0;
+	padding: 0 0 10px 0;
+}
+
+.accordion .detail .peak-through {
+	display: block;
+}
+
+.accordion.open .detail p,
+.accordion.open .detail li {
+	display: block;
+}
+
+.accordion.open .detail p .show-more {
+	display: none;
+}
 
 
 

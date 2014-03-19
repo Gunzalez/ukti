@@ -38,6 +38,10 @@ Date: 08.03.2014
 		
 		init: function(){
 			
+			if(!$('#carousel').length>0){
+				return false;
+			}
+			
 			var self = this; // scope			
 			
 			// sets up button clicks
@@ -69,12 +73,73 @@ Date: 08.03.2014
 					
 		}
 		
-	} /* carousel end */	
+	} /* carousel end */
 	
-	$( document ).ready(function() {
+	
+	uktandia.accordion = {
 		
-		uktandia.carousel.init();	// initiate carousel
+		$section: $('.accordion'),
 		
+		_adjustAllHeights: function(){
+			
+			var self = this; // scope
+			
+			self.$section.each(function(i, obj){			
+				self.$section.removeClass('open');	
+				$('.detail', $(obj)).css('height', $('.detail', $(obj)).data('height'));								
+			});
+						
+		},		
+		
+		init: function(){
+			
+			if(!$('.accordion').length>0){
+				return false;
+			}			
+			
+			var self = this; // scope
+			
+			self._adjustAllHeights();
+				
+			self.$section.each(function(i, obj){
+				
+				var links = $('.show-more', $(obj));
+				
+				links.on('click', function(e){
+					
+					e.preventDefault();
+					
+					if(!$(obj).hasClass('open')){
+						
+						self._adjustAllHeights();
+						
+						// gets new height to animate to via css
+						var el = $(obj).clone().addClass('open');
+						$('.detail', el).css({"height":"auto", "width":"620px"});
+						el = $('<div class="list" />').append(el);
+						el.appendTo("body");
+						var newHeight = $('.detail', el).outerHeight();
+						el.remove();
+						
+						// changes css
+						$('.detail', $(obj)).css('height',newHeight+'px');
+						$(obj).addClass('open');
+												
+					}
+				});
+								
+			});
+			
+		}	
+	}
+	
+	uktandia.init = function(){
+		uktandia.carousel.init();
+		uktandia.accordion.init();		
+	}	
+	
+	$( document ).ready(function() {		
+		uktandia.init();		
 	});
 
 })(jQuery);
