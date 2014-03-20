@@ -687,29 +687,29 @@ image {
 }
 
 .list .section .heading {
-	margin-left: 45px;
 	line-height: 30px;
+	background: url(../images/bg-section-heading.png) bottom left no-repeat #fff;
+	border-bottom: none;
 }
 
 .list .section {
-	margin-bottom: 20px;
+	margin-bottom: 10px;
 }
 
-.list .section.gallery {
-	background: url(../images/bg-secton-gallery.png) 0 0 no-repeat #fff;
-}
-.list .section.introduction {
-	background: url(../images/bg-secton-introduction.png) 0 0 no-repeat #fff;
-}
-.list .section.afternoon-tea {
-	background: url(../images/bg-secton-afternoon-tea.png) 0 0 no-repeat #fff;
-}
+.list .section h2 { background: url(../images/bg-list-sectons.png) 0 0 no-repeat; }
+.list .section.gallery h2 { background-position: 0 0; }
+.list .section.introduction h2 { background-position: 0 -35px; }
+.list .section.afternoon-tea h2 { background-position: 0 -70px; }
+.list .section.afternoon-tea-food-menu h2 { background-position: 0 -105px; }
+.list .section.tea-menu h2 { background-position: 0 -140px; }
+.list .section.openning-hours h2 { background-position: 0 -175px; }
+.list .section.notes h2 { background-position: 0 -210px; }
 
 
 .list .section .heading h2 {
 	float: left;
 	margin: 0;
-	padding: 2px 0 3px 0;
+	padding: 2px 0 3px 45px;
 	font-size: 1.6em;
 }
 
@@ -792,18 +792,43 @@ image {
 	background: rgba(255, 255, 255, 0.8);	
 }
 
+.section .detail p,
+.section .detail li {
+	margin: 0;
+	padding: 0 0 10px 0;
+}
+
 .accordion .detail {
 	-webkit-transition: height 0.2s ease-in-out;
   	-moz-transition: height 0.2s ease-in-out;
   	-o-transition: height 0.2s ease-in-out;
   	transition: height 0.2s ease-in-out;
+	height: 32px;
+}
+
+.accordion .action .show-more {
+	background: url(../images/accordion-open-close.png) right 6px no-repeat #fff;
+	padding-right: 26px;
+	display: block;
+}
+
+.list .accordion.open .action .show-more {
+	background-position: right -35px;
+	color: #333;
+}
+
+.accordion .detail p .show-more {
+	color: #3366cc;
+	text-decoration: none;
+}
+
+.accordion .detail p .show-more:hover {
+	text-decoration: underline;
 }
 
 .accordion .detail p,
 .accordion .detail li {
 	display: none;
-	margin: 0;
-	padding: 0 0 10px 0;
 }
 
 .accordion .detail .peak-through {
