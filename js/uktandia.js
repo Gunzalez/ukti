@@ -115,7 +115,7 @@ Date: 08.03.2014
 						
 						// gets new height to animate to via css
 						var el = $(obj).clone().addClass('open');
-						$('.detail', el).css({"height":"auto", "width":"620px"});
+						$('.detail', el).css({"height":"auto", "width": $(obj).width() + 'px'});
 						el = $('<div class="list" />').append(el);
 						el.appendTo("body");
 						var newHeight = $('.detail', el).outerHeight();
