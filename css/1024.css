@@ -24,13 +24,6 @@
 	width: 100%;
 }
 
-#carousel .stage .slides {
-	-webkit-transition: none;
-  	-moz-transition: none;
-  	-o-transition: none;
-  	transition: none;
-}
-
 #carousel .controls {
 	float: none;
 	z-index: 10;
