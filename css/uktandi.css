@@ -319,6 +319,15 @@ image {
 	height: 258px;
 }
 
+.content-row:after {
+   content: "."; 
+   visibility: hidden; 
+   display: block; 
+   height: 0; 
+   clear: both;
+}
+
+
 .content-block {
 	width: 300px;
 	height: 258px;
@@ -332,6 +341,7 @@ image {
 	font-weight: normal;
 	background: url(../images/bg-block-h2.png) right 11px no-repeat;
 	font-family: Sri-TSCRegular;
+	line-height: 36px;
 }
 
 .content-row h2:hover {
@@ -353,8 +363,12 @@ image {
 	text-decoration: none;
 	color: #fff;
 	padding: 0 10px;
-	line-height: 180%;
 	font-size: 1.1em;
+	background: url(../images/bg-block-h2.png) right 11px no-repeat #CC4949;
+}
+
+.tea-news h2 a:hover {
+	background-position: right -123px;
 }
 
 .tea-news ul {
@@ -408,19 +422,17 @@ image {
 
 .tea-facts h2 {
 	padding: 0 10px;
-	line-height: 180%;
 	color: #fff;
 }
 
 .tea-list {
 	height: 258px;
-	background: url(../images/bg-block-tea-list.png) 0 0 no-repeat;
+	background: url(../images/bg-block-tea-list.png) bottom left no-repeat;
 	color: #fff;
 }
 
 .tea-list h2 {
 	padding: 0 10px;
-	line-height: 180%;
 	background: none;
 	color: #fff;
 }
@@ -450,6 +462,7 @@ image {
 	cursor: pointer;
 	display: block;
 	border: 1px solid #fff;
+	background-color: #fff;
 }
 
 .tea-list form .submit {
@@ -471,7 +484,7 @@ image {
 
 .content-row.double {
 	height: auto;
-	width: 940px;
+	width: 100%;
 }
 
 .content-half {
@@ -955,8 +968,6 @@ image {
 		width: 94%;
 	}
 	
-	
-	
 	#carousel {
 		background: none;
 		height: auto;
@@ -1030,6 +1041,58 @@ image {
 		transition: background 0.2s ease-in-out;
 	}
 	
+	/* news, facts and list pods */
+	
+	.content {
+		width: 100%;
+	}
+	
+	.content-row {
+		width: 100%;
+		height: auto;
+	}
+	
+	.content-row .content-block {
+		height: auto;
+		margin: 0;
+	}
+	
+	.content-row .content-block-1 {
+		width: 100%;
+		margin-right: -320px;
+	}
+	
+	.content-row .content-block-1 > div {
+		margin-right: 320px;
+	}
+	
+	.content-block-2 {
+		float: right;
+		
+	}
+	
+	.content-block-2 a {
+		background: none;
+		height: auto;
+		background-color:#FF790D;
+		margin-bottom: 12px;
+	}
+	
+	.content-block-3 {
+		float: right;
+		
+	}
+	
+	.content-block-3 .block {
+		height: auto;
+		padding-bottom: 30px;
+		
+	}
+	
+	
+	
+	
+	
 	/* list page */
 	
 	.content {
@@ -1055,6 +1118,19 @@ image {
 		width: 100%;
 	}
 		
+}
+
+
+@media only screen and (max-width: 900px)  {
+	
+
+	.content-half {
+		width: 100%;
+		float: none;
+		padding-bottom: 1px;
+		margin-bottom: 10px;
+	}
+	
 }
 
 
