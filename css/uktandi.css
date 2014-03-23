@@ -14,6 +14,10 @@ select {
     border-radius: 0;
 }
 
+* {
+	outline: none;
+}
+
 image {
 	border: none;
 }
@@ -764,8 +768,7 @@ image {
 }
 
 .list .section .detail {
-	width: 620px;
-	overflow: hidden;
+	
 }
 
 .list .section.gallery ul {
@@ -773,17 +776,23 @@ image {
 	padding: 0;
 	list-style: none;
 	float: left;
-	width: 640px;
+	width: 100%;
 }
 
 .list .section.gallery ul li {
 	float: left;
-	padding-right: 20px;
-	padding-bottom: 10px;
+	width: 25%;
 }
 
+.list .section.gallery ul li a {
+	display: block;
+	border-right: 5px solid #fff;
+	border-left: 5px solid #fff;
+}
 
-
+.list .section.gallery ul li a img {
+	width: 100%;
+}
 
 
 
@@ -849,10 +858,6 @@ image {
 
 .accordion .clip {
 	padding: 0 0 10px 0;
-}
-
-.accordion.gallery .clip {
-	padding-bottom:0;
 }
 
 .accordion .clip .show-more {
