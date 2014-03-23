@@ -86,15 +86,13 @@ Date: 08.03.2014
 				return false;
 			}			
 			
-			var self = this; // scope			
-				
+			var self = this; // scope		
+			
 			self.$section.each(function(i, obj){
 				
-				var links = $('.show-more', $(obj));
+				var heading = $('.heading', $(obj));
 				
-				links.on('click', function(e){
-					
-					e.preventDefault();
+				heading.on('click', function(){
 					
 					if(!$(obj).hasClass('open')){	
 					
@@ -108,6 +106,30 @@ Date: 08.03.2014
 							$(obj).removeClass('open');
 						});
 					}
+					
+				});
+				
+			});	
+			
+			self.$section.each(function(i, obj){
+				
+				var clipLinks = $('.show-more', $(obj));
+				
+				clipLinks.on('click', function(e){
+									
+					e.preventDefault();
+										
+				});
+								
+			});
+				
+			self.$section.each(function(i, obj){
+				
+				var clipLinks = $('.clip .show-more', $(obj));
+				
+				clipLinks.on('click', function(){
+										
+					$(this).parents('.accordion').find('.heading').trigger('click');
 					
 				});
 								
