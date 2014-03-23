@@ -659,16 +659,10 @@ image {
 
 
 /* list page */
-.list .story {
-	width: 620px;
+.list .feature {	
 }
 
-.list .story .heading {
-	border-bottom: 1px solid #ccc;
-	margin-bottom: 15px;
-}
-
-.list .story .heading:after {
+.list .feature:after {
    content: "."; 
    visibility: hidden; 
    display: block; 
@@ -676,7 +670,111 @@ image {
    clear: both;
 }
 
-.list .story h1 {
+.list .feature .heading {
+	width: 620px;
+	float: left;
+	border-bottom: 1px solid #ccc;
+	padding-bottom: 5px;
+	margin-bottom: 10px;
+}
+
+.list .main-image {
+	width: 300px;
+	float: right;
+}
+
+
+.list .feature h1 {
+	margin: 0;
+	padding: 0;
+	color: #79714f;
+	font-family: 'Sri-TSCRegular';
+	font-weight: normal;
+	font-size: 3.0em;
+	float: left;
+}
+
+.list .feature .type {
+	float: right;
+	font-family: 'Sri-TSCRegular';
+	color: #999;
+	font-size: 1.4em;
+	padding-top: 15px;
+	text-align: right;
+}
+
+.list .feature .contact-details {
+	width: 620px;
+	float: left;
+}
+
+.list .feature .contact-details address {
+	float: left;
+	font-style: normal;
+}
+
+.list .feature .contact-details address a {
+	color: #3366cc;
+	text-decoration: none;
+}
+
+.list .feature .contact-details address a:hover {
+	text-decoration: underline;
+}
+
+
+.list .feature .contact-details .logo {
+	float: right;
+}
+
+.list .feature .main-image {
+	width: 300px;
+	height: 258px;
+	margin-bottom: 10px;
+	position: relative;
+}
+
+.list .feature .main-image .title {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	display: block;
+	padding: 10px 15px;
+	color: #333;
+	background-color: #fff;
+	width: 300px;
+	box-sizing: border-box;
+	font-size: 1.3em;
+	background: rgb(255, 255, 255);
+	background: rgba(255, 255, 255, 0.8);	
+}
+
+
+
+
+
+.list .story {
+	width: 620px;
+	margin-top: -45px;
+}
+
+
+.list .section .heading {
+	line-height: 30px;
+	background: url(../images/bg-section-heading.png) bottom left no-repeat #fff;
+	border-bottom: none;
+	margin-bottom: 10px;
+}
+
+.list .section .heading:after {
+   content: "."; 
+   visibility: hidden; 
+   display: block; 
+   height: 0; 
+   clear: both;
+}
+
+.list .section h1 {
 	margin: 0;
 	padding: 0;
 	color: #79714f;
@@ -686,48 +784,9 @@ image {
 	float: left;
 }
 
-.list .story .type {
-	float: right;
-	font-family: 'Sri-TSCRegular';
-	color: #999;
-	font-size: 1.4em;
-	padding-top: 15px;
-	text-align: right;
-}
-
-.list .story .contact-details {
-	min-height: 163px;
-}
-
-.list .story .contact-details address {
-	float: left;
-	font-style: normal;
-}
-
-.list .story .contact-details address a {
-	color: #3366cc;
-	text-decoration: none;
-}
-
-.list .story .contact-details address a:hover {
-	text-decoration: underline;
-}
-
-
-.list .story .contact-details .logo {
-	float: right;
-}
-
-.list .section .heading {
-	line-height: 30px;
-	background: url(../images/bg-section-heading.png) bottom left no-repeat #fff;
-	border-bottom: none;
-}
-
 .list .section {
 	margin-bottom: 10px;
 }
-
 
 .list .section h2 { background: url(../images/bg-list-sectons.png) 0 0 no-repeat; }
 .list .section.gallery h2 { background-position: 0 0; }
@@ -737,7 +796,6 @@ image {
 .list .section.tea-menu h2 { background-position: 0 -140px; }
 .list .section.openning-hours h2 { background-position: 0 -175px; }
 .list .section.notes h2 { background-position: 0 -210px; }
-
 
 .list .section .heading h2 {
 	float: left;
@@ -808,28 +866,6 @@ image {
 	color: #fff;
 }
 
-.list .side-bar .main-image {
-	width: 300px;
-	height: 258px;
-	margin-bottom: 10px;
-	position: relative;
-}
-
-.list .side-bar .main-image .title {
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	display: block;
-	padding: 10px 15px;
-	color: #333;
-	background-color: #fff;
-	width: 300px;
-	box-sizing: border-box;
-	font-size: 1.3em;
-	background: rgb(255, 255, 255);
-	background: rgba(255, 255, 255, 0.8);	
-}
-
 .section .detail p,
 .section .detail li {
 	margin: 0;
@@ -869,7 +905,6 @@ image {
 	text-decoration: underline;
 }
 
-.accordion .detail,
 .accordion .detail {
 	display: none;
 }
@@ -877,11 +912,6 @@ image {
 .accordion .detail .clip {
 	display: block;
 }
-
-/*.accordion.open .detail p,
-.accordion.open .detail li {
-	display: block;
-}*/
 
 .accordion.open .clip .show-more {
 	display: none;
@@ -1110,17 +1140,31 @@ image {
 	
 	/* list page */
 	
-	.content {
+	.content,	
+	.list .feature {
 		width: 100%;
 	}
+	
+	
+	.list .feature .heading,
+	.list .feature .contact-details {
+		width: 100%;
+		margin-right: -320px;
+		border: none;
+	}
+	
+	.list .feature .type,
+	.list .feature .logo {
+		margin-right: 320px;
+	}
+	
+	
 	
 	.list .story {
 		width: 100%;
 		margin-right: -320px;
-	}
+	}	
 	
-	.list .story > .heading,
-	.list .story .contact-details,
 	.list .story .section {
 		margin-right: 320px;
 	}
