@@ -708,17 +708,17 @@ image {
 	float: left;
 }
 
-.list .feature .contact-details address {
+.list address {
 	float: left;
 	font-style: normal;
 }
 
-.list .feature .contact-details address a {
+.list address a {
 	color: #3366cc;
 	text-decoration: none;
 }
 
-.list .feature .contact-details address a:hover {
+.list address a:hover {
 	text-decoration: underline;
 }
 
@@ -825,10 +825,6 @@ image {
 	color: #333;
 }
 
-.list .section .detail {
-	
-}
-
 .list .section.gallery ul {
 	margin: 0;
 	padding: 0;
@@ -917,15 +913,49 @@ image {
 	display: none;
 }
 
+.list .section .detail-half {
+	float: left;
+	width: 50%;
+}
 
+.list .section .detail-half h3 {
+	margin: 0;
+	padding: 0;
+	font-family: 'Sri-TSCRegular';
+	font-size: 1.3em;
+}
 
+.list .section .detail-half ul {
+	margin: 0;
+	padding: 0 0 0 30px;
+}
 
+.list .section .detail-half ul  li {
+	margin: 0;
+	padding: 0;
+}
 
+.list .section dl dt {
+	float: left;
+	font-weight: bold;
+	width: 60px;
+	padding-bottom: 2px;
+}
 
+.list .section dl.wide dt {
+	width: 100px;
+	padding-bottom: 10px;
+	padding-right: 20px;	
+}
 
+.list .section dl dd {
+	padding-right: 15px;
+	padding-bottom: 10px;
+}
 
-
-
+.list .section .detail-half dl dd {
+	padding-bottom: 2px;
+}
 
 
 
@@ -1219,9 +1249,7 @@ image {
 		float: none;
 		margin: 15px 0;	
 		text-align: center;
-	}
-	
-	
+	}	
 	
 	#header .main-nav li { 
 		display: inline-block; 
@@ -1235,6 +1263,52 @@ image {
 	#header .main-nav li:last-child a {
 		padding-right: 18px;
 	}
+	
+	/* list page */
+	.main-image {
+		display: none;
+	}
+	
+	.list .story {
+		margin-top: 15px;
+	}
+	
+	.list .story,
+	.list .feature .type,
+	.list .feature .logo,
+	.list .story .section,
+	.list .feature .heading,
+	.list .feature .contact-details {
+		margin-right: 0;
+	}
+		
+	.list .feature .heading {
+		border-bottom: 1px solid #ccc;
+	}
+	
+	.list .side-bar {
+		width: 100%;
+		margin-bottom: 20px;
+	}
+	
+	.list .block {
+		float: none;
+		height: auto;
+		background-color: #bcc140;
+		background-position: bottom right;
+	}	
+	
+	
+	.list .block p {
+		padding: 0 0 10px 12px;
+	}
+	
+	.list .block form {
+		padding-bottom: 10px;
+	}
+		
+	
+	
 	
 }
 
