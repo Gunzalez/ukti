@@ -78,18 +78,7 @@ Date: 08.03.2014
 	
 	uktandia.accordion = {
 		
-		$section: $('.accordion'),
-		
-		_adjustAllHeights: function(){
-			
-			var self = this; // scope
-			
-			self.$section.each(function(i, obj){			
-				self.$section.removeClass('open');	
-				$('.detail', $(obj)).css('height', $('.detail', $(obj)).data('height'));								
-			});
-						
-		},		
+		$section: $('.accordion'),		
 		
 		init: function(){
 			
@@ -97,9 +86,7 @@ Date: 08.03.2014
 				return false;
 			}			
 			
-			var self = this; // scope
-			
-			self._adjustAllHeights();
+			var self = this; // scope			
 				
 			self.$section.each(function(i, obj){
 				
@@ -109,23 +96,19 @@ Date: 08.03.2014
 					
 					e.preventDefault();
 					
-					if(!$(obj).hasClass('open')){
-						
-						self._adjustAllHeights();
-						
-						// gets new height to animate to via css
-						var el = $(obj).clone().addClass('open');
-						$('.detail', el).css({"height":"auto", "width": $(obj).width() + 'px'});
-						el = $('<div class="list" />').append(el);
-						el.appendTo("body");
-						var newHeight = $('.detail', el).outerHeight();
-						el.remove();
-						
-						// changes css
-						$('.detail', $(obj)).css('height',newHeight+'px');
-						$(obj).addClass('open');
+					if(!$(obj).hasClass('open')){	
+					
+						$(obj).siblings('.accordion').removeClass('open').find('.detail').slideUp(function(){
+							$(obj).addClass('open').find('.detail').slideDown();	
+						});						
 												
+					} else {
+										
+						$(obj).find('.detail').slideUp(function(){
+							$(obj).removeClass('open');
+						});
 					}
+					
 				});
 								
 			});
