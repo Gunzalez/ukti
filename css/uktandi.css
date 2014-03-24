@@ -38,7 +38,7 @@ a:hover {
 	text-decoration: none;
 }
 
-h1, h2, h3, h4, h5 { margin: 0; padding: 0; }
+p { margin: 0; padding: 0 0 15px 0; }
 
 /* fonts */
 
@@ -73,6 +73,12 @@ h1, h2, h3, h4, h5 { margin: 0; padding: 0; }
          url('fonts/sri-tsc-webfont.svg#Sri-TSCRegular') format('svg');
     font-weight: normal;
     font-style: normal;
+}
+
+h1, h2, h3, h4, h5 { 
+	margin: 0; 
+	padding: 0; 
+	font-family: 'Sri-TSCRegular';
 }
 
 /* ---------------------------------------------------------------- */
@@ -369,7 +375,7 @@ h1, h2, h3, h4, h5 { margin: 0; padding: 0; }
 /* Homepage */
 .tea-news {
 	height: 258px;
-	background: url(../images/bg-block-tea-news.png) 0 0 no-repeat;
+	background: url(../images/bg-block-tea-news.jpg) center  0 no-repeat;
 	position: relative;
 }
 
@@ -535,7 +541,6 @@ h1, h2, h3, h4, h5 { margin: 0; padding: 0; }
 	padding: 0;
 	margin: 0;
 	color: #333;
-	font-family: 'Sri-TSCRegular';
 	font-size: 1.2em;
 }
 
@@ -564,36 +569,30 @@ h1, h2, h3, h4, h5 { margin: 0; padding: 0; }
 	width: 700px;
 }
 
-.article .story .title-block {
-	height: 152px;
-	overflow: hidden;
+.article .story .title-block:after {
+   content: "."; 
+   visibility: hidden; 
+   display: block; 
+   height: 0; 
+   clear: both;
 	margin-bottom: 15px;
 }
 
-
-.article .story .history-of-tea {
-	background: url(../images/bg-magic-of-tea.jpg) top right no-repeat #fff;
-}
-
 .article .story .title-block h1 {
-	margin: 0;
-	padding: 0;
 	font-size: 2.5em;
 	color: #bcc240;
-	font-family: 'Sri-TSCRegular';
+	float: left;
+	width: 330px;
 }
 
-.article .story p {
-	margin: 0;
-	padding: 0 0 20px 0;
+.article .story .main-image {
+	float: right;
 }
 
 .article .story h2 {
-	margin: 0;
-	padding: 0 0 15px 0;
+	padding: 0 0 5px 0;
 	font-size: 1.6em;
 	color: #79714f;
-	font-family: 'Sri-TSCRegular';
 	font-weight: normal;
 }
 
@@ -601,7 +600,6 @@ h1, h2, h3, h4, h5 { margin: 0; padding: 0; }
 	float: right;
 	width: 224px;
 	background-color: #f5f5f5;
-	font-family: 'Sri-TSCRegular';
 	margin-bottom: 50px;
 }
 
@@ -760,7 +758,6 @@ h1, h2, h3, h4, h5 { margin: 0; padding: 0; }
 	margin: 0;
 	padding: 0;
 	color: #79714f;
-	font-family: 'Sri-TSCRegular';
 	font-weight: normal;
 	font-size: 2.8em;
 	float: left;
@@ -1136,7 +1133,25 @@ h1, h2, h3, h4, h5 { margin: 0; padding: 0; }
 	}
 	
 	
+	/* article */
+	.article {
+		padding-top: 10px;
+	}	
 	
+	.article .story {
+		width: 100%;
+		margin-right: -244px;
+	}
+	
+	.article .story p,
+	.article .story > div {
+		margin-right: 244px;
+	}
+	
+	.article .story .title-block h1 {
+		width: auto;
+		font-size: 2.2em;
+	}
 	
 	
 	/* list page */
@@ -1157,8 +1172,6 @@ h1, h2, h3, h4, h5 { margin: 0; padding: 0; }
 	.list .feature .logo {
 		margin-right: 320px;
 	}
-	
-	
 	
 	.list .story {
 		width: 100%;
@@ -1242,6 +1255,7 @@ h1, h2, h3, h4, h5 { margin: 0; padding: 0; }
 	#header .main-nav li:last-child a {
 		padding-right: 18px;
 	}
+	
 	
 	/* list page */
 	.main-image {
