@@ -97,13 +97,17 @@ Date: 08.03.2014
 					if(!$(obj).hasClass('open')){	
 					
 						$(obj).siblings('.accordion').removeClass('open').find('.detail').slideUp(function(){
+							
 							$(obj).addClass('open').find('.detail').slideDown();	
+							
 						});						
 												
 					} else {
 										
 						$(obj).find('.detail').slideUp(function(){
+							
 							$(obj).removeClass('open');
+							
 						});
 					}
 					
