@@ -36,6 +36,11 @@ Date: 08.03.2014
 		
 		},
 		
+		_adjustCarousel: function(){
+			
+			
+		},
+		
 		init: function(){
 			
 			if(!$('#carousel').length>0){
@@ -60,7 +65,7 @@ Date: 08.03.2014
 			});		
 		
 			// sets up auto
-			self.timer = setInterval(function(){
+			/*self.timer = setInterval(function(){
 										
 					var curIndex = self.$buttons.index($('.active'));
 										
@@ -69,7 +74,7 @@ Date: 08.03.2014
 					
 					self._goToSlideForThisButton(self.$buttons.eq(newIndex));
 					
-			}, self.delay );
+			}, self.delay );*/
 					
 		}
 		

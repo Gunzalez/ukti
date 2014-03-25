@@ -1141,11 +1141,7 @@ h1, h2 {
 		padding-bottom: 10px;	
 	}
 	
-	/* article */
-	.article {
-		padding-top: 10px;
-	}	
-	
+	/* article */	
 	.article .story {
 		width: 100%;
 		margin-right: -244px;
@@ -1162,8 +1158,7 @@ h1, h2 {
 	}
 	
 	
-	/* list page */
-	
+	/* list page */	
 	.content,	
 	.list .feature {
 		width: 100%;
@@ -1240,9 +1235,7 @@ h1, h2 {
 		background-color: #fff;
 	}
 	
-	#header h1 a {
-		margin: 0 auto;
-	}
+	
 	
 	
 	#header .main-nav {
@@ -1265,10 +1258,31 @@ h1, h2 {
 		padding-right: 18px;
 	}
 	
+	/* article */	
+	.article .story,
+	.article .story p,
+	.article .story > div {
+		margin-right: 0;
+		float: none;
+	}
+	
+	.article .side-bar {
+		float: none;
+		width: auto;
+		margin-bottom: 0;
+	}
+	
+	.article .share-this-article {
+		padding: 5px 10px;
+	}
 	
 	/* list page */
 	.main-image {
 		display: none;
+	}
+	
+	.article {
+		padding-top: 10px;
 	}
 	
 	.list .story {
@@ -1336,9 +1350,8 @@ h1, h2 {
 	}
 	
 	.content-block-2 .tea-facts a {
-		background-color: #ff790d;
 		height: 120px;
-		background-position: center right;			
+		background: url(../images/bg-block-tea-facts-small.jpg) right center no-repeat #ff790d;
 	}
 	
 	
