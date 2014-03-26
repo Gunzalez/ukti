@@ -245,49 +245,36 @@ h1, h2 {
 
 
 /* Carousel */
-#carousel {
-	height: 301px;
-	overflow: hidden;
-	background: url(../images/bg-carousel.jpg) 0 0 no-repeat;	
-	-webkit-transition: background 0.2s ease-in-out;
-  	-moz-transition: background 0.2s ease-in-out;
-  	-o-transition: background 0.2s ease-in-out;
-  	transition: background 0.2s ease-in-out;
+#carousel:after { 
+   content: "."; 
+   visibility: hidden; 
+   display: block; 
+   height: 0; 
+   clear: both;
 }
-
-#carousel.bg-pos-0 { background-position: 0 0; }
-#carousel.bg-pos-1 { background-position: 0 107px; }
-#carousel.bg-pos-2 { background-position: 0 214px; }
 
 #carousel .stage {
-	overflow: hidden;
-	width: 700px;	
-	height: 301px;
-	float: left;
+	width: 700px;
+	float: left;	
 }
 
-#carousel .stage .slides {
-	margin: 0;
-	padding: 0;
-	list-style: none;
-	width: 700px;
-	margin-top: -602px;	
-	-webkit-transition: margin 0.5s ease-in-out;
-  	-moz-transition: margin 0.5s ease-in-out;
-  	-o-transition: margin 0.5s ease-in-out;
-  	transition: margin 0.5s ease-in-out;
+#carousel .stage .owl-pagination,
+#carousel .stage .owl-controls {
+	display: none !important;
+}
+
+#carousel .owl-carousel .item img {
+	display: block;
+	width: 100%;
+	height: auto;
 }
 
 #carousel .stage .slides li {
-	width: 700px;
-	height: 301px;
 	position: relative;
 }
 
 #carousel .stage .slides li img {
-	position: absolute;
-	top: 0;
-	left: 0;
+	
 }
 
 #carousel .stage .slide h2 {
@@ -321,6 +308,10 @@ h1, h2 {
 
 #carousel .controls ul li {
 	padding-bottom: 20px;
+}
+
+#carousel .controls ul li.lastLi {
+	padding-bottom: 0;
 }
 
 #carousel .controls a {
@@ -1022,33 +1013,24 @@ h1, h2 {
 	}
 	
 	#carousel {
-		background: none;
-		height: auto;
 		position: relative;
 	}
 	
 	#carousel .stage {
-		overflow: hidden;
-		width: 100%;
-		float: none;
-		z-index: 2;
-	}
-	#carousel .stage .slides,
-	#carousel .stage .slides li,
-	#carousel .stage .slides img {
-		width: 100%;
-	}
+		width: 100%;	
+	}	
+	
 	
 	#carousel .controls {
 		float: none;
 		z-index: 10;
 		background-color: #fff;
 		background: rgb(255, 255, 255);
-		background: rgba(255, 255, 255, 0.8);
+		background: rgba(255, 255, 255, 0.7);
 		width: 100%;
 		position: absolute;
-		left: 0;
 		bottom: 0;
+		left: 0;
 	}
 	
 	#carousel .controls:after { 
@@ -1214,7 +1196,6 @@ h1, h2 {
 	#header {
 		background: none;
 		height: inherit;
-		text-align: center;
 		padding-bottom: 5px;
 		background-color: #f7f7f7;
 	}
@@ -1359,7 +1340,18 @@ h1, h2 {
 
 
 
-@media only screen and (max-width: 600px)  {	
+@media only screen and (max-width: 600px)  {
+	
+	#header {
+		background: none;
+		height: inherit;
+		background-color: #fff;
+	}	
+	
+	#header h1 {
+		padding-bottom: 10px;
+		/*border-bottom: 1px solid #ccc;*/
+	}
 	
 	#header .main-nav {
 		display: none;

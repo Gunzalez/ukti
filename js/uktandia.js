@@ -3,9 +3,9 @@ AUTHOR: Segun Konbire
 Date: 08.03.2014
 */
 
-(function ($) {
+(function ($, window, document) {
 	
-	var uktandia = {}
+	window.uktandia = {}
 	
 	uktandia.carousel = {
 		
@@ -13,32 +13,11 @@ Date: 08.03.2014
 		timer: '',
 		delay: 12000,
 		$html : $('#carousel'),
-		$slides : $('.slides', this.$html),
-		$buttons: $('.controls a', this.$html),		
+		$buttons: $('.controls a', this.$html),
 		
-		/* methods */		
-		_goToSlideForThisButton: function(button){
-			
-			var self = this;
-			
-			// change button states
-			self.$buttons.removeClass('active');
-			$(button).addClass('active');
-			
-			// adjust background css
-			var index = self.$buttons.index($(button));
-			self.$html.removeAttr('class');
-			self.$html.addClass('bg-pos-'+index);
-			
-			// adjust slides position css
-			var newTop = $(button).attr('data-slide-pos');
-			self.$slides.css('margin-top', newTop+'px');
-		
-		},
-		
-		_adjustCarousel: function(){
-			
-			
+		updateControls: function(index){
+			this.$buttons.removeClass('active')
+			this.$buttons.eq(index).addClass('active');
 		},
 		
 		init: function(){
@@ -47,34 +26,41 @@ Date: 08.03.2014
 				return false;
 			}
 			
-			var self = this; // scope			
+			var self = this; // scope
+  
+			$(".owl-carousel", this.$html).owlCarousel({
+				
+				navigation : false,
+				slideSpeed : 300,
+				paginationSpeed : 400,
+				singleItem : true
+				
+				// "singleItem:true" is a shortcut for:
+				// items : 1, 
+				// itemsDesktop : false,
+				// itemsDesktopSmall : false,
+				// itemsTablet: false,
+				// itemsMobile : false
 			
-			// sets up button clicks
-			self.$buttons.on('click', function(e){
-				
-				e.preventDefault(); // prevent default action
-				
-				if(!$(this).hasClass('active')){	// check if already active
-					
-					self._goToSlideForThisButton(this);
-					
-					// disable auto
-					clearTimeout(self.timer);					
-				}
-				
-			});		
+			});
+			
+			self.$buttons.on('click',function(e){
+				e.preventDefault();
+				var index = self.$buttons.index($(this));
+			    $(".owl-carousel", self.$html).trigger('owl.goTo', index);
+			});	
 		
 			// sets up auto
-			/*self.timer = setInterval(function(){
+			self.timer = setInterval(function(){
+				
 										
-					var curIndex = self.$buttons.index($('.active'));
-										
+					var curIndex = self.$buttons.index($('.button.active'));
 					curIndex++;
 					var newIndex = curIndex > 2 ? 0 : curIndex;
 					
-					self._goToSlideForThisButton(self.$buttons.eq(newIndex));
+					$(".owl-carousel", self.$html).trigger('owl.goTo', newIndex);
 					
-			}, self.delay );*/
+			}, self.delay );
 					
 		}
 		
@@ -156,4 +142,4 @@ Date: 08.03.2014
 		uktandia.init();		
 	});
 
-})(jQuery);
+}(jQuery, window, document));

@@ -17,6 +17,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 	<!-- Stylesheets -->   
     <link rel="stylesheet" media="all" href="css/uktandi.css" />
+    
+    <link href="js/library/owl.carousel.css" rel="stylesheet">
+    <link href="js/library/owl.theme.css" rel="stylesheet">
 
 	<!-- Responsive Stylesheets -->
 	<script src="js/modernizr-2.5.3-min.js"></script>
@@ -56,26 +59,17 @@
     <div class="content">	
         <div id="carousel">
             <div class="stage">
-                <ul class="slides">
-                    <li class="slide slide-3">
-                    	<h2>Stinking Chelsea<br />win again!</h2>
-                        <img src="images/slide3.jpg" alt=""/>
-                    </li>
-                    <li class="slide slide-2">
-                    	<h2>Some other title</h2>
-                        <img src="images/slide2.jpg" alt=""/>
-                    </li>
-                    <li class="slide slide-1">
-                    	<h2>All the tea in china</h2>
-                        <img src="images/slide1.jpg" alt=""/>
-                    </li>
-                </ul>
+            	<div class="owl-carousel owl-theme">
+                  <div class="item"><img src="images/slide1.jpg" alt=""/></div>
+                  <div class="item"><img src="images/slide2.jpg" alt=""/></div>
+                  <div class="item"><img src="images/slide3.jpg" alt=""/></div>
+                </div>
             </div>
             <div class="controls">
                 <ul>
-                    <li><a href="#" class="button button-1 active" data-slide-pos="-602">1</a></li>
-                    <li><a href="#" class="button button-2" data-slide-pos="-301">2</a></li>
-                    <li><a href="#" class="button button-3" data-slide-pos="0">3</a></li>
+                    <li class="firstLI"><a href="#" class="button button-1 active">1</a></li>
+                    <li><a href="#" class="button button-2">2</a></li>
+                    <li class="lastLi"><a href="#" class="button button-3">3</a></li>
                 </ul>
             </div>
         </div>
@@ -171,15 +165,9 @@
 
 </div>
 
-
-<!--<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-<script>window.jQuery || document.write('<script src="js/jquery-1.7.2.min.js"><\/script>')</script>
-
-<!-- More Scripts-->
-
-<script src="js/jquery-1.7.2.min.js"></script>
+<script src="js/jquery-1.9.1.min.js"></script>
 <script src="js/uktandia.js"></script>
-
+<script src="js/library/owl.carousel.js"></script>
 
 </body>
 </html>
