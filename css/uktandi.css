@@ -323,6 +323,14 @@ h1, h2 {
 	outline: none;
 }
 
+#carousel .controls a.active {
+	border-left: 15px solid #eee;
+	-webkit-transition: border-left 0.5s;
+  	-moz-transition: border-left 0.5s;
+  	-o-transition: border-left 0.5s;
+  	transition: border-left 0.5s;
+}
+
 #carousel .controls .button-1 {	background: url(../images/slide1-small.jpg) 0 0 no-repeat; }
 #carousel .controls .button-2 { background: url(../images/slide2-small.jpg) 0 0 no-repeat; }
 #carousel .controls .button-3 { background: url(../images/slide3-small.jpg) 0 0 no-repeat; }
@@ -730,10 +738,6 @@ h1, h2 {
 	background: rgba(255, 255, 255, 0.8);	
 }
 
-
-
-
-
 .list .story {
 	width: 620px;
 	margin-top: -45px;
@@ -1054,7 +1058,7 @@ h1, h2 {
 	
 	#carousel .controls a.button {
 		background: #fff;
-		border: 1px solid #999;
+		border: 1px solid #ccc;
 		height: 30px;
 		width: 30px;
 		-moz-border-radius:15px;
@@ -1198,6 +1202,7 @@ h1, h2 {
 		height: inherit;
 		padding-bottom: 5px;
 		background-color: #f7f7f7;
+		text-align: center;
 	}
 	
 	#header .top-nav,
@@ -1333,12 +1338,9 @@ h1, h2 {
 	.content-block-2 .tea-facts a {
 		height: 120px;
 		background: url(../images/bg-block-tea-facts-small.jpg) right center no-repeat #ff790d;
-	}
-	
+	}	
 	
 }
-
-
 
 @media only screen and (max-width: 600px)  {
 	
@@ -1355,6 +1357,16 @@ h1, h2 {
 	
 	#header .main-nav {
 		display: none;
+	}
+	
+}
+
+@media only screen and (max-width: 479px)  {
+	
+	#carousel .controls {
+		background-color: #f7f7f7;
+		position: static;
+		bottom: inherit;
 	}
 	
 }

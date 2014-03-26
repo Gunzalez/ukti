@@ -16,7 +16,9 @@ Date: 08.03.2014
 		$buttons: $('.controls a', this.$html),
 		
 		updateControls: function(index){
-			this.$buttons.removeClass('active')
+			
+			this.$buttons.removeClass('active');
+			
 			this.$buttons.eq(index).addClass('active');
 		},
 		
@@ -35,29 +37,28 @@ Date: 08.03.2014
 				paginationSpeed : 400,
 				singleItem : true
 				
-				// "singleItem:true" is a shortcut for:
-				// items : 1, 
-				// itemsDesktop : false,
-				// itemsDesktopSmall : false,
-				// itemsTablet: false,
-				// itemsMobile : false
-			
 			});
 			
 			self.$buttons.on('click',function(e){
+				
 				e.preventDefault();
+				
 				var index = self.$buttons.index($(this));
+				
 			    $(".owl-carousel", self.$html).trigger('owl.goTo', index);
+				
+				clearInterval(self.timer);				
+				
 			});	
 		
 			// sets up auto
-			self.timer = setInterval(function(){
-				
+			self.timer = setInterval(function(){	
 										
 					var curIndex = self.$buttons.index($('.button.active'));
-					curIndex++;
-					var newIndex = curIndex > 2 ? 0 : curIndex;
 					
+					curIndex++;
+					var newIndex = curIndex > 2 ? 0 : curIndex;	
+									
 					$(".owl-carousel", self.$html).trigger('owl.goTo', newIndex);
 					
 			}, self.delay );
@@ -134,12 +135,17 @@ Date: 08.03.2014
 	}
 	
 	uktandia.init = function(){
+		
 		uktandia.carousel.init();
-		uktandia.accordion.init();		
+		
+		uktandia.accordion.init();	
+			
 	}	
 	
-	$( document ).ready(function() {		
+	$( document ).ready(function() {	
+		
 		uktandia.init();		
+		
 	});
 
 }(jQuery, window, document));
