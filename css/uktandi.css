@@ -65,7 +65,7 @@ p { margin: 0; padding: 0 0 15px 0; }
     font-style: normal;
 }
 
- @font-face {
+@font-face {
     font-family: 'Sri-TSCRegular';
     src: url('fonts/sri-tsc-webfont.eot');
     src: url('fonts/sri-tsc-webfont.eot?#iefix') format('embedded-opentype'),
@@ -107,17 +107,11 @@ h3, h4, h5  {
 	position: absolute;
 	left: 0;
 	top: 5px;
-	margin: 0;
-	padding: 0;
 }
 
 #header h1 a {
-	display: block;
-	width: 271px;
-	height: 106px;
-	background: url(../images/logo.png) 0 0 no-repeat;
+	display: inline-block;
 	text-decoration: none;
-	text-indent: -9000px;
 }
 
 #header .top-nav {
@@ -127,6 +121,11 @@ h3, h4, h5  {
 	margin: 0;
 	padding: 0;
 	list-style: none;
+}
+
+#mobile-nav-btn,
+#mobile-nav-list {
+	display: none;
 }
 
 .top-nav li {
@@ -201,10 +200,13 @@ h3, h4, h5  {
 
 #header .main-nav {
 	float: right;
-	margin: 88px 0 0 0;
-	padding: 0;
+	position: absolute;
+	right: 0;
+	top: 88px;
 	list-style: none;
 	display: inline;
+	margin: 0;
+	padding: 0;
 }
 
 #header .main-nav:after { 
@@ -600,7 +602,7 @@ h3, h4, h5  {
    display: block; 
    height: 0; 
    clear: both;
-	margin-bottom: 15px;
+	margin-bottom: 10px;
 }
 
 .article .story .title-block h1 {
@@ -632,6 +634,7 @@ h3, h4, h5  {
 	color: #79714f;
 	line-height: 36px;
 	font-weight: normal;
+	padding: 0 12px;
 }
 
 .article .side-bar ul {
@@ -1216,7 +1219,6 @@ h3, h4, h5  {
 	#header {
 		background: none;
 		height: inherit;
-		padding-bottom: 5px;
 		background-color: #f7f7f7;
 		text-align: center;
 	}
@@ -1228,22 +1230,19 @@ h3, h4, h5  {
 	
 	#header h1 {
 		position: static;
-		width: 100%;
-		height: 106px;
-		margin: 0 auto;
-		padding-bottom: 15px;
-		/*border-bottom: 1px solid #ccc;*/
-		margin-bottom: 5px;
+		padding-bottom: 10px;
 		background-color: #fff;
+		text-align: left;
 	}
 	
-	
-	
-	
 	#header .main-nav {
-		float: none;
-		margin: 15px 0;	
+		position: static;
+		float: none;	
 		text-align: center;
+	}	
+	
+	#header .main-nav li a {
+		padding: 15px 15px;
 	}	
 	
 	#header .main-nav li { 
@@ -1330,6 +1329,14 @@ h3, h4, h5  {
 
 @media only screen and (max-width: 700px)  {
 	
+	#header h1 a img {
+		width: 240px;
+	}		
+	
+	#header .main-nav li a {
+		padding: 10px 13px;
+	}
+	
 	
 	.content,	
 	.list .feature {
@@ -1387,10 +1394,9 @@ h3, h4, h5  {
 		height: inherit;
 	}	
 	
-	#header h1 {
-		padding-bottom: 10px;
-	}
-	
+	#header h1 a img {
+		width: 220px;
+	}		
 	
 	#header .main-nav li a {
 		font-size: 1.3em;
@@ -1445,7 +1451,11 @@ h3, h4, h5  {
 	
 }
 
-@media only screen and (max-width: 479px)  {
+@media only screen and (max-width: 479px)  {	
+	
+	#header h1 a img {
+		width: 180px;
+	}
 	
 	#carousel .controls {
 		background-color: #f7f7f7;
@@ -1457,11 +1467,43 @@ h3, h4, h5  {
 	#header {		
 		height: inherit;
 		background: none;
-	}
-	
+	}	
+		
 	#header .main-nav,
 	.footer .footer-nav {
 		display: none;
 	}
 	
+	#mobile-nav-btn {
+		display: block;
+	}
+	
+	#wrapper {		
+		-webkit-transition: margin 0.5s;
+		-moz-transition: margin 0.5s;
+		-o-transition: margin 0.5s;
+		transition: margin 0.5s;
+	}
+
+	
+}
+
+#mobile-nav-btn {
+	position: absolute;
+	right: 0;
+	bottom: 15px;
+}
+
+#mobile-nav-btn a {
+	background: url(../images/mobile-nav-btn.png) 0 0 no-repeat;
+	display: block;
+	width: 23px;
+	height: 20px;
+	text-indent: -9000px;
+}
+
+#mobile-nav-list {
+	width: 100%;
+	height: 400px;
+	background-color: #928D8D;
 }

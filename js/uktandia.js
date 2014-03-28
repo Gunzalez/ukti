@@ -66,8 +66,7 @@ Date: 08.03.2014
 		}
 		
 	} /* carousel end */
-	
-	
+		
 	uktandia.accordion = {
 		
 		$section: $('.accordion'),		
@@ -134,11 +133,91 @@ Date: 08.03.2014
 		}	
 	}
 	
+	uktandia.mobile = {		
+		
+		$mobileNavBtn: $('#mobile-nav-btn'),
+		
+		/* methods */
+		_launchMobileNav: function(){
+			
+			var $mainPage = $('#wrapper'),
+				$mobileNav = $('#mobile-nav-list'),
+				$theStage = $('<div id="the-stage" />'),
+				$fakeWrapper = $('<div id="fake-wrapper" />'),
+				stageWidth = $(window).width(),
+				stageHeight = $('#wrapper').height();
+				
+			$theStage.css({
+				width: stageWidth,
+				height: stageHeight,
+				position: 'relative'
+			});
+			
+			$fakeWrapper.css({
+				width: stageWidth,
+				height: stageHeight,
+				position: 'absolute',
+				top: 0,
+				left: 0
+			})
+			$fakeWrapper.append($mainPage)
+			
+			$theStage.append($fakeWrapper).append($mobileNav);
+			$('body').prepend($theStage);
+			
+			$fakeWrapper.animate({				
+				left:'-'+(stageWidth-50)+'px'	
+			}, 500, 'swing')
+			
+		},
+		
+		_hideMobileNav: function(){
+			
+			var self = this;
+			
+			var $fakeWrapper = $('#fake-wrapper');
+			
+			$fakeWrapper.animate({
+				left:0	
+			}, 500, 'swing', function(){
+					self._destroyMobileNav();
+				});
+		},
+		
+		_destroyMobileNav: function(){
+			
+			$('body').prepend($('#mobile-nav-list'));
+			$('body').prepend($('#wrapper'));
+			$('#the-stage').remove();
+		},
+		
+		init: function(){
+			
+			var self = this;
+			
+			if($('#mobile-nav-btn').length > 0){
+				
+				$('#mobile-nav-btn a').on('click',function(evt){
+					
+					evt.preventDefault();
+					if($('#the-stage').length > 0){
+						self._hideMobileNav();
+					} else {
+						self._launchMobileNav();
+					}					
+				});
+					
+			}	
+		}	
+	}
+	
 	uktandia.init = function(){
 		
 		uktandia.carousel.init();
 		
 		uktandia.accordion.init();	
+		
+		uktandia.mobile.init();
 			
 	}	
 	
