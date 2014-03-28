@@ -6,6 +6,7 @@ body {
 	font-size: 12px;
 	font-family: arial, verdana;
 	color: #555;
+	-webkit-text-size-adjust: none;
 }
 
 input,
@@ -82,6 +83,14 @@ h1, h2, h3, h4, h5 {
 
 h1, h2 { 
 	font-family: 'Sri-TSCRegular';
+}
+
+h2  {
+	font-size: 1.4em;
+}
+
+h3, h4, h5  {
+	font-size: 1.0em;
 }
 
 /* ---------------------------------------------------------------- */
@@ -300,7 +309,7 @@ h1, h2 {
 }
 
 #carousel .controls ul {
-	width: 220px;
+	width: 240px;
 	list-style: none;
 	margin: 0;
 	padding: 0;
@@ -321,14 +330,19 @@ h1, h2 {
 	text-indent: -9000px;
 	text-decoration: none;
 	outline: none;
+	border-left: 20px solid #fff;
+	-webkit-transition: border-left 0.8s;
+  	-moz-transition: border-left 0.8s;
+  	-o-transition: border-left 0.8s;
+  	transition: border-left 0.8s;
 }
 
 #carousel .controls a.active {
-	border-left: 15px solid #eee;
-	-webkit-transition: border-left 0.5s;
-  	-moz-transition: border-left 0.5s;
-  	-o-transition: border-left 0.5s;
-  	transition: border-left 0.5s;
+	border-left: 20px solid #eee;
+	-webkit-transition: border-left 0.8s;
+  	-moz-transition: border-left 0.8s;
+  	-o-transition: border-left 0.8s;
+  	transition: border-left 0.8s;
 }
 
 #carousel .controls .button-1 {	background: url(../images/slide1-small.jpg) 0 0 no-repeat; }
@@ -385,7 +399,6 @@ h1, h2 {
 	text-decoration: none;
 	color: #fff;
 	padding: 0 10px;
-	font-size: 1.1em;
 	background: url(../images/bg-block-h2.png) right 11px no-repeat #CC4949;
 }
 
@@ -446,7 +459,10 @@ h1, h2 {
 	text-decoration: none;
 	display: block;
 	height: 258px;
-	background: url(../images/bg-block-tea-facts.png) 0 0 no-repeat;
+	background: url(../images/bg-block-tea-facts-square.jpg) center center no-repeat #ff790d;
+	-webkit-border-radius: 0px 0px 0px 25px;
+	-moz-border-radius: 0px 0px 0px 25px;
+	border-radius: 0px 0px 0px 25px;
 }
 
 .tea-facts h2 {
@@ -456,8 +472,11 @@ h1, h2 {
 
 .tea-list {
 	height: 258px;
-	background: url(../images/bg-block-tea-list.png) bottom left no-repeat;
+	background: url(../images/bg-block-tea-list-square.jpg) center right no-repeat #bcc140;
 	color: #fff;
+	-webkit-border-radius: 0px 0px 0px 25px;
+	-moz-border-radius: 0px 0px 0px 25px;
+	border-radius: 0px 0px 0px 25px;
 }
 
 .tea-list h2 {
@@ -532,8 +551,6 @@ h1, h2 {
 	display: block;
 	text-decoration: none;
 	color: #fff;
-	line-height: 180%;
-	font-size: 1.1em;
 	padding: 0 10px;
 }
 
@@ -600,7 +617,6 @@ h1, h2 {
 
 .article .story h2 {
 	padding: 0 0 5px 0;
-	font-size: 1.6em;
 	color: #79714f;
 	font-weight: normal;
 }
@@ -613,10 +629,10 @@ h1, h2 {
 }
 
 .article .side-bar h2 {
-	padding: 8px 12px;
-	font-size: 1.1em;
 	margin: 0;
 	color: #79714f;
+	line-height: 36px;
+	font-weight: normal;
 }
 
 .article .side-bar ul {
@@ -785,7 +801,6 @@ h1, h2 {
 	float: left;
 	margin: 0;
 	padding: 2px 0 3px 45px;
-	font-size: 1.6em;
 }
 
 .list .section .heading .action {
@@ -903,6 +918,8 @@ h1, h2 {
 	padding: 0;
 }
 
+
+/* definition list */
 .list .section dl {
 	margin: 0;
 	padding: 0;
@@ -1314,6 +1331,12 @@ h1, h2 {
 
 @media only screen and (max-width: 700px)  {
 	
+	
+	.content,	
+	.list .feature {
+		padding-bottom: 10px;
+	}
+	
 	.content-block-1 {
 		width: 100%;
 		margin-right: 0;		
@@ -1332,32 +1355,90 @@ h1, h2 {
 		width: 100%;
 		height: auto;		
 		margin-right: 0;
-		margin-top: 20px;		
+		margin-top: 10px;		
+	}
+	
+	.content-block-3 {
+		margin-top: 10px;
 	}
 	
 	.content-block-2 .tea-facts a {
-		height: 120px;
-		background: url(../images/bg-block-tea-facts-small.jpg) right center no-repeat #ff790d;
+		height: 160px;
+		background: url(../images/bg-block-tea-facts-small.jpg) center center no-repeat #ff790d;
+		-webkit-border-radius: 0px 0px 0px 12px;
+		-moz-border-radius: 0px 0px 0px 12px;
+		border-radius: 0px 0px 0px 12px;
 	}	
+	
+	.tea-list {
+		-webkit-border-radius: 0px 0px 0px 12px;
+		-moz-border-radius: 0px 0px 0px 12px;
+		border-radius: 0px 0px 0px 12px;
+	}
 	
 }
 
 @media only screen and (max-width: 600px)  {
 	
-	#header {
-		background: none;
+	#header {		
 		height: inherit;
-		background-color: #fff;
 	}	
 	
 	#header h1 {
 		padding-bottom: 10px;
-		/*border-bottom: 1px solid #ccc;*/
 	}
 	
-	#header .main-nav {
+	
+	#header .main-nav li a {
+		font-size: 1.3em;
+		padding: 8px 10px;
+	}
+	
+	.footer .footer-nav li a {
+		font-size: 1.0em;
+	}
+		
+	.list .feature .contact-details .logo {
 		display: none;
 	}
+	
+	.list .section .heading h2 {
+		font-size: 1.3em;
+	}
+	
+	.accordion .action .show-more {
+		background: url(../images/accordion-open-close.png) right 6px no-repeat #fff;
+		padding-right: 0;
+		display: block;
+		text-indent: -9000px;
+		width: 26px;
+		height: 26px;
+	}
+	
+	.list .section .detail-half {
+		float: none;
+		width: 100%;
+		padding-bottom: 12px;
+	}
+	
+	/* list page */
+	.list .section dl {
+		margin: 0;
+		padding: 0;
+	}
+	
+	.list .section dl.wide dt {
+		float: none;
+		width: auto;
+		padding: 0 0 2px 0;
+		margin: 0;
+	}
+	
+	.list .section dl.wide dd {
+		padding: 0;
+		margin: 0 0 12px 0;
+	}
+	
 	
 }
 
@@ -1367,6 +1448,17 @@ h1, h2 {
 		background-color: #f7f7f7;
 		position: static;
 		bottom: inherit;
+	}
+	
+	
+	#header {		
+		height: inherit;
+		background: none;
+	}
+	
+	#header .main-nav,
+	.footer .footer-nav {
+		display: none;
 	}
 	
 }
