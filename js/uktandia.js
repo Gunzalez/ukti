@@ -142,15 +142,20 @@ Date: 08.03.2014
 			
 			var $mainPage = $('#wrapper'),
 				$mobileNav = $('#mobile-nav-list'),
-				$theStage = $('<div id="the-stage" />'),
+				$theStage = $('<div id="the-stage" />'),				
 				$fakeWrapper = $('<div id="fake-wrapper" />'),
+				$slidingContainer = $('<div id="sliding-container" />'),
 				stageWidth = $(window).width(),
-				stageHeight = $('#wrapper').height();
+				stageHeight = $(window).height(),
+				peakThrough = 45,
+				slideSpeed = 250,
+				easing = 'swing';				
 				
 			$theStage.css({
 				width: stageWidth,
 				height: stageHeight,
-				position: 'relative'
+				position: 'relative',
+				overflow: 'hidden'
 			});
 			
 			$fakeWrapper.css({
@@ -159,35 +164,61 @@ Date: 08.03.2014
 				position: 'absolute',
 				top: 0,
 				left: 0
-			})
-			$fakeWrapper.append($mainPage)
+			});
 			
-			$theStage.append($fakeWrapper).append($mobileNav);
+			$mobileNav.css({
+				width: stageWidth - peakThrough + 'px',
+				position: 'absolute',
+				top: 0,
+				left: stageWidth + 'px',
+				height: stageHeight,
+				display: 'block'
+			});			
+			
+			$slidingContainer.css({
+				width: (stageWidth * 2) - peakThrough + 'px',
+				height: stageHeight,					
+				position: 'absolute',
+				top: 0,
+				left: 0
+			});
+			
+			$fakeWrapper.append($mainPage);
+			$slidingContainer.append($fakeWrapper).append($mobileNav);
+			$theStage.append($slidingContainer);
 			$('body').prepend($theStage);
 			
-			$fakeWrapper.animate({				
-				left:'-'+(stageWidth-50)+'px'	
-			}, 500, 'swing')
+			$slidingContainer.animate({				
+				left:'-'+(stageWidth-45)+'px'	
+			}, slideSpeed, easing);
 			
 		},
 		
 		_hideMobileNav: function(){
 			
-			var self = this;
+			var self = this,
+				$slidingContainer = $('#sliding-container');
 			
-			var $fakeWrapper = $('#fake-wrapper');
-			
-			$fakeWrapper.animate({
+			$slidingContainer.animate({
 				left:0	
-			}, 500, 'swing', function(){
+			}, self.slideSpeed, self.easing, function(){
 					self._destroyMobileNav();
 				});
 		},
 		
 		_destroyMobileNav: function(){
 			
-			$('body').prepend($('#mobile-nav-list'));
-			$('body').prepend($('#wrapper'));
+			var $mainPage = $('#wrapper'),
+				$mobileNav = $('#mobile-nav-list'),
+				$theStage = $('<div id="the-stage" />');
+				
+			$mobileNav.css({
+				display:'none'
+			}).removeAttr('style');
+			
+			$mainPage.removeAttr('style');
+				
+			$('body').prepend($mobileNav).prepend($mainPage);
 			$('#the-stage').remove();
 		},
 		
@@ -200,14 +231,158 @@ Date: 08.03.2014
 				$('#mobile-nav-btn a').on('click',function(evt){
 					
 					evt.preventDefault();
+					
 					if($('#the-stage').length > 0){
+						
 						self._hideMobileNav();
+						
 					} else {
+						
 						self._launchMobileNav();
-					}					
+						
+					}
+										
 				});
 					
 			}	
+		},
+		
+		resize: function(){
+						
+			var self = this;
+						
+			self._destroyMobileNav();
+			
+		}
+		
+	}
+	
+	uktandia.megadropdown = {
+		
+		isBusy: false,
+		$links: $('.main-nav a'),
+		$megaDropDivs: $('.megaDropDiv'),
+		$megaDropDown: $('#megaDropDown'),
+		
+		_adjustMegaDivHeights: function(){
+						
+			var self = this;
+			
+			self.$megaDropDown.css('top', $('#header').height());
+			
+			self.$megaDropDivs.each(function(index, obj){
+				
+				$(obj).css('top','-'+$(obj).height()+'px');	
+							
+			});
+			
+		},
+		
+		_showMegaDropDownForThisLink: function($link, callback){
+						
+			var self = this,
+				megaDropDivId = $link.attr('data-mega-drop');
+			
+			$link.addClass('active');
+												
+			self.$megaDropDown.height($('#'+megaDropDivId).height());
+			
+			$('#'+megaDropDivId).animate({
+				top: 0	
+			}, 250, function(){
+				
+				self.isBusy = false;
+				
+				if( callback != null ){
+					
+					callback();	
+					
+				} else {
+					
+					self.isBusy = false;
+										
+				}
+			});
+						
+		},		
+		
+		_hideMegaDropDownForThisLink: function($link, callback){
+						
+			var self = this,
+				megaDropDivId = $link.attr('data-mega-drop');
+			
+			$('#'+megaDropDivId).animate({									
+				top: '-'+$('#'+megaDropDivId).height()+'px'									
+			}, 250, function(){
+				
+				$link.removeAttr('class');
+				
+				self.$megaDropDown.height(0);
+				
+				if( callback != null ){
+					
+					callback();	
+					
+				} else {
+					
+					self.isBusy = false;					
+				}
+				
+			});
+			
+		},
+		
+		init: function(){
+						
+			var self = this;
+			
+			self.$links.each(function(index, obj){
+				
+				$(obj).on('click',function(evt){					
+				
+					var megaDropDivId = $(this).attr('data-mega-drop');
+					if (typeof megaDropDivId !== 'undefined' && megaDropDivId !== false) {						
+						
+						evt.preventDefault();
+						
+						if(!self.isBusy){
+							
+							self.isBusy = true;
+							
+							if(!$(this).hasClass('active')){
+								
+								var $curActiveItem = $('.active', self.$links.parent()),
+									curDropDivId = $curActiveItem.attr('data-mega-drop');
+									
+								if( typeof curDropDivId !== 'undefined' ){
+									
+									var callback = function(){
+										self._showMegaDropDownForThisLink($(evt.target), null)
+									}
+									
+									self._hideMegaDropDownForThisLink($curActiveItem, callback);
+									
+									
+								} else {
+									
+									self._showMegaDropDownForThisLink($(this), null);
+									
+								}
+								
+							} else {
+								
+								self._hideMegaDropDownForThisLink($(this), null);
+								
+							}
+							
+						}
+					}
+					
+				});
+			
+			});	
+			
+			self._adjustMegaDivHeights();
 		}	
 	}
 	
@@ -218,10 +393,19 @@ Date: 08.03.2014
 		uktandia.accordion.init();	
 		
 		uktandia.mobile.init();
+		
+		uktandia.megadropdown.init();
+		
+		$(window).on('resize',function(){			
+			
+			uktandia.mobile.resize();
+		
+		});
 			
 	}	
 	
 	$( document ).ready(function() {	
+			
 		
 		uktandia.init();		
 		

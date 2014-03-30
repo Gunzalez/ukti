@@ -98,9 +98,10 @@ h3, h4, h5  {
 
 /* header */
 #header {
-	height: 140px;
+	height: 130px;
 	position: relative;
 	background: url(../images/bg-header-nav.png) top right no-repeat;
+	margin-bottom: 10px;
 }
 
 #header h1 {
@@ -202,7 +203,7 @@ h3, h4, h5  {
 	float: right;
 	position: absolute;
 	right: 0;
-	top: 88px;
+	bottom: 0;
 	list-style: none;
 	display: inline;
 	margin: 0;
@@ -227,19 +228,97 @@ h3, h4, h5  {
 	font-size: 1.5em;
 	line-height: 99%;
 	text-decoration: none;
-	padding: 0 18px;
-	padding-top: 12px;
+	padding: 12px 18px;
 	color: #79714f;
 	font-family: 'Sri-TSCRegular';
 }
 
 #header .main-nav li a:hover,
 #header .main-nav li a.active {
-	color: #333;
+	background-color: #7a7250;
+	color: #fff;
 }
 
+#megaDropDown {
+	width: 100%;
+	position: absolute;
+	left: 0;
+	z-index: 1;
+	color: #fff;
+	overflow: hidden;
+}
+
+.megaDropDiv {
+	width: 100%;
+	position: absolute;
+	background-color: #7a7250;
+}
+
+.megaDropDiv .padding {
+	padding: 12px 20px;
+}
+
+.megaDropDiv .padding:after { 
+   content: "."; 
+   visibility: hidden; 
+   display: block; 
+   height: 0; 
+   clear: both;
+}
+
+.megaDropDiv h2 {
+	font-size: 1.1em;
+	padding-bottom: 2px;
+	line-height: 120%;
+}
+
+.megaDropDiv ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.megaDropDiv ul li a {
+	font-size: 1.0em;
+	display: block;
+	text-decoration: none;
+	color: #fff;
+}
+
+.megaDropDiv ul li a:hover {
+	background: #958e73;
+}
+
+.megaDropSubDiv {
+	float: left;
+	width: 135px;
+	margin-right:16px;
+}
+
+.imagerySubDiv {
+	margin-right:0;
+	height: 100%;
+	width: 145px;
+	background: #3b3931;
+	margin-top: -12px;
+	margin-bottom: -12px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 #header .main-nav li:last-child a {
-	padding-right: 0;
+	
 }
 
 #header .main-nav li:first-child {
@@ -870,7 +949,7 @@ h3, h4, h5  {
 }
 
 .accordion .action .show-more {
-	background: url(../images/accordion-open-close.png) right 6px no-repeat #fff;
+	background: url(../images/accordion-open-close.png) right 9px no-repeat #fff;
 	padding-right: 26px;
 	display: block;
 }
@@ -1040,7 +1119,8 @@ h3, h4, h5  {
 	}
 	
 	#carousel .stage {
-		width: 100%;	
+		width: 100%;
+		float: none;	
 	}	
 	
 	
@@ -1416,9 +1496,7 @@ h3, h4, h5  {
 	}
 	
 	.accordion .action .show-more {
-		background: url(../images/accordion-open-close.png) right 6px no-repeat #fff;
 		padding-right: 0;
-		display: block;
 		text-indent: -9000px;
 		width: 26px;
 		height: 26px;
@@ -1458,11 +1536,10 @@ h3, h4, h5  {
 	}
 	
 	#carousel .controls {
-		background-color: #f7f7f7;
+		background-color: #f0f0f0;
 		position: static;
 		bottom: inherit;
 	}
-	
 	
 	#header {		
 		height: inherit;
@@ -1484,8 +1561,22 @@ h3, h4, h5  {
 		-o-transition: margin 0.5s;
 		transition: margin 0.5s;
 	}
-
 	
+	#carousel .controls ul {
+		text-align: center;
+		float: none;
+		padding: 0;
+	}
+	
+	#carousel .controls ul li {
+		display: inline-block;
+		float: none;
+		padding: 10px;
+	}	
+	
+	#carousel .controls ul li a {
+		display: block;
+	}
 }
 
 #mobile-nav-btn {
@@ -1503,7 +1594,5 @@ h3, h4, h5  {
 }
 
 #mobile-nav-list {
-	width: 100%;
-	height: 400px;
-	background-color: #928D8D;
+	background-color: #7a7250;
 }

@@ -24,33 +24,7 @@
 <body>
 <div id="wrapper">
 
-	<div id="header">
-    	<h1><a href="index.html"><img src="images/logo.png" alt="UKTea &amp; Infusions Association"/></a></h1>
-        <ul class="top-nav">
-        	<li><a href="#">Login</a></li>
-        	<li><a href="#">Sitemap</a></li>
-        	<li><a href="#">Contact</a></li>
-        	<li>
-                <form name="search-form" method="post" action="somefile.php">
-                	<label for="search-term">Search</label>
-                    <input type="text" placeholder="Search:" value="" id="search-term" name="search-term" class="text" />
-                    <input type="submit" value="Search" class="submit" />
-                </form>
-            </li>
-        </ul>
-        <div class="tea-count">
-        	<span>Cups of tea consumed in UK so far today</span>
-            <span class="figure">164,548,927</span>
-        </div>        
-        <ul class="main-nav">
-        	<li><a href="history-of-tea.html">About Tea</a></li>
-        	<li><a href="#">About Us</a></li>
-        	<li><a href="#">Health</a></li>
-        	<li><a href="list.html" class="active">The Tea List</a></li>
-        	<li><a href="#">News</a></li>
-        </ul>
-        <div id="mobile-nav-btn"><a href="#">menu</a></div>           
-    </div>
+	<?php include ("frags/header-frag.php");?>
     <!--- header end /-->
 	
     <div class="content">	
@@ -290,24 +264,11 @@
            </div>
            
        </div>
-    </div>    
+    </div>
     
-    <div class="footer content">        	       
-        <ul class="footer-nav">
-            <li><a href="history-of-tea.html">About Tea</a></li>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Health</a></li>
-            <li><a href="#" class="active">The Tea List</a></li>
-            <li><a href="#">News</a></li>
-        </ul>
-        <div class="footer-copy">
-            <p>&copy; Copyright 2013 — <a href="#">Privacy Policy</a></p>
-            <p>The United Kingdom Tea Council Ltd,<br> 
-            Suite 10 Fourth Floor, Crown House,<br>
-            One Crown Square, Woking, GU21 6HR</p>
-            <p><a href="#">Contact Us</a> or view our <a href="#">Frequently Asked Questions (FAQ)</a></p>
-        </div>
-    </div>    
+    
+	<?php include ("frags/footer-frag.php");?>
+    <!--- footer end /-->   
 
 </div>
 
