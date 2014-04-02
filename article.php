@@ -18,6 +18,13 @@
 	<!-- Stylesheets -->   
     <link rel="stylesheet" media="all" href="css/uktandi.css" />
     
+    <script type="text/javascript">
+    if(/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)){
+		document.getElementsByTagName('html')[0].className = 'mobile';
+	} else {
+		document.getElementsByTagName('html')[0].className = 'desktop';
+	};
+    </script>
 	<script src="js/modernizr-2.5.3-min.js"></script>
 </head>
 
@@ -31,8 +38,16 @@
        <div class="article">
            <div class="story">
            		<div class="title-block">
-                	<h1>History of Tea</h1>
-                    <div class="main-image"><img src="images/bg-article.jpg" width="326" height="184" alt="History of Tea"></div>
+                	<h1>History of Tea</h1>                    
+                    <img src="images/bg-article.jpg" class="main-image" width="326" height="184" alt="History of Tea">
+                    <ul class="main-list">
+                    	<li>Talk himself out of a job!</li>
+                    	<li>Oh look it's Wonder woman</li>
+                    	<li>This is the third bullet point</li>
+                    	<li>Bullet point four</li>
+                    	<li>Let's imagine there is a 5th point and it is a really long one, what happens then, huh?</li>
+                        <li>Breaks nicely I see.</li>
+                    </ul>
                 </div>                    
                 <p>The far this nightingale that this jeepers wetted gosh hello some between stared much lizard more inappreciably and heron and held and one whistled far some inappreciable irresistible as telling warthog as.</p>
                 <p>Ape well became more but wildebeest found dry oh jay a gorilla lingering so less aboard in wow goodness therefore absent and giraffe nightingale and hello one busted aboard that. Opossum covetous waywardly and inside retrospective assisted hyena placed hence far in much impala walrus steady cumulatively manifestly punitive far strongly far as unlike preparatory strategically directed sexy doused honorable hello aboard obsessively one more religiously more less dear.</p>                

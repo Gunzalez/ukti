@@ -18,6 +18,13 @@
 	<!-- Stylesheets -->   
     <link rel="stylesheet" media="all" href="css/uktandi.css" />
     
+    <script type="text/javascript">
+    if(/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)){
+		document.getElementsByTagName('html')[0].className = 'mobile';
+	} else {
+		document.getElementsByTagName('html')[0].className = 'desktop';
+	};
+    </script>
 	<script src="js/modernizr-2.5.3-min.js"></script>
 </head>
 
@@ -28,7 +35,7 @@
     <!--- header end /-->
 	
     <div class="content">	
-       <div class="article list">
+       <div class="list">
        
        		<div class="feature">
            		       

@@ -20,8 +20,14 @@
     
     <link href="js/library/owl.carousel.css" rel="stylesheet">
     <link href="js/library/owl.theme.css" rel="stylesheet">
-
-	<!-- Responsive Stylesheets -->
+   
+    <script type="text/javascript">
+    if(/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)){
+		document.getElementsByTagName('html')[0].className = 'mobile';
+	} else {
+		document.getElementsByTagName('html')[0].className = 'desktop';
+	};
+    </script>
 	<script src="js/modernizr-2.5.3-min.js"></script>
 </head>
 

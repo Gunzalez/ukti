@@ -7,6 +7,13 @@ Date: 08.03.2014
 	
 	window.uktandia = {}
 	
+	uktandia.properties = {
+		
+		/* global properties */
+		isMobile: false,
+		isIE: false	
+	}
+	
 	uktandia.carousel = {
 		
 		/* properties */		
@@ -69,6 +76,7 @@ Date: 08.03.2014
 		
 	uktandia.accordion = {
 		
+		/* properties */
 		$section: $('.accordion'),		
 		
 		init: function(){
@@ -131,10 +139,11 @@ Date: 08.03.2014
 			});
 			
 		}	
-	}
+	} /* accordion end */
 	
 	uktandia.mobile = {		
 		
+		/* properties */
 		$mobileNavBtn: $('#mobile-nav-btn'),
 		
 		/* methods */
@@ -255,20 +264,30 @@ Date: 08.03.2014
 			
 		}
 		
-	}
+	} /* mobile end */
 	
 	uktandia.megadropdown = {
 		
+		/* properties */
 		isBusy: false,
 		$links: $('.main-nav a'),
 		$megaDropDivs: $('.megaDropDiv'),
 		$megaDropDown: $('#megaDropDown'),
 		
-		_adjustMegaDivHeights: function(){
-						
+		resize: function(){
+			
 			var self = this;
 			
-			self.$megaDropDown.css('top', $('#header').height());
+			self._adjustMegaDivHeights();
+			
+		},
+		
+		_adjustMegaDivHeights: function(){
+						
+			var self = this;			
+			
+			var megaDropDownHeight = $('#header').height() > 130 ? $('#header').height() - 1 : 130
+			self.$megaDropDown.css('top', megaDropDownHeight);
 			
 			self.$megaDropDivs.each(function(index, obj){
 				
@@ -357,7 +376,7 @@ Date: 08.03.2014
 								if( typeof curDropDivId !== 'undefined' ){
 									
 									var callback = function(){
-										self._showMegaDropDownForThisLink($(evt.target), null)
+										self._showMegaDropDownForThisLink($(evt.target), null);
 									}
 									
 									self._hideMegaDropDownForThisLink($curActiveItem, callback);
@@ -380,13 +399,60 @@ Date: 08.03.2014
 					
 				});
 			
-			});	
+			});
+			
+			if(uktandia.properties.isMobile){
+				
+				$('.previewSubDiv').remove();
+				
+			} else {
+				
+				$('.megaDropDiv').each(function(index, obj){
+				
+					var $megaDropSubDiv = $(obj),
+						slinks = $('li', $megaDropSubDiv);
+						
+					slinks.each(function(index, obj){
+						
+						$(obj).on('mouseenter',function(){
+						
+							$('.previewDivContianer', $megaDropSubDiv).removeClass('show-preview');
+							var previewId = $('a', $(obj)).attr('data-preview');
+							
+							if(typeof previewId !== 'undefined'){
+								$('#'+previewId, $megaDropSubDiv).addClass('show-preview');
+							}
+							
+						}).on('mouseleave',function(){						
+						
+							$('.previewDivContianer', $megaDropSubDiv).removeClass('show-preview');
+							
+						});
+							
+					});
+					
+				});				
+				
+			}
 			
 			self._adjustMegaDivHeights();
+			
 		}	
+	} /* mega drop down end */
+	
+	uktandia.setGlobalVariable = function(){
+		
+		if($('html').hasClass('mobile')){
+			
+			uktandia.properties.isMobile = true;
+			
+		}
+			
 	}
 	
 	uktandia.init = function(){
+		
+		uktandia.setGlobalVariable();	
 		
 		uktandia.carousel.init();
 		
@@ -399,13 +465,14 @@ Date: 08.03.2014
 		$(window).on('resize',function(){			
 			
 			uktandia.mobile.resize();
-		
+			
+			uktandia.megadropdown.resize();
+			
 		});
 			
 	}	
 	
 	$( document ).ready(function() {	
-			
 		
 		uktandia.init();		
 		

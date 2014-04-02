@@ -1,17 +1,20 @@
 	<div id="header">
     	<h1><a href="index.php"><img src="images/logo.png" alt="UKTea &amp; Infusions Association"/></a></h1>
-        <ul class="top-nav">
-        	<li><a href="#">Login</a></li>
-        	<li><a href="#">Sitemap</a></li>
-        	<li><a href="#">Contact</a></li>
-        	<li>
-                <form name="search-form" method="post" action="somefile.php">
-                	<label for="search-term">Search</label>
-                    <input type="text" placeholder="Search:" value="" id="search-term" name="search-term" class="text" />
-                    <input type="submit" value="Search" class="submit" />
-                </form>
-            </li>
-        </ul>
+        <div class="top-nav">
+        	<ul>
+                <li><a href="#">Login</a></li>
+                <li><a href="#">Sitemap</a></li>
+                <li><a href="#">Contact</a></li>
+                <li>
+                    <form name="search-form" method="post" action="somefile.php">
+                        <label for="search-term">Search</label>
+                        <input type="text" placeholder="Search:" value="" id="search-term" name="search-term" class="text" />
+                        <input type="submit" value="Search" class="submit" />
+                    </form>
+                </li>
+            </ul>
+        </div>
+        
         <div class="tea-count">
         	<span>Cups of tea consumed in UK so far today</span>
             <span class="figure">164,548,927</span>
@@ -19,10 +22,10 @@
                 
         <ul class="main-nav">
         	<li><a href="#" data-mega-drop='mainNavOption1'>About Tea</a></li>
-        	<li><a href="list.php">About Us</a></li>
-        	<li><a href="#" data-mega-drop='mainNavOption2'>Health</a></li>
-        	<li><a href="#" data-mega-drop='mainNavOption3'>The Tea List</a></li>
-        	<li><a href="history-of-tea.php">News</a></li>
+        	<li><a href="#" data-mega-drop='mainNavOption2'>About Us</a></li>
+        	<li><a href="#" data-mega-drop='mainNavOption3'>Health</a></li>
+        	<li><a href="#" data-mega-drop='mainNavOption4'>The Tea List</a></li>
+        	<li><a href="#" data-mega-drop='mainNavOption5'>News</a></li>
         </ul>
         
         <div id="mobile-nav-btn"><a href="#">menu</a></div>        
@@ -34,9 +37,9 @@
                     <div class="megaDropSubDiv">
                     	<h2>Growing &amp; Production</h2>
                         <ul>
-                        	<li><a href="#">Processing &amp; Blending</a></li>
-                        	<li><a href="#">Packaging &amp; Distribution</a></li>
-                        	<li><a href="#">Sustainability &amp; Environment</a></li>
+                        	<li><a href="#" data-preview="preview-1">Processing &amp; Blending</a></li>
+                        	<li><a href="#" data-preview="preview-2">Packaging &amp; Distribution</a></li>
+                        	<li><a href="#" data-preview="preview-3">Sustainability &amp; Environment</a></li>
                         </ul>                    
                     </div>
                     <div class="megaDropSubDiv">
@@ -79,22 +82,60 @@
                         	<li><a href="#">A social history</a></li>
                         </ul>                    
                     </div>
-                    <div class="megaDropSubDiv imagerySubDiv">
-                    
-                    	<div style="height: 180px;"></div>
-                                       
+                    <div class="megaDropSubDiv previewSubDiv">
+                    	<div class="previewDivContianer" id="preview-1">
+                        	<div class="imagery">
+                            	<img src="images/preview-image-1.jpg" />
+                            </div>
+                            <div class="copy">
+                            	<p>This here contains some summary of stuff.</p>
+                            </div>
+                        </div>
+                    	<div class="previewDivContianer" id="preview-2">
+                        	<div class="imagery">
+                            	<img src="images/preview-image-2.jpg" />                            
+                            </div>
+                            <div class="copy">
+                            	<p>That woman is crying again.</p>                            
+                            </div>
+                        </div>
+                    	<div class="previewDivContianer" id="preview-3">
+                        	<div class="imagery">
+                            	<img src="images/preview-image-3.jpg" />                            
+                            </div>
+                            <div class="copy">
+                            	<p>Remeber our deal, you keep him alive at all costs.</p>
+                            </div>
+                        </div>         
                     </div>
                     
                 </div>
             </div>
         	<div id="mainNavOption2" class="megaDropDiv">
-            	Health
-                <div style="height: 500px;"></div>
+            	<div class="padding">
+                    About Us
+                    <div style="height: 210px;"></div>                
+                </div>
             </div>
         	<div id="mainNavOption3" class="megaDropDiv">
-            	The Tea List
-                <div style="height: 200px;"></div>
+            	<div class="padding">
+                    Health
+                    <div style="height: 190px;"></div>               
+                </div>
             </div>
+            <div id="mainNavOption4" class="megaDropDiv">
+            	<div class="padding">
+                    The Tea List
+                    <div style="height: 250px;"></div>                
+                </div>
+            </div>
+        	<div id="mainNavOption5" class="megaDropDiv">
+            	<div class="padding">
+                    News
+                    <div style="height: 140px;"></div>               
+                </div>
+            </div>
+            
         </div>
                  
     </div>
