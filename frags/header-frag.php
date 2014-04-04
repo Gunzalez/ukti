@@ -35,15 +35,15 @@
                 <div class="padding">
                 	
                     <div class="megaDropSubDiv">
-                    	<h2>Growing &amp; Production</h2>
+                    	<h2><a href="#">Growing &amp; Production</a></h2>
                         <ul>
-                        	<li><a href="#" data-preview="preview-1">Processing &amp; Blending</a></li>
-                        	<li><a href="#" data-preview="preview-2">Packaging &amp; Distribution</a></li>
-                        	<li><a href="#" data-preview="preview-3">Sustainability &amp; Environment</a></li>
+                        	<li><a href="#">Processing &amp; Blending</a></li>
+                        	<li><a href="#">Packaging &amp; Distribution</a></li>
+                        	<li><a href="#">Sustainability &amp; Environment</a></li>
                         </ul>                    
                     </div>
                     <div class="megaDropSubDiv">
-                    	<h2>History of Tea</h2>
+                    	<h2><a href="article.php">Types of Tea</a></h2>
                         <ul>
                         	<li><a href="#">China</a></li>
                         	<li><a href="#">India &amp; Sri Lanka</a></li>
@@ -52,7 +52,7 @@
                         </ul>                    
                     </div>
                     <div class="megaDropSubDiv">
-                    	<h2>Tea facts &amp; Stats</h2>
+                    	<h2><a href="#">Tea facts &amp; Stats</a></h2>
                         <ul>
                         	<li><a href="#">Tea customs</a></li>
                         	<li><a href="#">Tea paraphernalia</a></li>
@@ -60,7 +60,7 @@
                         </ul>                    
                     </div>
                     <div class="megaDropSubDiv">
-                    	<h2>Tea Ceremonies</h2>
+                    	<h2><a href="#">Tea Ceremonies</a></h2>
                         <ul>
                         	<li><a href="#">Japan</a></li>
                         	<li><a href="#">Russia</a></li>
@@ -69,7 +69,7 @@
                         </ul>                    
                     </div>
                     <div class="megaDropSubDiv">
-                    	<h2>History of tea</h2>
+                    	<h2><a href="#">History of tea</a></h2>
                         <ul>
                         	<li><a href="#">A brief history</a></li>
                         	<li><a href="#">The beginnings of tea</a></li>
@@ -77,44 +77,50 @@
                         	<li><a href="#">Catherin of Braganza</a></li>
                         	<li><a href="#">Tea smuggling</a></li>
                         	<li><a href="#">Boston tea party</a></li>
-                        	<li><a href="#">tea Clippers</a></li>
+                        	<li><a href="#">Tea Clippers</a></li>
                         	<li><a href="#">London tea auction</a></li>
                         	<li><a href="#">A social history</a></li>
                         </ul>                    
                     </div>
-                    <div class="megaDropSubDiv previewSubDiv">
-                    	<div class="previewDivContianer" id="preview-1">
-                        	<div class="imagery">
-                            	<img src="images/preview-image-1.jpg" />
-                            </div>
-                            <div class="copy">
-                            	<p>This here contains some summary of stuff.</p>
-                            </div>
+                    <div class="megaDropSubDivWithImage">
+                        <div class="imagery">
+                            <img src="images/preview-image-1.jpg" />
                         </div>
-                    	<div class="previewDivContianer" id="preview-2">
-                        	<div class="imagery">
-                            	<img src="images/preview-image-2.jpg" />                            
-                            </div>
-                            <div class="copy">
-                            	<p>That woman is crying again.</p>                            
-                            </div>
+                        <div class="copy">
+                            <p>This here contains some summary of stuff.</p>
                         </div>
-                    	<div class="previewDivContianer" id="preview-3">
-                        	<div class="imagery">
-                            	<img src="images/preview-image-3.jpg" />                            
-                            </div>
-                            <div class="copy">
-                            	<p>Remeber our deal, you keep him alive at all costs.</p>
-                            </div>
-                        </div>         
                     </div>
-                    
+                                        
                 </div>
             </div>
         	<div id="mainNavOption2" class="megaDropDiv">
             	<div class="padding">
-                    About Us
-                    <div style="height: 210px;"></div>                
+                	
+                    <div class="megaDropSubDiv">
+                    	<h2><a href="#">Nav Item Level 2</a></h2>
+                        <ul>
+                        	<li><a href="#">Nav Item Level 3</a></li>
+                        	<li><a href="#">Nav Item Level 3</a></li>
+                        </ul>                    
+                    </div>
+                    <div class="megaDropSubDiv">
+                    	<h2><a href="#">Nav Item Level 2</a></h2>
+                        <ul>
+                        	<li><a href="#">Nav Item Level 3</a></li>
+                        	<li><a href="#">Nav Item Level 3</a></li>
+                        	<li><a href="#">Nav Item Level 3</a></li>
+                        	<li><a href="#">Nav Item Level 3</a></li>
+                        </ul>                    
+                    </div>
+                    <div class="megaDropSubDivWithImage">
+                        <div class="imagery">
+                            <img src="images/preview-image-2.jpg" />
+                        </div>
+                        <div class="copy">
+                            <p>I would never have signed this off.</p>
+                        </div>
+                    </div>
+                                        
                 </div>
             </div>
         	<div id="mainNavOption3" class="megaDropDiv">

@@ -266,11 +266,9 @@ h3, h4, h5  {
 	-webkit-box-shadow: inset 0px 3px 2px 0px rgba(51,51,51,0.17);
 	-moz-box-shadow: inset 0px 3px 2px 0px rgba(51,51,51,0.17);
 	box-shadow: inset 0px 3px 2px 0px rgba(51,51,51,0.17);
-}
-
-#mainNavOption1 {
 	background: url(../images/mega-drop.png) top right repeat-y #7a7250;
 }
+
 
 /* for mobile */
 .mobile #mainNavOption1 {
@@ -278,7 +276,7 @@ h3, h4, h5  {
 }
 
 .megaDropDiv .padding {
-	padding: 12px 20px;
+	padding: 12px 18px;
 }
 
 .megaDropDiv .padding:after { 
@@ -289,8 +287,18 @@ h3, h4, h5  {
    clear: both;
 }
 
+.megaDropDiv a {
+	color: #fff;
+	text-decoration: none;
+	display: block;
+}
+
+.megaDropDiv a:hover {
+	background: #958e73;
+}
+
 .megaDropDiv h2 {
-	font-size: 1.1em;
+	font-size: 1.0em;
 	padding-bottom: 2px;
 	line-height: 120%;
 	font-family: arial, verdana;
@@ -303,17 +311,9 @@ h3, h4, h5  {
 }
 
 .megaDropDiv ul li a {
-	font-size: 1.0em;
-	display: block;
-	text-decoration: none;
-	color: #fff;
+	font-size: 0.90em;
 	line-height: 120%;
-	margin: 1px 0;
-	
-}
-
-.megaDropDiv ul li a:hover {
-	background: #958e73;
+	margin: 1px 0;	
 }
 
 .megaDropSubDiv {
@@ -322,34 +322,48 @@ h3, h4, h5  {
 	margin-right:16px;
 }
 
+.megaDropSubDivWithImage {
+	float: right;
+	width: 125px;
+	margin-right: 10px;
+}
+
+.megaDropSubDivWithImage img {
+	display: block;
+}
+
+.megaDropSubDivWithImage p {
+	padding: 8px 0;
+	font-size: 0.90em;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .mobile .megaDropSubDiv {
 	width: 164px;
 }
 
-.previewSubDiv {
-	margin-right:0;
-	width: 145px;
-}
-
-.previewSubDiv .previewDivContianer {
-	display: none;
-	padding: 0 10px;
-}
-
-.previewSubDiv .previewDivContianer.show-preview {
-	display: block;
-}
-
-.previewSubDiv .imagery img {
-	width: 124px;
-	display: block;
-	padding-bottom: 10px;
-}
-
-.previewSubDiv .copy p {
-	margin: 0;
-	font-size: 0.95em;
-}
 
 
 
@@ -684,17 +698,16 @@ h3, h4, h5  {
 
 .content-half .copy {
 	margin: 0 11px 11px 11px;
-	padding: 162px 10px 10px 10px;
+	padding: 0;
 	background-color: #fff;
 }
 
-.copy.magic-of-tea { background: url(../images/bg-magic-of-tea.jpg) top right no-repeat #fff; }
-.copy.tea-smugglers { background: url(../images/bg-tea-smugglers.jpg) top right no-repeat #fff; }
+.content-half .copy img {
+	width: 100%;
+}
 
-.content-half h3 {
-	padding: 0;
-	margin: 0;
-	color: #333;
+.content-half .copy .padding {
+	padding: 10px;
 }
 
 .content-half p {
@@ -1363,20 +1376,6 @@ h3, h4, h5  {
 }
 
 
-@media only screen and (max-width: 900px)  {
-	
-
-	.content-half {
-		width: 100%;
-		float: none;
-		padding-bottom: 1px;
-		margin-bottom: 10px;
-	}
-	
-}
-
-
-
 @media only screen and (max-width: 870px)  {
 	#header {
 		background: none;
@@ -1688,7 +1687,16 @@ h3, h4, h5  {
 	#carousel .controls ul li a {
 		display: block;
 	}
+	
+
+	.content-half {
+		width: 100%;
+		float: none;
+		padding-bottom: 1px;
+		margin-bottom: 10px;
+	}
 }
+
 
 #mobile-nav-btn {
 	position: absolute;

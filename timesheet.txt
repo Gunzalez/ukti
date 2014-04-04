@@ -1,0 +1,28 @@
+Home page - 8hrs
+History page - 3hrs
+Directory page - 4hrs
+Directory page - 6hrs
+Responsive list page - 3hrs
+Responsive Carousel - 3hrs
+Responsive Header area - 2hrs
+Responsive green section on homepage - 2hrs
+Responsive accordian - 3hrs
+CSS clean up 2hr
+Responsive Carousel and body for mobile - 4hrs
+More responsive work - 2hrs
+Mobile nav - 3hrs
+MegaDropDown - 4hrs
+Refactor - 1hr
+
+
+TODO:
+Text shadow on navigation
+Make carousel buttons smaller
+Fix for FF
+See about Tea Facts imagery, and other in general, possible talk required.
+
+See about Fablet header area responsive bollox
+Ask about search, slide out, down?
+Fancy box attachment
+
+Mobile nav

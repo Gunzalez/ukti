@@ -113,15 +113,21 @@
         	<div class="content-half content-half-1">
                 <h2><a href="#">The Magic of Tea</a></h2>
             	<div class="copy magic-of-tea">
-                	<h3>The perfect brew</h3>
-                    <p>The far this nightingale that this jeepers wetted gosh hello some between stared much lizard more inappreciably. <a href="#">Read&nbsp;more</a></p>
+                	<img src="images/magic-of-tea.jpg" alt=""/>                    
+                    <div class="padding">
+                        <h3>The perfect brew</h3>
+                        <p>The far this nightingale that this jeepers wetted gosh hello some between stared much lizard more inappreciably. <a href="#">Read&nbsp;more</a></p>
+                    </div>
                 </div>
             </div>
         	<div class="content-half content-half-2">
             	<h2><a href="#">18th-century smugglers</a></h2>
             	<div class="copy tea-smugglers">
-                	<h3>Tea Smuggling</h3>
-                    <p>Spiderman 2 starring Andrew Garfield looks really good. I simply can't wait to see it with the kids, oh yeah! <a href="#">Read&nbsp;more</a></p>
+                	<img src="images/tea-smugglers.jpg" alt=""/>
+                    <div class="padding">
+                        <h3>Tea Smuggling</h3>
+                        <p>Spiderman 2 starring Andrew Garfield looks really good. I simply can't wait to see it with the kids, oh yeah! <a href="#">Read&nbsp;more</a></p>
+                    </div>
                 </div>            
             </div>
             <div class="cleft"></div>

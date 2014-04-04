@@ -401,40 +401,6 @@ Date: 08.03.2014
 			
 			});
 			
-			if(uktandia.properties.isMobile){
-				
-				$('.previewSubDiv').remove();
-				
-			} else {
-				
-				$('.megaDropDiv').each(function(index, obj){
-				
-					var $megaDropSubDiv = $(obj),
-						slinks = $('li', $megaDropSubDiv);
-						
-					slinks.each(function(index, obj){
-						
-						$(obj).on('mouseenter',function(){
-						
-							$('.previewDivContianer', $megaDropSubDiv).removeClass('show-preview');
-							var previewId = $('a', $(obj)).attr('data-preview');
-							
-							if(typeof previewId !== 'undefined'){
-								$('#'+previewId, $megaDropSubDiv).addClass('show-preview');
-							}
-							
-						}).on('mouseleave',function(){						
-						
-							$('.previewDivContianer', $megaDropSubDiv).removeClass('show-preview');
-							
-						});
-							
-					});
-					
-				});				
-				
-			}
-			
 			self._adjustMegaDivHeights();
 			
 		}	
@@ -472,7 +438,7 @@ Date: 08.03.2014
 			
 	}	
 	
-	$( document ).ready(function() {	
+	$( window ).load(function() {	
 		
 		uktandia.init();		
 		
