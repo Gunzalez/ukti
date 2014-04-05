@@ -97,9 +97,9 @@
             	<div class="padding">
                 	
                     <div class="megaDropSubDiv">
-                    	<h2><a href="#">Nav Item Level 2</a></h2>
+                    	<h2><a href="#">About Us Item Level 2</a></h2>
                         <ul>
-                        	<li><a href="#">Nav Item Level 3</a></li>
+                        	<li><a href="#">Nav Item Level 3 Nav Item Level 3</a></li>
                         	<li><a href="#">Nav Item Level 3</a></li>
                         </ul>                    
                     </div>
@@ -114,7 +114,7 @@
                     </div>
                     <div class="megaDropSubDivWithImage">
                         <div class="imagery">
-                            <img src="images/preview-image-2.jpg" />
+                            <img src="images/preview-image-2.jpg" width="125" />
                         </div>
                         <div class="copy">
                             <p>I would never have signed this off.</p>
@@ -125,20 +125,124 @@
             </div>
         	<div id="mainNavOption3" class="megaDropDiv">
             	<div class="padding">
-                    Health
-                    <div style="height: 190px;"></div>               
+                	
+                    <div class="megaDropSubDiv">
+                    	<h2><a href="#">Health Item Level 2</a></h2>
+                        <ul>
+                        	<li><a href="#">Nav Item Level 3</a></li>
+                        	<li><a href="#">Nav Item Level 3</a></li>
+                        	<li><a href="#">Nav Item Level 3</a></li>
+                        	<li><a href="#">Nav Item Level 3</a></li>
+                        </ul>                    
+                    </div>
+                    <div class="megaDropSubDiv">
+                    	<h2><a href="#">Nav Item Level 2</a></h2>
+                        <ul>
+                        	<li><a href="#">Nav Item Level 3</a></li>
+                        	<li><a href="#">Nav Item Level 3</a></li>
+                        </ul>                    
+                    </div>
+                    <div class="megaDropSubDiv">
+                    	<h2><a href="#">Nav Item Level 2</a></h2>
+                        <ul>
+                        	<li><a href="#">Nav Item Level 3 Nav Item Level 3</a></li>
+                        	<li><a href="#">Nav Item Level Nav Item Level 3 Nav Item Level 3</a></li>
+                        	<li><a href="#">Nav Item Level 3</a></li>
+                        </ul>                    
+                    </div>
+                    <div class="megaDropSubDivWithImage">
+                        <div class="imagery">
+                            <img src="images/preview-image-3.jpg" width="125" />
+                        </div>
+                        <div class="copy">
+                            <p>These ideas keep coming to me, time after time.</p>
+                        </div>
+                    </div>
+                                        
                 </div>
             </div>
             <div id="mainNavOption4" class="megaDropDiv">
             	<div class="padding">
-                    The Tea List
-                    <div style="height: 250px;"></div>                
+                	
+                    <div class="megaDropSubDiv">
+                    	<h2><a href="#">The Tea List Item Level come in here</a></h2>
+                        <ul>
+                        	<li><a href="#">Nav Item Level 3 Nav Item Level 3 Nav Item Level 3</a></li>
+                        	<li><a href="#">Nav Item Level 3</a></li>
+                        	<li><a href="#">Nav Item Level 3</a></li>
+                        	<li><a href="#">Nav Item Level 3</a></li>
+                        </ul>                    
+                    </div>
+                    <div class="megaDropSubDiv">
+                    	<h2><a href="#">Nav Item Level 2</a></h2>
+                        <ul>
+                        	<li><a href="#">Nav Item Level 3</a></li>
+                        	<li><a href="#">Nav Item Level 3</a></li>
+                        </ul>                    
+                    </div>
+                    <div class="megaDropSubDiv">
+                    	<h2><a href="#">Nav Item Level 2</a></h2>
+                        <ul>
+                        	<li><a href="#">Nav Item Level 3</a></li>
+                        	<li><a href="#">Nav Item Level 3</a></li>
+                        	<li><a href="#">Nav Item Level 3</a></li>
+                        </ul>                    
+                    </div>
+                    <div class="megaDropSubDivWithImage">
+                        <div class="imagery">
+                            <img src="images/preview-image-4.jpg" width="125" />
+                        </div>
+                        <div class="copy">
+                            <p>GIR (voiced by Rosearik Rikki Simons) is a malfunctioning and dimwitted robot</p>
+                        </div>
+                    </div>
+                                        
                 </div>
             </div>
         	<div id="mainNavOption5" class="megaDropDiv">
             	<div class="padding">
-                    News
-                    <div style="height: 140px;"></div>               
+                	
+                    <div class="megaDropSubDiv">
+                    	<h2><a href="#">News Item Level 2</a></h2>
+                        <ul>
+                        	<li><a href="#">Nav Item Level 3</a></li>
+                        	<li><a href="#">Nav Item Level 3</a></li>
+                        	<li><a href="#">Nav Item Level 3</a></li>
+                        	<li><a href="#">Nav Item Level 3</a></li>
+                        </ul>                    
+                    </div>
+                    <div class="megaDropSubDiv">
+                    	<h2><a href="#">News Item Level 2</a></h2>
+                        <ul>
+                        	<li><a href="#">Nav Item Level 3</a></li>
+                        	<li><a href="#">Nav Item Level 3</a></li>
+                        </ul>                    
+                    </div>
+                    <div class="megaDropSubDiv">
+                    	<h2><a href="#">News Item Level 2</a></h2>
+                        <ul>
+                        	<li><a href="#">Nav Item Level 3</a></li>
+                        	<li><a href="#">Nav Item Level 3</a></li>
+                        	<li><a href="#">Nav Item Level 3</a></li>
+                        </ul>                    
+                    </div>                    
+                    <div class="megaDropSubDiv">
+                    	<h2><a href="#">More News Item Level 2</a></h2>
+                        <ul>
+                        	<li><a href="#">Nav Item Level 3 Nav Item Level 3</a></li>
+                        	<li><a href="#">Nav Item Level Nav Item Level 3m Level 3</a></li>
+                        	<li><a href="#">Nav Item Level 3</a></li>
+                        </ul>                    
+                    </div>
+                    <div class="megaDropSubDivWithImage">
+                        <div class="imagery">
+                            <img src="images/preview-image-5.jpg" width="125" />
+                        </div>
+                        <div class="copy">
+                            <p>That's right, it's Johnny Cash, looking directly at you, yes you Rob!</p>
+                        </div>
+                    </div>
+                                        
                 </div>
             </div>
             

@@ -7,7 +7,7 @@
             <li><a href="#">News</a></li>
         </ul>
         <div class="footer-copy">
-            <p>&copy; Copyright 2013 — <a href="#">Privacy Policy</a></p>
+            <p>&copy; Copyright 2013 &ndash; <a href="#">Privacy Policy</a></p>
             <p>The United Kingdom Tea Council Ltd,<br> 
             Suite 10 Fourth Floor, Crown House,<br>
             One Crown Square, Woking, GU21 6HR</p>

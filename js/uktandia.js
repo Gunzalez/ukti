@@ -69,6 +69,22 @@ Date: 08.03.2014
 					$(".owl-carousel", self.$html).trigger('owl.goTo', newIndex);
 					
 			}, self.delay );
+			
+			
+			// Makes carousel slide active, helps mobile devices
+			$('.item', self.$html).each(function(index, obj){
+				
+				$(obj).on('click',function(){
+					
+					if($('a', $(obj)).length > 0){
+						
+						window.location = $('a', $(obj)).attr('href');
+						
+					}
+					
+				});
+				
+			});
 					
 		}
 		

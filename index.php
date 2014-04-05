@@ -42,16 +42,37 @@
         <div id="carousel">
             <div class="stage">
             	<div class="owl-carousel owl-theme">
-                  <div class="item"><img src="images/slide1.jpg" alt=""/></div>
-                  <div class="item"><img src="images/slide2.jpg" alt=""/></div>
-                  <div class="item"><img src="images/slide3.jpg" alt=""/></div>
+                    <div class="item">                    	
+                        <img src="images/slide1.jpg" alt=""/>
+                        <h2 class="slide-title colour3">
+                        	All the tea in china!
+                        </h2>
+                        <div class="slide-link">
+                        	<a href="list.php">Click here to read the full story!</a>
+                        </div>
+                    </div>
+                    <div class="item">                    	
+                        <img src="images/slide2.jpg" alt=""/>
+                        <h2 class="slide-title">
+                        	One with no Link<br>below.
+                        </h2>
+                    </div>
+                    <div class="item">                    	
+                        <img src="images/slide3.jpg" alt=""/>
+                        <h2 class="slide-title colour1">
+                        	Green stuff in a <br> big white spoon!
+                        </h2>
+                        <div class="slide-link">
+                        	<a href="article.php">I'm a reasonable man, get off my case, get off my case!</a>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="controls">
                 <ul>
-                    <li class="firstLI"><a href="#" class="button button-1 active">1</a></li>
-                    <li><a href="#" class="button button-2">2</a></li>
-                    <li class="lastLi"><a href="#" class="button button-3">3</a></li>
+                    <li class="firstLI"><a href="#" class="button button-1 active"><img src="images/slide1-small.jpg" width="220" height="87" alt=""/></a></li>
+                    <li><a href="#" class="button button-2"><img src="images/slide2-small.jpg" width="220" height="87" alt=""/></a></li>
+                    <li class="lastLi"><a href="#" class="button button-3"><img src="images/slide3-small.jpg" width="220" height="87" alt=""/></a></li>
                 </ul>
             </div>
         </div>
