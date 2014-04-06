@@ -303,13 +303,18 @@ Date: 08.03.2014
 			var self = this;			
 			
 			var megaDropDownHeight = $('#header').height() > 130 ? $('#header').height() - 1 : 130
-			self.$megaDropDown.css('top', megaDropDownHeight);
+			self.$megaDropDown.css({
+				top : megaDropDownHeight,
+				height: 0
+			});
 			
 			self.$megaDropDivs.each(function(index, obj){
 				
 				$(obj).css('top','-'+$(obj).height()+'px');	
 							
 			});
+			
+			self.$links.removeClass('active');
 			
 		},
 		
@@ -323,6 +328,7 @@ Date: 08.03.2014
 				newHeight = $('#'+newMegaDropDiv).height();
 			
 			$newLink.addClass('active');
+			
 			$('#'+newMegaDropDiv).fadeOut();	
 			
 			$('#'+curMegaDropDiv).fadeOut(function(){
@@ -332,9 +338,13 @@ Date: 08.03.2014
 				}, 50, function(){
 					
 					$('#'+newMegaDropDiv).css('top',0).fadeIn();
+					
 					$('#'+curMegaDropDiv).css('top', '-'+curHeight+'px').fadeIn();
-					$curLink.removeClass('active');
+					
+					$curLink.removeAttr('class');
+					
 					self.isBusy = false;
+					
 				});
 			});
 			
@@ -383,8 +393,8 @@ Date: 08.03.2014
 				top: '-'+$('#'+megaDropDivId).height()+'px'									
 			}, 250, function(){
 				
-				$link.removeAttr('class');				
-				
+				$link.removeAttr('class');
+								
 				if( callback != null ){
 					
 					callback();	

@@ -21,11 +21,7 @@
         </div> 
                 
         <ul class="main-nav">
-        	<li><a href="#" data-mega-drop='mainNavOption1'>About Tea</a></li>
-        	<li><a href="#" data-mega-drop='mainNavOption2'>About Us</a></li>
-        	<li><a href="#" data-mega-drop='mainNavOption3'>Health</a></li>
-        	<li><a href="#" data-mega-drop='mainNavOption4'>The Tea List</a></li>
-        	<li><a href="#" data-mega-drop='mainNavOption5'>News</a></li>
+        	<li><a href="#" data-mega-drop='mainNavOption1'>About Tea</a></li><li><a href="#" data-mega-drop='mainNavOption2'>About Us</a></li><li><a href="#" data-mega-drop='mainNavOption3'>Health</a></li><li><a href="#" data-mega-drop='mainNavOption4'>The Tea List</a></li><li><a href="#" data-mega-drop='mainNavOption5'>News</a></li>
         </ul>
         
         <div id="mobile-nav-btn"><a href="#">menu</a></div>        
@@ -68,7 +64,7 @@
                         	<li><a href="#">North/South Korea</a></li>
                         </ul>                    
                     </div>
-                    <div class="megaDropSubDiv">
+                    <div class="megaDropSubDiv lastDropSubDiv">
                     	<h2><a href="#">History of tea</a></h2>
                         <ul>
                         	<li><a href="#">A brief history</a></li>
@@ -103,7 +99,7 @@
                         	<li><a href="#">Nav Item Level 3</a></li>
                         </ul>                    
                     </div>
-                    <div class="megaDropSubDiv">
+                    <div class="megaDropSubDiv lastDropSubDiv">
                     	<h2><a href="#">Nav Item Level 2</a></h2>
                         <ul>
                         	<li><a href="#">Nav Item Level 3</a></li>
@@ -142,7 +138,7 @@
                         	<li><a href="#">Nav Item Level 3</a></li>
                         </ul>                    
                     </div>
-                    <div class="megaDropSubDiv">
+                    <div class="megaDropSubDiv lastDropSubDiv">
                     	<h2><a href="#">Nav Item Level 2</a></h2>
                         <ul>
                         	<li><a href="#">Nav Item Level 3 Nav Item Level 3</a></li>
@@ -180,7 +176,7 @@
                         	<li><a href="#">Nav Item Level 3</a></li>
                         </ul>                    
                     </div>
-                    <div class="megaDropSubDiv">
+                    <div class="megaDropSubDiv lastDropSubDiv">
                     	<h2><a href="#">Nav Item Level 2</a></h2>
                         <ul>
                         	<li><a href="#">Nav Item Level 3</a></li>
@@ -226,7 +222,7 @@
                         	<li><a href="#">Nav Item Level 3</a></li>
                         </ul>                    
                     </div>                    
-                    <div class="megaDropSubDiv">
+                    <div class="megaDropSubDiv lastDropSubDiv">
                     	<h2><a href="#">More News Item Level 2</a></h2>
                         <ul>
                         	<li><a href="#">Nav Item Level 3 Nav Item Level 3</a></li>

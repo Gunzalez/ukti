@@ -14,6 +14,7 @@ Mobile nav - 3hrs
 MegaDropDown - 4hrs
 Refactor - 1hr
 Carousel, Navigation - 3hr
+Make nav like Costa - 1hr
 
 
 
