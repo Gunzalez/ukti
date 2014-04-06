@@ -13,16 +13,21 @@ More responsive work - 2hrs
 Mobile nav - 3hrs
 MegaDropDown - 4hrs
 Refactor - 1hr
+Carousel, Navigation - 3hr
+
 
 
 TODO:
 Text shadow on navigation
-Make carousel buttons smaller
-Fix for FF
 See about Tea Facts imagery, and other in general, possible talk required.
-
 See about Fablet header area responsive bollox
 Ask about search, slide out, down?
 Fancy box attachment
 
 Mobile nav
+
+
+
+
+
+

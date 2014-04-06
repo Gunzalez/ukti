@@ -313,6 +313,33 @@ Date: 08.03.2014
 			
 		},
 		
+		_switchMegaDropDownForTheseLinks: function($curLink, $newLink){
+						
+			var self = this;			
+			
+			var curMegaDropDiv = $curLink.attr('data-mega-drop'),
+				curHeight = $('#'+curMegaDropDiv).height(),
+				newMegaDropDiv =  $newLink.attr('data-mega-drop'),
+				newHeight = $('#'+newMegaDropDiv).height();
+			
+			$newLink.addClass('active');
+			$('#'+newMegaDropDiv).fadeOut();	
+			
+			$('#'+curMegaDropDiv).fadeOut(function(){
+				
+				self.$megaDropDown.animate({
+					height: newHeight
+				}, 50, function(){
+					
+					$('#'+newMegaDropDiv).css('top',0).fadeIn();
+					$('#'+curMegaDropDiv).css('top', '-'+curHeight+'px').fadeIn();
+					$curLink.removeClass('active');
+					self.isBusy = false;
+				});
+			});
+			
+		},
+		
 		_showMegaDropDownForThisLink: function($link, callback){
 						
 			var self = this,
@@ -320,7 +347,9 @@ Date: 08.03.2014
 			
 			$link.addClass('active');
 												
-			self.$megaDropDown.height($('#'+megaDropDivId).height());
+			self.$megaDropDown.animate({
+				height: $('#'+megaDropDivId).height()
+			}, 250);
 			
 			$('#'+megaDropDivId).animate({
 				top: 0	
@@ -345,14 +374,16 @@ Date: 08.03.2014
 						
 			var self = this,
 				megaDropDivId = $link.attr('data-mega-drop');
+												
+			self.$megaDropDown.animate({
+				height: 0
+			}, 250);
 			
 			$('#'+megaDropDivId).animate({									
 				top: '-'+$('#'+megaDropDivId).height()+'px'									
 			}, 250, function(){
 				
-				$link.removeAttr('class');
-				
-				self.$megaDropDown.height(0);
+				$link.removeAttr('class');				
 				
 				if( callback != null ){
 					
@@ -389,14 +420,9 @@ Date: 08.03.2014
 								var $curActiveItem = $('.active', self.$links.parent()),
 									curDropDivId = $curActiveItem.attr('data-mega-drop');
 									
-								if( typeof curDropDivId !== 'undefined' ){
+								if( typeof curDropDivId !== 'undefined' ){									
 									
-									var callback = function(){
-										self._showMegaDropDownForThisLink($(evt.target), null);
-									}
-									
-									self._hideMegaDropDownForThisLink($curActiveItem, callback);
-									
+									self._switchMegaDropDownForTheseLinks($curActiveItem, $(this));																		
 									
 								} else {
 									
