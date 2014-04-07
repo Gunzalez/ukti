@@ -244,7 +244,9 @@ Date: 08.03.2014
 			$mainPage.removeAttr('style');
 				
 			$('body').prepend($mobileNav).prepend($mainPage);
+			
 			$('#the-stage').remove();
+			
 		},
 		
 		init: function(){
@@ -285,6 +287,7 @@ Date: 08.03.2014
 	uktandia.megadropdown = {
 		
 		/* properties */
+		timer: '',
 		isBusy: false,
 		$links: $('.main-nav a'),
 		$megaDropDivs: $('.megaDropDiv'),
@@ -327,6 +330,8 @@ Date: 08.03.2014
 				newMegaDropDiv =  $newLink.attr('data-mega-drop'),
 				newHeight = $('#'+newMegaDropDiv).height();
 			
+			self.$links.removeClass('active');
+			
 			$newLink.addClass('active');
 			
 			$('#'+newMegaDropDiv).fadeOut();	
@@ -341,8 +346,6 @@ Date: 08.03.2014
 					
 					$('#'+curMegaDropDiv).css('top', '-'+curHeight+'px').fadeIn();
 					
-					$curLink.removeAttr('class');
-					
 					self.isBusy = false;
 					
 				});
@@ -350,7 +353,7 @@ Date: 08.03.2014
 			
 		},
 		
-		_showMegaDropDownForThisLink: function($link, callback){
+		_showMegaDropDownForThisLink: function($link){
 						
 			var self = this,
 				megaDropDivId = $link.attr('data-mega-drop');
@@ -367,24 +370,15 @@ Date: 08.03.2014
 				
 				self.isBusy = false;
 				
-				if( callback != null ){
-					
-					callback();	
-					
-				} else {
-					
-					self.isBusy = false;
-										
-				}
 			});
 						
 		},		
 		
-		_hideMegaDropDownForThisLink: function($link, callback){
+		_hideMegaDropDownForThisLink: function($link){
 						
 			var self = this,
 				megaDropDivId = $link.attr('data-mega-drop');
-												
+				
 			self.$megaDropDown.animate({
 				height: 0
 			}, 250);
@@ -394,32 +388,94 @@ Date: 08.03.2014
 			}, 250, function(){
 				
 				$link.removeAttr('class');
-								
-				if( callback != null ){
-					
-					callback();	
-					
-				} else {
-					
-					self.isBusy = false;					
-				}
+				
+				self.isBusy = false;
 				
 			});
 			
 		},
 		
-		init: function(){
-						
+		_startMegaDropDownShutDown: function($link){
+			
+			console.log('_startMegaDropDownShutDown')
+			
 			var self = this;
 			
-			self.$links.each(function(index, obj){
+			var $curActiveItem = $('.active', self.$links.parent()),
+				curDropDivId = $curActiveItem.attr('data-mega-drop');
 				
-				$(obj).on('click',function(evt){					
+			if( typeof curDropDivId !== 'undefined' ){									
+										
 				
-					var megaDropDivId = $(this).attr('data-mega-drop');
-					if (typeof megaDropDivId !== 'undefined' && megaDropDivId !== false) {						
+			} else {
+				
+				self._hideMegaDropDownForThisLink($link);
+																				
+				clearInterval(self.timer);
+				
+			}		
+			
+		},
+		
+		init: function(){
+				
+			var self = this;
+			
+/*			if(uktandia.properties.isMobile){*/
+			
+				self.$links.each(function(index, obj){
+					
+					$(obj).on('click',function(evt){					
+					
+						var megaDropDivId = $(this).attr('data-mega-drop');
+						if (typeof megaDropDivId !== 'undefined' && megaDropDivId !== false) {						
+							
+							evt.preventDefault();
+							
+							if(!self.isBusy){
+								
+								self.isBusy = true;
+								
+								if(!$(this).hasClass('active')){
+									
+									var $curActiveItem = $('.active', self.$links.parent()),
+										curDropDivId = $curActiveItem.attr('data-mega-drop');
+										
+									if( typeof curDropDivId !== 'undefined' ){									
+										
+										self._switchMegaDropDownForTheseLinks($curActiveItem, $(this));																		
+										
+									} else {
+										
+										self._showMegaDropDownForThisLink($(this));
+										
+									}
+									
+								} else {
+									
+									self._hideMegaDropDownForThisLink($(this));
+									
+								}
+								
+							}
+							
+						}
+						
+					});
+				
+				});
+				
+/*			} else {			
+				
+				self.$links.each(function(index, obj){
+					
+					$(obj).on('click',function(evt){
 						
 						evt.preventDefault();
+						
+					});
+					
+					$(obj).on('mouseenter',function(){
 						
 						if(!self.isBusy){
 							
@@ -428,30 +484,41 @@ Date: 08.03.2014
 							if(!$(this).hasClass('active')){
 								
 								var $curActiveItem = $('.active', self.$links.parent()),
-									curDropDivId = $curActiveItem.attr('data-mega-drop');
+									curDropDivId = $curActiveItem.attr('data-mega-drop'),
+									$thisLink = $(this);
 									
 								if( typeof curDropDivId !== 'undefined' ){									
 									
-									self._switchMegaDropDownForTheseLinks($curActiveItem, $(this));																		
+									self._switchMegaDropDownForTheseLinks($curActiveItem, $thisLink);																		
 									
 								} else {
 									
-									self._showMegaDropDownForThisLink($(this), null);
+									self._showMegaDropDownForThisLink($thisLink);
 									
-								}
-								
-							} else {
-								
-								self._hideMegaDropDownForThisLink($(this), null);
+									self.timer = setInterval(function(){
+										
+										self._startMegaDropDownShutDown($thisLink);	
+										
+									}, 500);
+									
+								}								
 								
 							}
 							
 						}
-					}
+						
+					});
+					
+					$(obj).on('mouseleave',function(){
+						
+						$(obj).removeClass('active');
+						
+					});
+					
 					
 				});
-			
-			});
+				
+			}*/
 			
 			self._adjustMegaDivHeights();
 			
