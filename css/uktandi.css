@@ -636,7 +636,7 @@ h3, h4, h5  {
 
 .tea-list form .select {
 	font-family: arial, verdana;
-	font-size: 0.9em;
+	font-size: 1.0em;
 	color: #79714f;
 	padding: 3px 6px;
 	width: 230px;
@@ -656,14 +656,21 @@ h3, h4, h5  {
 	padding: 3px 6px;
 	cursor: pointer;
 	margin: 5px 5px 5px 0;
-	border: 1px solid #f7f7f7;
+	border: 1px solid #fff;
 	outline: none;
+	-webkit-transition: background-color 0.5s;
+  	-moz-transition: background-color 0.5s;
+  	-o-transition: background-color 0.5s;
+  	transition: background-color 0.5s;
 }
 
 .tea-list form .submit:hover {
 	color: #79714f;
 	background-color: #fff;
-	border: 1px solid #fff;
+	-webkit-transition: background-color 0.5s;
+  	-moz-transition: background-color 0.5s;
+  	-o-transition: background-color 0.5s;
+  	transition: background-color 0.5s;
 }
 
 
@@ -747,8 +754,7 @@ h3, h4, h5  {
 }
 
 .article .title-block .main-image {
-	float: left;
-	
+	float: left;	
 }
 
 .article .title-block .main-list {
@@ -866,14 +872,34 @@ h3, h4, h5  {
 	float: right;
 }
 
-.list .feature h1 {
+.list h1 {
 	margin: 0;
 	padding: 0;
 	color: #79714f;
-	font-family: 'Sri-TSCRegular';
-	font-weight: normal;
-	font-size: 3.0em;
+	font-size: 2.5em;
 	float: left;
+}
+
+.list .maps h1 {
+	float: none;
+}
+
+.list .maps .heading {
+	border-bottom: 1px solid #ccc;
+	padding-bottom: 5px;
+	margin-bottom: 10px;
+}
+
+.maps-on-mobile {
+	display: none;
+}
+
+.maps-on-desktop {
+	display: block;
+}
+
+.list h1 .list-type {
+	font-size: 0.8em;
 }
 
 .list .feature .contact-details {
@@ -914,8 +940,11 @@ h3, h4, h5  {
 
 .list .story {
 	width: 620px;
-	margin-top: -45px;
 	float: left;
+}
+
+.list .story.raised {
+	margin-top: -45px;
 }
 
 
@@ -1005,7 +1034,6 @@ h3, h4, h5  {
 .list .section.gallery ul li a img {
 	width: 100%;
 }
-
 
 .list .side-bar {
 	float: right;
@@ -1101,14 +1129,90 @@ h3, h4, h5  {
 }
 
 
+/* listing pages */
+#formListings:after { 
+   content: "."; 
+   visibility: hidden; 
+   display: block; 
+   height: 0; 
+   clear: both;
+}
 
+.map-intro {
+	float: left;
+	width: 240px;
+}
 
+.map-image {
+	float: right;
+	width: 380px;
+	padding-top: 10px;
+}
 
+#formListings .row {
+	padding-bottom: 20px;
+}
 
+#formListings label,
+#formListings .label {
+	color: #79714f;
+	font-family: 'Sri-TSCRegular';
+	font-weight: normal;
+	font-size: 1.6em;
+	padding-bottom: 5px;
+	display: block;
+	margin: 0;
+}
+
+#formListings select {
+	font-family: arial, verdana;
+	font-size: 1.0em;
+	color: #79714f;
+	padding: 3px 6px;
+	margin: 0;
+	border: 0;
+	outline: 0;
+	cursor: pointer;
+	border: 1px solid #ccc;
+	background-color: #fff;
+	width: 200px
+}
+
+#formListings .hint {
+	background: url(../images/bg-hint.jpg) top right no-repeat;
+	padding-top: 10px;
+}
+
+#formListings .submit {
+	background: #fff;
+	color: #79714f;
+	border: none;
+	padding: 3px 6px;
+	border: 1px solid #79714f;	
+	outline: none;
+	cursor: pointer;
+	-webkit-transition: background-color 0.5s;
+  	-moz-transition: background-color 0.5s;
+  	-o-transition: background-color 0.5s;
+  	transition: background-color 0.5s;
+}
+
+#formListings .submit:hover {
+	background: #79714f;
+	color: #fff;
+	-webkit-transition: background-color 0.5s;
+  	-moz-transition: background-color 0.5s;
+  	-o-transition: background-color 0.5s;
+  	transition: background-color 0.5s;
+}
 
 
 
 /* footer */
+.footer {
+	padding-bottom: 30px !important;
+}
+
 .footer .footer-nav {
 	margin: 0;
 	padding: 0 0 10px 0;
@@ -1281,7 +1385,7 @@ h3, h4, h5  {
 	}
 	
 	.content-block-3 .block {
-		height: auto;
+		height: 160px;
 		background-color: #bcc140;
 		background-position: center right;
 		-webkit-border-radius: 0px 0px 0px 12px;
@@ -1319,17 +1423,12 @@ h3, h4, h5  {
 	
 	.article .title-block h1 {
 		width: auto;
-		font-size: 2.2em;
 	}	
 	
 	/* list page */	
 	.content,	
 	.list .feature {
 		width: 100%;
-	}
-	
-	.list .main-image {
-		display: none;
 	}	
 	
 	.list .feature .heading,
@@ -1337,7 +1436,7 @@ h3, h4, h5  {
 		width: 100%;
 		margin-right: -320px;
 		border: none;
-	}
+	}	
 	
 	.list .feature .logo {
 		margin-right: 320px;
@@ -1348,9 +1447,45 @@ h3, h4, h5  {
 		margin-right: -320px;
 	}	
 	
+	.list .maps .heading,
+	.list .maps form {
+		margin-right: 320px;
+	}
+	
+	.map-intro,
+	.map-image {
+		float: none;
+		width: 100%;
+		text-align: center;
+	}
+	
+/*	.map-intro p {
+		text-align: left;
+	}*/		
+	
+	#formListings .map-intro select {
+		margin: 0 auto;	
+	}
+	
+	#formListings .hint {
+		display: inline-block;
+	}
+	
+	
+	
+	
+	.list .story .heading:after { 
+	   content: "."; 
+	   visibility: hidden; 
+	   display: block; 
+	   height: 0; 
+	   clear: both;
+	}
+	
 	.list .story .section {
 		margin-right: 320px;
 	}
+	
 	
 	.list .section .detail {
 		width: 100%;
@@ -1454,15 +1589,21 @@ h3, h4, h5  {
 	
 	/* carousel */
 	#carousel .controls ul {
-		padding: 15px 5px;
+		padding: 12px 5px;
 	}
 
 	#carousel .controls a.button {
-		height: 20px;
-		width: 20px;
-		-moz-border-radius:10px;
-		-webkit-border-radius: 10px;
-	    border-radius: 10px;			
+		height: 14px;
+		width: 14px;
+		-moz-border-radius: 7px;
+		-webkit-border-radius: 7px;
+	    border-radius: 7px;			
+	}
+	
+	/* maps */
+	.list .maps .heading,
+	.list .maps form {
+		margin-right: 0;
 	}
 	
 	
@@ -1493,6 +1634,10 @@ h3, h4, h5  {
 	.list .story {
 		margin-top: 15px;
 	}
+	.list .story.maps {
+		margin-top: 5px;
+	}
+	
 	
 	.list .story,
 	.list .feature .logo,
@@ -1513,13 +1658,19 @@ h3, h4, h5  {
 		margin-bottom: 20px;
 	}
 	
+	.list .main-image {
+		display: none;		
+	}
+	
 	.list .block {
 		float: none;
 		height: auto;
 		background-color: #bcc140;
 		background-position: center right;
+		-webkit-border-radius: 0px 0px 0px 12px;
+		-moz-border-radius: 0px 0px 0px 12px;
+		border-radius: 0px 0px 0px 12px;
 	}	
-	
 	
 	.list .block p {
 		padding: 0 0 10px 12px;
@@ -1539,8 +1690,7 @@ h3, h4, h5  {
 	
 	#header .main-nav li a {
 		padding: 10px 13px;
-	}
-	
+	}	
 	
 	.content,	
 	.list .feature {
@@ -1754,15 +1904,21 @@ h3, h4, h5  {
 	#carousel .controls ul li a {
 		display: block;
 	}
-	
-	
-	
 
 	.content-half {
 		width: 100%;
 		float: none;
 		padding-bottom: 1px;
 		margin-bottom: 10px;
+	}
+	
+	/* maps */
+	#formListings .maps-on-mobile {
+		display: block;
+	}
+	
+	#formListings .maps-on-desktop {
+		display: none;
 	}
 }
 

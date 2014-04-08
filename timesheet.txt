@@ -15,17 +15,41 @@ MegaDropDown - 4hrs
 Refactor - 1hr
 Carousel, Navigation - 3hr
 Make nav like Costa - 1hr
+Image maps page and responsive - 4hrs
 
 
 
 TODO:
+---------------------
 Text shadow on navigation
-See about Tea Facts imagery, and other in general, possible talk required.
-See about Fablet header area responsive bollox
-Ask about search, slide out, down?
 Fancy box attachment
+Build image map
+Maps page form validation
+Clone maps page for other template
 
+
+Epic TODO:
+---------------------
+Desktop nav
 Mobile nav
+
+
+May need attention
+--------------------------
+Header sizes, should make responsive?
+
+
+
+Questions mark
+---------------------
+Tablet header area, including aux nav and search
+Tea facts imagery for different screens
+
+
+
+Tech query
+-------------------
+Use of 2 UL elements in gallery, may not work with fancy box.
 
 
 
