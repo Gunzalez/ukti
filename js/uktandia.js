@@ -284,6 +284,103 @@ Date: 08.03.2014
 		
 	} /* mobile end */
 	
+	uktandia.mapforms = {
+		
+		$form: $('#formListings'),
+		$map: $('.map-image', this.$form),
+		
+		_checkIfThisFormIsValid: function(){
+			
+			var self = this
+			
+			if($('#category', self.$form).val() == 'null' || $('#location', self.$form).val() == 'null'){
+
+				self.$form.addClass('error');
+				
+				return false;
+				
+			} else {
+				
+				return true;
+				
+			}				
+			
+		},
+		
+		_setMapToThisLocation: function($obj){
+						
+			var self = this,
+				srcArray = [],
+				location = $obj.attr('class'),
+				newImgSrc = 'map-'+location+'.png'
+				curSrc = $('img', self.$map).attr('src');
+			
+			srcArray = curSrc.split('/');
+			
+			srcArray.pop();
+			
+			srcArray.push(newImgSrc);
+			
+			var newImgSrc = srcArray.join('/');
+		
+			$('img', self.$map).attr('src', newImgSrc);
+			
+		},
+		
+		_unSetMapAnyLocation: function(){
+						
+			var self = this,
+				resetSrc = $('img', self.$map).attr('data-location-reset');
+				
+			$('img', self.$map).attr('src', resetSrc);
+			
+		},		
+		
+		init: function(){
+						
+			var self = this;
+			
+			if(!$('#formListings').length>0){
+				return false;
+			}
+			
+			$('[href="#"]', self.$map).each(function(index, obj){
+				
+				$(obj).on('click',function(evt){
+					
+					evt.preventDefault();
+					
+					var pickedLocation = $(obj).attr('class');
+					
+					$('#location', self.$form).val(pickedLocation).trigger('change');
+					
+					$('#submit', self.$form).trigger('click');
+					
+				}).on('mouseenter',function(){
+					
+					self._setMapToThisLocation($(obj));
+					
+				}).on('mouseleave',function(){
+					
+					self._unSetMapAnyLocation();
+					
+				});
+				
+			});
+			
+			$(self.$form).on('submit',function(){
+				
+				var isValid = self._checkIfThisFormIsValid();
+
+				if(!isValid){
+					return false;	
+				}
+				
+			});
+			
+		}		
+	},
+	
 	uktandia.megadropdown = {
 		
 		/* properties */
@@ -397,7 +494,7 @@ Date: 08.03.2014
 		
 		_startMegaDropDownShutDown: function($link){
 			
-			console.log('_startMegaDropDownShutDown')
+			//console.log('_startMegaDropDownShutDown')
 			
 			var self = this;
 			
@@ -546,6 +643,8 @@ Date: 08.03.2014
 		uktandia.mobile.init();
 		
 		uktandia.megadropdown.init();
+		
+		uktandia.mapforms.init();
 		
 		$(window).on('resize',function(){			
 			

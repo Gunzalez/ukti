@@ -15,8 +15,8 @@ MegaDropDown - 4hrs
 Refactor - 1hr
 Carousel, Navigation - 3hr
 Make nav like Costa - 1hr
-Image maps page and responsive - 4hrs
-
+Image maps page / start - 4hrs
+Maps page form validation - 4hrs
 
 
 TODO:
@@ -24,7 +24,7 @@ TODO:
 Text shadow on navigation
 Fancy box attachment
 Build image map
-Maps page form validation
+
 Clone maps page for other template
 
 

@@ -1146,11 +1146,55 @@ h3, h4, h5  {
 .map-image {
 	float: right;
 	width: 380px;
-	padding-top: 10px;
+	text-align: center;
 }
 
-#formListings .row {
+.maps-container {
+	position: relative;
+	width: 303px;
+	height: 473px;
+	margin: 0 auto;
+}
+
+.map-image a {
+	position: absolute;
+	font-size: 1.7em;
+	color: #666;
+	text-decoration: none;
+	top: 20px;
+	left: 56px;
+}
+
+.map-image a:hover {
+	color: #79714f;
+}
+
+.map-image a.london { left: 260px; top: 390px; }
+.map-image a.wales { left: 30px; top: 300px; }
+.map-image a.north-west { left: 20px; top: 240px; }
+.map-image a.south-east { left: 155px; top: 415px; }
+.map-image a.east { left: 285px; top: 320px; }
+.map-image a.midlands { left: 235px; top: 265px; }
+.map-image a.scotland { left: 175px; top: 105px; }
+.map-image a.north-east { left: 195px; top: 185px; }
+.map-image a.south-west { left: -15px; top: 380px; }
+
+#formListings .row-1 {
 	padding-bottom: 20px;
+}
+
+#formListings .row-3 {
+	padding: 20px 0;
+}
+
+#formListings .error {
+	color: #A42E30;
+	font-weight: bold;
+	display: none;	
+}
+
+#formListings.error .error {
+	display: block;
 }
 
 #formListings label,
