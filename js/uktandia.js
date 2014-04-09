@@ -356,15 +356,20 @@ Date: 08.03.2014
 					
 					$('#submit', self.$form).trigger('click');
 					
-				}).on('mouseenter',function(){
+				})
+				
+				if(!uktandia.properties.isMobile){
 					
-					self._setMapToThisLocation($(obj));
-					
-				}).on('mouseleave',function(){
-					
-					self._unSetMapAnyLocation();
-					
-				});
+					$(obj).on('mouseenter',function(){
+						
+						self._setMapToThisLocation($(obj));
+						
+					}).on('mouseleave',function(){
+						
+						self._unSetMapAnyLocation();
+						
+					});
+				}
 				
 			});
 			
