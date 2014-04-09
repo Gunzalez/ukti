@@ -749,8 +749,6 @@ h3, h4, h5  {
 .article .title-block h1 {
 	font-size: 2.5em;
 	color: #bcc240;
-	line-height: 100%;
-	padding-bottom: 10px;
 }
 
 .article .title-block .main-image {
@@ -771,8 +769,6 @@ h3, h4, h5  {
 	color: #79714f;
 	font-family: 'Sri-TSCRegular';
 }
-
-
 
 .article h2 {
 	padding: 0 0 5px 0;
@@ -862,7 +858,7 @@ h3, h4, h5  {
 .list .feature .heading {
 	width: 620px;
 	float: left;
-	border-bottom: 1px solid #ccc;
+	border-bottom: 1px solid #79714f;
 	padding-bottom: 5px;
 	margin-bottom: 10px;
 }
@@ -884,11 +880,19 @@ h3, h4, h5  {
 	float: none;
 }
 
-.list .maps .heading {
-	border-bottom: 1px solid #ccc;
+.article .heading {
+	border-bottom: 1px solid #bcc240;
 	padding-bottom: 5px;
 	margin-bottom: 10px;
 }
+
+.list .maps .heading {
+	border-bottom: 1px solid #79714f;
+	padding-bottom: 5px;
+	margin-bottom: 10px;
+}
+
+
 
 .maps-on-mobile {
 	display: none;
@@ -1695,7 +1699,7 @@ h3, h4, h5  {
 	
 	.list .feature .heading {
 		margin-top: 5px;
-		border-bottom: 1px solid #ccc;
+		border-bottom: 1px solid #79714f;
 	}	
 	
 	.list .side-bar {

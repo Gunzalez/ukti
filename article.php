@@ -38,7 +38,9 @@
        <div class="article">
            <div class="story">
            		<div class="title-block">
-                	<h1>History of Tea</h1>                    
+                	<div class="heading">                    
+	                	<h1>History of Tea</h1>
+                    </div>                 
                     <img src="images/bg-article.jpg" class="main-image" width="326" height="184" alt="History of Tea">
                     <ul class="main-list">
                     	<li>Talk himself out of a job!</li>

@@ -16,7 +16,7 @@ Refactor - 1hr
 Carousel, Navigation - 3hr
 Make nav like Costa - 1hr
 Image maps page / start - 4hrs
-Maps page form validation - 4hrs
+Maps page and form validation - 4hrs
 
 
 TODO:
@@ -24,8 +24,7 @@ TODO:
 Text shadow on navigation
 Fancy box attachment
 Build image map
-
-Clone maps page for other template
+Clone maps page for Venues
 
 
 Epic TODO:
