@@ -23,7 +23,7 @@ TODO:
 ---------------------
 Text shadow on navigation
 Fancy box attachment
-Build image map
+iPhone window reszie bug
 Clone maps page for Venues
 
 

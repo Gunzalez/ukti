@@ -651,7 +651,7 @@ h3, h4, h5  {
 
 .tea-list form .submit {
 	background-color: transparent;
-	color: #f7f7f7;
+	color: #fff;
 	border: none;
 	padding: 3px 6px;
 	cursor: pointer;
@@ -880,18 +880,21 @@ h3, h4, h5  {
 	float: none;
 }
 
-.article .heading {
-	border-bottom: 1px solid #bcc240;
-	padding-bottom: 5px;
-	margin-bottom: 10px;
+.maps.venues h1 {
+	color: #bcc240;
 }
 
+.article .heading,
 .list .maps .heading {
 	border-bottom: 1px solid #79714f;
 	padding-bottom: 5px;
 	margin-bottom: 10px;
 }
 
+.article .heading,
+.list .maps.venues .heading {
+	border-bottom: 1px solid #bcc240;
+}
 
 
 .maps-on-mobile {
@@ -965,15 +968,6 @@ h3, h4, h5  {
    display: block; 
    height: 0; 
    clear: both;
-}
-
-.list .section h1 {
-	margin: 0;
-	padding: 0;
-	color: #79714f;
-	font-weight: normal;
-	font-size: 2.8em;
-	float: left;
 }
 
 .list .section {
@@ -1171,8 +1165,8 @@ h3, h4, h5  {
 	color: #79714f;
 }
 
-.map-image a:hover {
-	color: #79714f;
+.venues .map-image a {
+	color: #bcc240;
 }
 
 .map-image a.london { left: 260px; top: 390px; }
@@ -1202,8 +1196,7 @@ h3, h4, h5  {
 	display: block;
 }
 
-#formListings label,
-#formListings .label {
+#formListings label {
 	color: #79714f;
 	font-family: 'Sri-TSCRegular';
 	font-weight: normal;
@@ -1211,6 +1204,10 @@ h3, h4, h5  {
 	padding-bottom: 5px;
 	display: block;
 	margin: 0;
+}
+
+.venues #formListings label {
+	color: #bcc240;
 }
 
 #formListings select {
@@ -1255,7 +1252,15 @@ h3, h4, h5  {
   	transition: background-color 0.5s;
 }
 
+.venues #formListings .submit {
+	color: #bcc240;
+	border: 1px solid #bcc240;
+}
 
+.venues #formListings .submit:hover {
+	background: #bcc240;
+	color: #fff;
+}
 
 /* footer */
 .footer {
@@ -1335,6 +1340,10 @@ h3, h4, h5  {
 
 /* media queries */
 @media only screen and (max-width: 1000px)  {
+	#carousel .owl-carousel .item .slide-link {
+		padding: 13px 18px;
+	}
+	
 	#wrapper {
 		width: 94%;
 	}
@@ -1380,13 +1389,13 @@ h3, h4, h5  {
 	}
 	
 	#carousel .controls a.button {
-		background: #fff;
-		border: 1px solid #ccc;
-		height: 30px;
-		width: 30px;
-		-moz-border-radius:15px;
-		-webkit-border-radius: 15px;
-	    border-radius: 15px;		
+		background: #ccc;
+		height: 14px;
+		width: 14px;
+		-moz-border-radius: 7px;
+		-webkit-border-radius: 7px;
+	    border-radius: 7px;
+		border: none;		
 		-webkit-transition: background 0.2s ease-in-out;
 		-moz-transition: background 0.2s ease-in-out;
 		-o-transition: background 0.2s ease-in-out;
@@ -1394,8 +1403,8 @@ h3, h4, h5  {
 	}
 	
 	#carousel .controls a.button.active {
-		background: #F87108;
-		border: 1px solid #F87108;	
+		background: #F87108;	
+		border: none;		
 		-webkit-transition: background 0.2s ease-in-out;
 		-moz-transition: background 0.2s ease-in-out;
 		-o-transition: background 0.2s ease-in-out;
@@ -1508,9 +1517,13 @@ h3, h4, h5  {
 		text-align: center;
 	}
 	
-/*	.map-intro p {
+	.map-intro p {
 		text-align: left;
-	}*/		
+	}
+	
+	.map-intro p.error {
+		text-align: center;
+	}		
 	
 	#formListings .map-intro select {
 		margin: 0 auto;	
@@ -1640,14 +1653,6 @@ h3, h4, h5  {
 	#carousel .controls ul {
 		padding: 12px 5px;
 	}
-
-	#carousel .controls a.button {
-		height: 14px;
-		width: 14px;
-		-moz-border-radius: 7px;
-		-webkit-border-radius: 7px;
-	    border-radius: 7px;			
-	}
 	
 	/* maps */
 	.list .maps .heading,
@@ -1672,19 +1677,21 @@ h3, h4, h5  {
 	
 	.article .share-this-article {
 		padding: 5px 10px;
-	}	
-	
-	.article {
-		padding-top: 10px;
 	}
 	
-	
-	/* list page */
-	.list .story {
-		margin-top: 15px;
+	.story,  
+	.feature {
+		padding-top: 5px;
 	}
-	.list .story.maps {
-		margin-top: 5px;
+	
+	.article .title-block h1,
+	.list h1 {
+		font-size: 2.2em;
+	}
+	
+	/* list page */	
+	.content, .list .feature {
+		padding-bottom: 20px;
 	}
 	
 	
@@ -1698,7 +1705,6 @@ h3, h4, h5  {
 	
 	
 	.list .feature .heading {
-		margin-top: 5px;
 		border-bottom: 1px solid #79714f;
 	}	
 	
@@ -1791,6 +1797,12 @@ h3, h4, h5  {
 		-webkit-border-radius: 0px 0px 0px 12px;
 		-moz-border-radius: 0px 0px 0px 12px;
 		border-radius: 0px 0px 0px 12px;
+	}
+	
+	
+	.article .title-block h1,
+	.list h1 {
+		font-size: 2.0em;
 	}
 		
 }

@@ -108,7 +108,7 @@
                 <div class="block tea-list">
                 	<h2>The Tea List</h2>
                     <p>Our guide of the best afternoon tea venues and businesses.</p>
-                    <form action="listing.php" name="category-form" method="post">                 	
+                    <form action="listing-businesses.php" name="category-form" method="post">                 	
                 		<label for="list-category">Category</label>
                     	<select id="list-category" name="list-category" class="select">
                         	<option selected="selected" value="--">Please pick a category</option>

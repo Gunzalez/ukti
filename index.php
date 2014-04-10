@@ -83,10 +83,10 @@
             <div class="content-block content-block-1">
             	
                 <div class="block tea-news">
-                	<h2><a href="listing.php">News</a></h2>
+                	<h2><a href="listing-businesses.php">News</a></h2>
                     <ul>
                     	<li>
-                        	<a href="#">
+                        	<a href="listing-venues.php">
                             	<span class="title">Replace with real title</span>
                             	<span class="description">I do fancy wearing nice ear rings.</span>
                         	</a>
@@ -104,7 +104,7 @@
             <div class="content-block content-block-2">
             	
                 <div class="block tea-facts">
-                	<a href="#">
+                	<a href="listing-venues.php">
                 		<h2>Tea Facts</h2>
                     </a>
                 </div>
@@ -115,7 +115,7 @@
                 <div class="block tea-list">
                 	<h2>The Tea List</h2>
                     <p>Our guide of the best afternoon tea venues and businesses.</p>
-                    <form action="listing.php" name="category-form" method="post">                 	
+                    <form action="listing-businesses.php" name="category-form" method="post">                 	
                 		<label for="list-category">Category</label>
                     	<select id="list-category" name="list-category" class="select">
                         	<option selected="selected" value="--">Please pick a category</option>
