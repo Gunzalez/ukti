@@ -18,8 +18,8 @@
 	<!-- Stylesheets -->   
     <link rel="stylesheet" media="all" href="css/uktandi.css" />
     
-    <link href="js/library/owl.carousel.css" rel="stylesheet">
-    <link href="js/library/owl.theme.css" rel="stylesheet">
+    <link href="js/library/carousel/owl.carousel.css" rel="stylesheet">
+    <link href="js/library/carousel/owl.theme.css" rel="stylesheet">
    
     <script type="text/javascript">
     if(/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)){
@@ -165,7 +165,7 @@
     
 <script src="js/jquery-1.9.1.min.js"></script>
 <script src="js/uktandia.js"></script>
-<script src="js/library/owl.carousel.js"></script>
+<script src="js/library/carousel/owl.carousel.js"></script>
 
 </body>
 </html>

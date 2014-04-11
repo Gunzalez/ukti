@@ -25,8 +25,8 @@ TODO:
 ---------------------
 Text shadow on navigation
 Fancy box attachment
-iPhone window reszie bug
-Other listing page
+iPhone window reszie bug (suddenly vanished, hmm)
+
 
 
 

@@ -1033,6 +1033,25 @@ h3, h4, h5  {
 	width: 100%;
 }
 
+.list .section.gallery ul li a.click-me {
+	position: relative;
+}
+
+.list .section.gallery ul li a.click-me span {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	padding: 20px;
+	box-sizing: border-box;
+	text-align: center;
+	background-color: #fff;
+	background: rgb(255, 255, 255);
+	background: rgba(255, 255, 255, 0.8);
+}
+
+
 .list .side-bar {
 	float: right;
 	background-color: #f7f7f7;
@@ -1774,6 +1793,10 @@ h3, h4, h5  {
 		margin-right: 0;
 	}
 	
+	.list .story.raised {
+		margin-top: 0;
+	}
+	
 	
 	.list .feature .heading {
 		border-bottom: 1px solid #79714f;
@@ -1963,7 +1986,11 @@ h3, h4, h5  {
 	
 	.result .imagery {
 		display: none;
-	}	
+	}
+	
+	.click-to-enlarge {
+		display: none;
+	}
 	
 }
 

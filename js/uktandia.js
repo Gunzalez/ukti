@@ -184,7 +184,40 @@ Date: 08.03.2014
 			});
 			
 		}	
+		
 	} /* results end */
+	
+	
+	uktandia.gallery = {
+		
+		/* properties */
+		$gallery: $('.gallery'),		
+		
+		init: function(){
+			
+			if(!$('.gallery').length>0){
+				return false;
+			}			
+			
+			var self = this; // scope			
+				
+			var $clipImages  = $('.gallery .clip a'),
+				ranNum = Math.floor(Math.random() * $clipImages.length) + 1,
+				$hinLi = $('li', $clipImages.parents('.clip')).eq(ranNum-1),
+				$hintText = $('<span class="click-to-enlarge">Click images to enlarge</span>');
+				
+			$('a', $hinLi).append($hintText).addClass('click-me');
+				
+				
+			$('a', self.$gallery).on('click',function(){
+				$('.click-to-enlarge').remove();
+				$('.click-me').removeClass('click-me');
+			});
+			
+		}	
+		
+	} /* gallery end */	
+	
 	
 	
 	uktandia.mobile = {		
@@ -678,6 +711,8 @@ Date: 08.03.2014
 		uktandia.results.init();	
 		
 		uktandia.mobile.init();
+		
+		uktandia.gallery.init();
 		
 		uktandia.megadropdown.init();
 		

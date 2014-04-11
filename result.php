@@ -63,7 +63,7 @@
                 
             </div>    
        
-           <div class="story">
+           <div class="story raised">
                 
                 <div class="section gallery accordion">
                 	<div class="heading">
@@ -220,7 +220,7 @@
                             Mayfair<br>
                             London W1K 4HR<br>
                             <br>
-                            Phone: +44 (0)20 7629 8860<br>
+                            Phone: +44 <span>(0)20</span> 7629 8860<br>
                             Web: <a href="http://www.claridges.co.uk" target="_blank">www.claridges.co.uk</a><br>
                             Email: <a href="mailto:info@claridges.co.uk">info@claridges.co.uk</a>
                             </address>  
@@ -245,7 +245,7 @@
                             <dt>Dress code: </dt>
                             <dd>Elegant smart casual; no short, no vests, no sportswear, no flip flops, no ripped jeans and no baseball caps.</dd>
                             <dt>Reservations:</dt>
-                            <dd>Uusally essential. Call +44 (0)20 7107 88072 (Lines open Monday - Sunday, 8am - 8pm; Email <a href="mailto:dining@claridges.co.uk">dining@claridges.co.uk</a></dd>                            
+                            <dd>Uusally essential. Call +44 <span>(0)20</span> 7107 88072 (Lines open Monday - Sunday, 8am - 8pm; Email <a href="mailto:dining@claridges.co.uk">dining@claridges.co.uk</a></dd>                            
                         </dl>
 
                     </div>                    
