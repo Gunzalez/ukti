@@ -156,6 +156,36 @@ Date: 08.03.2014
 			
 		}	
 	} /* accordion end */
+		
+	
+	uktandia.results = {
+		
+		/* properties */
+		$results: $('.result'),		
+		
+		init: function(){
+			
+			if(!$('.result').length>0){
+				return false;
+			}			
+			
+			var self = this; // scope			
+				
+			self.$results.each(function(i, obj){
+				
+				var $header = $('.heading', $(obj));
+				
+				$header.on('click',function(){
+					
+					window.location = $('.show-more', $(obj)).attr('href');
+					
+				});
+												
+			});
+			
+		}	
+	} /* results end */
+	
 	
 	uktandia.mobile = {		
 		
@@ -172,7 +202,7 @@ Date: 08.03.2014
 				$slidingContainer = $('<div id="sliding-container" />'),
 				stageWidth = $(window).width(),
 				stageHeight = $(window).height(),
-				peakThrough = 45,
+				peakThrough = 48,
 				slideSpeed = 250,
 				easing = 'swing';				
 				
@@ -214,7 +244,7 @@ Date: 08.03.2014
 			$('body').prepend($theStage);
 			
 			$slidingContainer.animate({				
-				left:'-'+(stageWidth-45)+'px'	
+				left:'-'+(stageWidth-peakThrough)+'px'	
 			}, slideSpeed, easing);
 			
 		},
@@ -643,7 +673,9 @@ Date: 08.03.2014
 		
 		uktandia.carousel.init();
 		
-		uktandia.accordion.init();	
+		uktandia.accordion.init();
+		
+		uktandia.results.init();	
 		
 		uktandia.mobile.init();
 		

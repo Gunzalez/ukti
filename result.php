@@ -25,7 +25,7 @@
 		document.getElementsByTagName('html')[0].className = 'desktop';
 	};
     </script>
-	<script src="js/modernizr-2.5.3-min.js"></script>
+	
 </head>
 
 <body>
@@ -47,7 +47,7 @@
                     <h1>Claridge's</h1>
                 </div>   
                 <div class="contact-details">                
-                    <address>Claridge’s<br>
+                    <address>Claridge's<br>
                     Brook Street<br>
                     Mayfair<br>
                     London W1K 4HR<br>

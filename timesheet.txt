@@ -18,6 +18,7 @@ Make nav like Costa - 1hr
 Image maps page / start - 4hrs
 Maps page and form validation - 4hrs
 Builds Venue listing page - 3hrs
+Builds results page, responsive and everything - 3hrs
 
 
 TODO:

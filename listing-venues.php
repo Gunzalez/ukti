@@ -25,7 +25,7 @@
 		document.getElementsByTagName('html')[0].className = 'desktop';
 	};
     </script>
-	<script src="js/modernizr-2.5.3-min.js"></script>
+	
 </head>
 
 <body>
@@ -40,7 +40,7 @@
            <div class="story maps venues">
            
                 <div class="heading">
-                    <h1>The Tea List <span class="list-type">- Venues</span></h1>
+                    <h1>The Tea List <span class="smaller-text">- Venues</span></h1>
                 </div>
                 
                 <form id="formListings" name="formListings" action="index.php" method="post">

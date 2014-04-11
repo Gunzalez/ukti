@@ -28,7 +28,7 @@
 		document.getElementsByTagName('html')[0].className = 'desktop';
 	};
     </script>
-	<script src="js/modernizr-2.5.3-min.js"></script>
+	
 </head>
 
 <body>
@@ -48,7 +48,7 @@
                         	All the tea in china!
                         </h2>
                         <div class="slide-link">
-                        	<a href="list.php">Click here to read the full story!</a>
+                        	<a href="results.php">Click here to read the full story!</a>
                         </div>
                     </div>
                     <div class="item">                    	

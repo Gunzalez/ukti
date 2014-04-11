@@ -25,7 +25,7 @@
 		document.getElementsByTagName('html')[0].className = 'desktop';
 	};
     </script>
-	<script src="js/modernizr-2.5.3-min.js"></script>
+	
 </head>
 
 <body>
