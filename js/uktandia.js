@@ -554,19 +554,21 @@ Date: 08.03.2014
 			
 	} /* mega drop down end */
 	
-	uktandia.setGlobalVariable = function(){
+	uktandia.setGlobalVariables = function(){
 		
-		if($('html').hasClass('mobile')){
+		if($('html').hasClass('mobile')){			
 			
 			uktandia.properties.isMobile = true;
 			
 		}
+		
+		uktandia.properties.width = $(window).width();
 			
 	}
 	
 	uktandia.init = function(){
 		
-		uktandia.setGlobalVariable();	
+		uktandia.setGlobalVariables();	
 		
 		uktandia.carousel.init();
 		
@@ -582,13 +584,23 @@ Date: 08.03.2014
 		
 		uktandia.mapforms.init();
 		
-		$(window).on('resize',function(){			
+		$(window).on('resize',function(){
 			
-			uktandia.mobile.resize();
+			var theWidthNow = $(window).width()
 			
-			uktandia.megadropdown.resize();
+			if(uktandia.properties.width != theWidthNow){
+			
+				uktandia.mobile.resize();
+				
+				uktandia.megadropdown.resize();
+		
+				uktandia.properties.width = theWidthNow;
+			
+			}
 			
 		});
+		
+		$(window).trigger('resize');
 			
 	}	
 	
