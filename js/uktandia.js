@@ -223,21 +223,23 @@ Date: 08.03.2014
 	uktandia.mobile = {		
 		
 		/* properties */
+		isBusy: false,
+		slideSpeed: 250,
+		easing: 'swing',		
 		$mobileNavBtn: $('#mobile-nav-btn'),
 		
 		/* methods */
 		_launchMobileNav: function(){
 			
-			var $mainPage = $('#wrapper'),
+			var self = this,
+				$mainPage = $('#wrapper'),
 				$mobileNav = $('#mobile-nav-list'),
 				$theStage = $('<div id="the-stage" />'),				
 				$fakeWrapper = $('<div id="fake-wrapper" />'),
 				$slidingContainer = $('<div id="sliding-container" />'),
 				stageWidth = $(window).width(),
 				stageHeight = $(window).height(),
-				peakThrough = 48,
-				slideSpeed = 250,
-				easing = 'swing';				
+				peakThrough = 48;				
 				
 			$theStage.css({
 				width: stageWidth,
@@ -272,13 +274,16 @@ Date: 08.03.2014
 			});
 			
 			$fakeWrapper.append($mainPage);
+			
 			$slidingContainer.append($fakeWrapper).append($mobileNav);
+			
 			$theStage.append($slidingContainer);
+			
 			$('body').prepend($theStage);
 			
 			$slidingContainer.animate({				
 				left:'-'+(stageWidth-peakThrough)+'px'	
-			}, slideSpeed, easing);
+			}, self.slideSpeed, self.easing);
 			
 		},
 		
@@ -296,7 +301,7 @@ Date: 08.03.2014
 		
 		_destroyMobileNav: function(){
 			
-			var $mainPage = $('#wrapper'),
+			var	$mainPage = $('#wrapper'),
 				$mobileNav = $('#mobile-nav-list'),
 				$theStage = $('<div id="the-stage" />');
 				
@@ -312,9 +317,155 @@ Date: 08.03.2014
 			
 		},
 		
+		_cloneNavigation: function(){
+			
+			var self = this,
+				$mobileNav = $('#mobile-nav-list'),			
+				$clonedNav = $('.main-nav').clone();
+				
+			$('.level-1', $clonedNav).each(function(index, obj){
+				
+				$(obj).on('click', function(evt){
+					
+					evt.preventDefault();					
+					
+					if(self.isBusy){
+						
+						return false;
+						
+					} else {
+					
+						self.isBusy = true;
+						
+						var $mobileMegaDropDown = $(obj).parent('li').find('.megaDropDown'),
+							$mobileMegaDropDownDiv = $('<div id="mobileMegaDropDownDiv"></div>'),
+							$header = $('<div class="header">'+ $(obj).html() +'</div>');
+							
+							$header.on('click', function(){
+								
+								$mobileMegaDropDownDiv.animate({
+									
+									left: $mobileNav.width()
+										
+								}, self.slideSpeed, self.easing, function(){
+									
+										$mobileMegaDropDownDiv.remove();
+									
+									});
+											
+							});
+							
+							$mobileMegaDropDownDiv.append($header);
+						
+						$('.level-2', $mobileMegaDropDown).each(function(index, obj){							
+							
+							if($(obj).parent('h2').hasClass('haslist'))	{
+							
+								var $clonedLink = $(obj).clone(),
+									$clonedList = $(obj).parents('.megaDropSubDiv').find('ul').clone();								
+								
+								$clonedLink.on('click',function(evt){
+									
+									evt.preventDefault();
+									
+									var $megaDropSubDiv = $('<div id="megaDropSubDiv"></div>'),
+										$header = $('<div class="header">'+ $clonedLink.html() +'</div>');
+										
+									$header.on('click', function(){
+									
+										$megaDropSubDiv.animate({
+											
+											left: $mobileNav.width()
+												
+										}, self.slideSpeed, self.easing, function(){
+											
+												$megaDropSubDiv.remove();
+											
+											});
+													
+									});	
+									
+									$megaDropSubDiv.append($header);
+									
+									$megaDropSubDiv.append($clonedList);
+									
+									$megaDropSubDiv.css({
+								
+										height: $mobileNav.height(),
+										width: $mobileNav.width(),
+										left: $mobileNav.width()+'px'
+										
+									});
+																
+									$mobileNav.append($megaDropSubDiv);
+									
+									$megaDropSubDiv.animate({
+														
+										left: 0
+										
+									}, self.slideSpeed, self.easing, function(){
+										
+											self.isBusy = false;	
+										
+										});
+									
+								});
+								
+								$mobileMegaDropDownDiv.append($clonedLink);								
+								
+							} else {
+								
+								var $clonedLink = $(obj).clone();
+								
+								$mobileMegaDropDownDiv.append($clonedLink);	
+								
+							}	
+							
+						});
+						
+						$mobileMegaDropDownDiv.css({
+							
+							height: $mobileNav.height(),
+							width: $mobileNav.width(),
+							left: $mobileNav.width()+'px'
+							
+						});
+						
+						$mobileNav.append($mobileMegaDropDownDiv);
+						
+						$mobileMegaDropDownDiv.animate({
+													
+							left: 0
+							
+						}, self.slideSpeed, self.easing, function(){
+							
+								self.isBusy = false;	
+							
+							});
+					
+					}
+					
+				})
+				
+			});
+			
+			$header = $('<div class="header">Menu</div>');
+									
+			$header.on('click', function(){
+			
+				$('#mobile-nav-btn a').trigger('click');
+							
+			});	
+			
+			$mobileNav.append($header);			
+			
+			$mobileNav.append($clonedNav);
+			
+		},
+		
 		init: function(){
 			
-			var self = this;
+			var self = this;			
 			
 			if($('#mobile-nav-btn').length > 0){
 				
@@ -332,9 +483,12 @@ Date: 08.03.2014
 						
 					}
 										
-				});
+				});				
+				
+				self._cloneNavigation();
 					
-			}	
+			}
+			
 		},
 		
 		resize: function(){
@@ -452,6 +606,7 @@ Date: 08.03.2014
 	uktandia.megadropdown = {
 		
 		/* properties */
+		fullWidth: 940,
 		resetLeft: '-999em',
 		$links: $('.main-nav > li'),
 		
@@ -479,12 +634,14 @@ Date: 08.03.2014
 		
 		_showMegaDropDownForThisLink: function(obj){
 			
+			var self = this;			
+			
 			var megaWidth = $('#header').width(),
 				megaLeft = $('#header').offset().left - $(obj).offset().left;
 				
 			$(obj).addClass('active');
 			
-			if( megaWidth < 940 ) {
+			if( megaWidth < self.fullWidth ) {
 				
 				$('.main-nav').addClass('notFullWidth');
 				

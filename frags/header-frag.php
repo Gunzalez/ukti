@@ -27,48 +27,48 @@
                     	<h2 class="haslist"><a href="#" class="level-2">Growing &amp; Production</a></h2>
                         <ul>
                         	<li><a href="#" class="level-3">Processing &amp; Blending</a></li>
-                        	<li><a href="#">Packaging &amp; Distribution</a></li>
-                        	<li><a href="#">Sustainability &amp; Environment</a></li>
+                        	<li><a href="#" class="level-3">Packaging &amp; Distribution</a></li>
+                        	<li><a href="#" class="level-3">Sustainability &amp; Environment</a></li>
                         </ul>                    
                     </div>
                     <div class="megaDropSubDiv">
-                    	<h2 class="haslist"><a href="#">Types of Tea</a></h2>
+                    	<h2 class="haslist"><a href="#" class="level-2">Types of Tea</a></h2>
                         <ul>
-                        	<li><a href="#">China</a></li>
-                        	<li><a href="#">India &amp; Sri Lanka</a></li>
-                        	<li><a href="#">Kenya, Malawi &amp; Zimbabwe</a></li>
-                        	<li><a href="#">Other tea producers</a></li>                            
+                        	<li><a href="#" class="level-3">China</a></li>
+                        	<li><a href="#" class="level-3">India &amp; Sri Lanka</a></li>
+                        	<li><a href="#" class="level-3">Kenya, Malawi &amp; Zimbabwe</a></li>
+                        	<li><a href="#" class="level-3">Other tea producers</a></li>                            
                         </ul>                    
                     </div>
                     <div class="megaDropSubDiv">
-                    	<h2 class="haslist"><a href="#">Tea facts &amp; Stats</a></h2>
+                    	<h2 class="haslist"><a href="#" class="level-2">Tea facts &amp; Stats</a></h2>
                         <ul>
-                        	<li><a href="#">Tea customs</a></li>
-                        	<li><a href="#">Tea paraphernalia</a></li>
-                        	<li><a href="#">AQ's &amp; Glossary</a></li>
+                        	<li><a href="#" class="level-3">Tea customs</a></li>
+                        	<li><a href="#" class="level-3">Tea paraphernalia</a></li>
+                        	<li><a href="#" class="level-3">AQ's &amp; Glossary</a></li>
                         </ul>                    
                     </div>
                     <div class="megaDropSubDiv">
-                    	<h2 class="haslist"><a href="#">Tea Ceremonies</a></h2>
+                    	<h2 class="haslist"><a href="#" class="level-2">Tea Ceremonies</a></h2>
                         <ul>
-                        	<li><a href="#">Japan</a></li>
-                        	<li><a href="#">Russia</a></li>
-                        	<li><a href="#">China</a></li>
-                        	<li><a href="#">North/South Korea</a></li>
+                        	<li><a href="#" class="level-3">Japan</a></li>
+                        	<li><a href="#" class="level-3">Russia</a></li>
+                        	<li><a href="#" class="level-3">China</a></li>
+                        	<li><a href="#" class="level-3">North/South Korea</a></li>
                         </ul>                    
                     </div>
                     <div class="megaDropSubDiv">
-                    	<h2 class="haslist"><a href="#">History of tea</a></h2>
+                    	<h2 class="haslist"><a href="#" class="level-2">History of tea</a></h2>
                         <ul>
-                        	<li><a href="#">A brief history</a></li>
-                        	<li><a href="#">The beginnings of tea</a></li>
-                        	<li><a href="#">East india company</a></li>
-                        	<li><a href="#">Catherin of Braganza</a></li>
-                        	<li><a href="#">Tea smuggling</a></li>
-                        	<li><a href="#">Boston tea party</a></li>
-                        	<li><a href="#">Tea Clippers</a></li>
-                        	<li><a href="#">London tea auction</a></li>
-                        	<li><a href="#">A social history</a></li>
+                        	<li><a href="#" class="level-3">A brief history</a></li>
+                        	<li><a href="#" class="level-3">The beginnings of tea</a></li>
+                        	<li><a href="#" class="level-3">East india company</a></li>
+                        	<li><a href="#" class="level-3">Catherin of Braganza</a></li>
+                        	<li><a href="#" class="level-3">Tea smuggling</a></li>
+                        	<li><a href="#" class="level-3">Boston tea party</a></li>
+                        	<li><a href="#" class="level-3">Tea Clippers</a></li>
+                        	<li><a href="#" class="level-3">London tea auction</a></li>
+                        	<li><a href="#" class="level-3">A social history</a></li>
                         </ul>                    
                     </div>
                     <div class="megaDropSubDivWithImage">
