@@ -205,12 +205,10 @@ h3, h4, h5  {
 }
 
 #header .main-nav {
-	float: right;
 	position: absolute;
 	right: 0;
 	bottom: 0;
 	list-style: none;
-	display: inline;
 	margin: 0;
 	padding: 0;
 }
@@ -226,9 +224,10 @@ h3, h4, h5  {
 #header .main-nav li {
 	float: left;
 	border-left: 1px solid #ccc;
+	position: relative;
 }
 
-#header .main-nav li a {
+#header .main-nav li .level-1 {
 	display: block;
 	font-size: 1.5em;
 	line-height: 99%;
@@ -238,83 +237,76 @@ h3, h4, h5  {
 	font-family: 'Sri-TSCRegular';
 }
 
-.desktop #header .main-nav li a:hover,
-#header .main-nav li a.active {
+.desktop #header .main-nav li a.level-1:hover,
+#header .main-nav li.active a.level-1 {
 	background-color: #7a7250;
 	color: #fff;
 }
 
-#megaDropDown {
-	width: 100%;
+.megaDropDown {
 	position: absolute;
-	left: 0;
+	background-color: #7a7250;
 	z-index: 3;
-	color: #fff;
-	overflow: hidden;
-	background: url(../images/mega-drop.png) top right repeat-y #7a7250;
-}
-
-.megaDropDiv {
-	width: 100%;
-	position: absolute;
+	width: 940px;
+	left: -999em;
 	-webkit-box-shadow: inset 0px 3px 2px 0px rgba(51,51,51,0.17);
 	-moz-box-shadow: inset 0px 3px 2px 0px rgba(51,51,51,0.17);
 	box-shadow: inset 0px 3px 2px 0px rgba(51,51,51,0.17);
 }
 
-
-/* for mobile */
-.megaDropDiv .padding {
-	padding: 12px 18px;
-}
-
-.megaDropDiv .padding:after { 
-   content: "."; 
-   visibility: hidden; 
-   display: block; 
-   height: 0; 
-   clear: both;
-}
-
-.megaDropDiv a {
+#header .main-nav .megaDropDown a {
 	color: #fff;
 	text-decoration: none;
 	display: block;
 }
 
-.megaDropDiv a:hover {
-	background: #958e73;
+.megaDropSubDiv {
+	float: left;
+	width: 156px;
+	padding-top: 8px;
+	padding-bottom: 12px;
 }
 
-.megaDropDiv h2 {
-	font-size: 1.0em;
+.megaDropSubDiv h2 {
+	margin: 0 8px;
+}
+
+.megaDropSubDiv h2 a {
+	font-size: 0.80em;
 	padding-bottom: 2px;
-	line-height: 120%;
+	line-height: 130%;
 	font-family: arial, verdana;
 }
 
-.megaDropDiv ul {
-	margin: 0;
-	padding: 0;
+.megaDropSubDiv .haslist a {
+	border-bottom: 1px solid #ccc;
+}
+
+.megaDropSubDiv ul {
+	padding: 2px 0 0 0;
+	margin: 0 8px;
 	list-style: none;
 }
 
-.megaDropDiv ul li a {
-	font-size: 0.90em;
-	line-height: 120%;
-	margin: 1px 0;	
+#header .main-nav .megaDropSubDiv ul li {
+	border: none;
+	float: none;
 }
 
-.megaDropSubDiv {
-	float: left;
-	width: 135px;
-	padding-right:16px;
+.megaDropSubDiv a {	
+	line-height: 120%;
+	padding: 2px 6px;
+}
+
+.megaDropSubDiv a:hover {
+	background: #958e73;
 }
 
 .megaDropSubDivWithImage {
 	float: right;
 	width: 125px;
-	margin-right: 10px;
+	margin-right: 20px;
+	margin-top: 10px;
 }
 
 .megaDropSubDivWithImage img {
@@ -324,6 +316,30 @@ h3, h4, h5  {
 .megaDropSubDivWithImage p {
 	padding: 8px 0;
 	font-size: 0.90em;
+	color: #fff;
+}
+
+.hasImage {
+	background: url(../images/mega-drop.png) 748px top repeat-y #7a7250;	
+}
+
+.notFullWidth .hasImage {
+	background-image: none;
+}
+
+.notFullWidth .megaDropSubDivWithImage {
+	display: none;
+}
+
+.notFullWidth .megaDropSubDiv {
+	float: none;
+	width: auto;
+	text-align: left;
+	padding-bottom: 4px;
+}
+
+.notFullWidth .megaDropDown {
+	padding-bottom: 10px;
 }
 
 /* navgation */	
@@ -355,10 +371,6 @@ h3, h4, h5  {
 
 
 
-
-#header .main-nav li:last-child a {
-	
-}
 
 #header .main-nav li:first-child {
 	padding-right: 0;
@@ -1645,42 +1657,6 @@ h3, h4, h5  {
 		width: 100%;
 	}
 	
-	/* navgation */	
-	.megaDropSubDivWithImage {
-		display: none;
-	}
-	
-	#megaDropDown {
-		background: #7a7250;
-	}	
-
-	.megaDropSubDiv {
-		float: none;
-		width: auto;
-		padding: 0;
-		border-bottom: 1px solid #958e73;
-	}
-	
-	.megaDropSubDiv.lastDropSubDiv {
-		border-bottom: none;
-	}
-
-	.megaDropSubDiv h2 {
-		font-size: 1.2em;
-		font-weight: normal;
-		line-height: 140%;
-		padding: 0;
-	}
-	
-	.megaDropSubDiv h2 a {
-		text-align: center;
-		padding: 5px 0;
-	}	
-	
-	.megaDropSubDiv ul {
-		display: none;
-	}
-		
 }
 
 
@@ -1719,21 +1695,21 @@ h3, h4, h5  {
 	   clear: both;
 	}
 	
-	#header .main-nav li a {
+	#header .main-nav li .level-1 {
 		padding: 15px 15px;
 	}	
 	
-	#header .main-nav li {
+	#header .main-nav > li {
 		float: none;
 		display: inline-block;
 		border-left: 1px solid #fff;
 	}
 	
-	#header .main-nav li a {
+	#header .main-nav li .level-1 {
 		padding: 10px 18px;
 	}
 	
-	#header .main-nav li:last-child a {
+	#header .main-nav li:last-child .level-1 {
 		padding-right: 18px;
 	}
 	
@@ -1840,7 +1816,7 @@ h3, h4, h5  {
 		width: 240px;
 	}		
 	
-	#header .main-nav li a {
+	#header .main-nav li .level-1 {
 		padding: 10px 13px;
 	}	
 	
@@ -1929,7 +1905,7 @@ h3, h4, h5  {
 		width: 220px;
 	}		
 	
-	#header .main-nav li a {
+	#header .main-nav li .level-1 {
 		font-size: 1.3em;
 		padding: 8px 10px;
 	}

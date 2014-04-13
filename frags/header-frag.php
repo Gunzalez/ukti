@@ -21,25 +21,18 @@
         </div> 
                 
         <ul class="main-nav">
-        	<li><a href="#" data-mega-drop='mainNavOption1'>About Tea</a></li><li><a href="#" data-mega-drop='mainNavOption2'>About Us</a></li><li><a href="#" data-mega-drop='mainNavOption3'>Health</a></li><li><a href="#" data-mega-drop='mainNavOption4'>The Tea List</a></li><li><a href="#" data-mega-drop='mainNavOption5'>News</a></li>
-        </ul>
-        
-        <div id="mobile-nav-btn"><a href="#">menu</a></div>        
-        
-        <div id="megaDropDown">
-        	<div id="mainNavOption1" class="megaDropDiv">            	               
-                <div class="padding">
-                	
-                    <div class="megaDropSubDiv">
-                    	<h2><a href="#">Growing &amp; Production</a></h2>
+        	<li><a href="#" class="level-1">About Tea</a>
+            	<div class="megaDropDown hasImage">
+                	<div class="megaDropSubDiv">
+                    	<h2 class="haslist"><a href="#" class="level-2">Growing &amp; Production</a></h2>
                         <ul>
-                        	<li><a href="#">Processing &amp; Blending</a></li>
+                        	<li><a href="#" class="level-3">Processing &amp; Blending</a></li>
                         	<li><a href="#">Packaging &amp; Distribution</a></li>
                         	<li><a href="#">Sustainability &amp; Environment</a></li>
                         </ul>                    
                     </div>
                     <div class="megaDropSubDiv">
-                    	<h2><a href="article.php">Types of Tea</a></h2>
+                    	<h2 class="haslist"><a href="#">Types of Tea</a></h2>
                         <ul>
                         	<li><a href="#">China</a></li>
                         	<li><a href="#">India &amp; Sri Lanka</a></li>
@@ -48,7 +41,7 @@
                         </ul>                    
                     </div>
                     <div class="megaDropSubDiv">
-                    	<h2><a href="#">Tea facts &amp; Stats</a></h2>
+                    	<h2 class="haslist"><a href="#">Tea facts &amp; Stats</a></h2>
                         <ul>
                         	<li><a href="#">Tea customs</a></li>
                         	<li><a href="#">Tea paraphernalia</a></li>
@@ -56,7 +49,7 @@
                         </ul>                    
                     </div>
                     <div class="megaDropSubDiv">
-                    	<h2><a href="#">Tea Ceremonies</a></h2>
+                    	<h2 class="haslist"><a href="#">Tea Ceremonies</a></h2>
                         <ul>
                         	<li><a href="#">Japan</a></li>
                         	<li><a href="#">Russia</a></li>
@@ -64,8 +57,8 @@
                         	<li><a href="#">North/South Korea</a></li>
                         </ul>                    
                     </div>
-                    <div class="megaDropSubDiv lastDropSubDiv">
-                    	<h2><a href="#">History of tea</a></h2>
+                    <div class="megaDropSubDiv">
+                    	<h2 class="haslist"><a href="#">History of tea</a></h2>
                         <ul>
                         	<li><a href="#">A brief history</a></li>
                         	<li><a href="#">The beginnings of tea</a></li>
@@ -86,162 +79,68 @@
                             <p>This here contains some summary of stuff.</p>
                         </div>
                     </div>
-                                        
                 </div>
-            </div>
-        	<div id="mainNavOption2" class="megaDropDiv">
-            	<div class="padding">
-                	
+            </li>
+            <li><a href="#" class="level-1">About Us</a>
+            	<div class="megaDropDown">
+                	<div class="megaDropSubDiv">
+                    	<h2><a href="#" class="level-2">About Us 1</a></h2>                    
+                    </div>
                     <div class="megaDropSubDiv">
-                    	<h2><a href="#">About Us Item Level 2</a></h2>
-                        <ul>
-                        	<li><a href="#">Nav Item Level 3 Nav Item Level 3</a></li>
-                        	<li><a href="#">Nav Item Level 3</a></li>
-                        </ul>                    
+                    	<h2><a href="#" class="level-2">About Us 2</a></h2>                    
                     </div>
-                    <div class="megaDropSubDiv lastDropSubDiv">
-                    	<h2><a href="#">Nav Item Level 2</a></h2>
-                        <ul>
-                        	<li><a href="#">Nav Item Level 3</a></li>
-                        	<li><a href="#">Nav Item Level 3</a></li>
-                        	<li><a href="#">Nav Item Level 3</a></li>
-                        	<li><a href="#">Nav Item Level 3</a></li>
-                        </ul>                    
+                    <div class="megaDropSubDiv">
+                    	<h2><a href="#" class="level-2">About Us 3</a></h2>                    
                     </div>
-                    <div class="megaDropSubDivWithImage">
-                        <div class="imagery">
-                            <img src="images/preview-image-2.jpg" width="125" />
-                        </div>
-                        <div class="copy">
-                            <p>I would never have signed this off.</p>
-                        </div>
-                    </div>
-                                        
                 </div>
-            </div>
-        	<div id="mainNavOption3" class="megaDropDiv">
-            	<div class="padding">
-                	
-                    <div class="megaDropSubDiv">
-                    	<h2><a href="#">Health Item Level 2</a></h2>
-                        <ul>
-                        	<li><a href="#">Nav Item Level 3</a></li>
-                        	<li><a href="#">Nav Item Level 3</a></li>
-                        	<li><a href="#">Nav Item Level 3</a></li>
-                        	<li><a href="#">Nav Item Level 3</a></li>
-                        </ul>                    
+            </li>
+            <li><a href="#" class="level-1">Health</a>
+            	<div class="megaDropDown">
+                	<div class="megaDropSubDiv">
+                    	<h2><a href="#" class="level-2">Health 1</a></h2>                    
                     </div>
                     <div class="megaDropSubDiv">
-                    	<h2><a href="#">Nav Item Level 2</a></h2>
-                        <ul>
-                        	<li><a href="#">Nav Item Level 3</a></li>
-                        	<li><a href="#">Nav Item Level 3</a></li>
-                        </ul>                    
+                    	<h2><a href="#" class="level-2">Health 2</a></h2>                    
                     </div>
-                    <div class="megaDropSubDiv lastDropSubDiv">
-                    	<h2><a href="#">Nav Item Level 2</a></h2>
-                        <ul>
-                        	<li><a href="#">Nav Item Level 3 Nav Item Level 3</a></li>
-                        	<li><a href="#">Nav Item Level Nav Item Level 3 Nav Item Level 3</a></li>
-                        	<li><a href="#">Nav Item Level 3</a></li>
-                        </ul>                    
-                    </div>
-                    <div class="megaDropSubDivWithImage">
-                        <div class="imagery">
-                            <img src="images/preview-image-3.jpg" width="125" />
-                        </div>
-                        <div class="copy">
-                            <p>These ideas keep coming to me, time after time.</p>
-                        </div>
-                    </div>
-                                        
                 </div>
-            </div>
-            <div id="mainNavOption4" class="megaDropDiv">
-            	<div class="padding">
-                	
-                    <div class="megaDropSubDiv">
-                    	<h2><a href="#">The Tea List Item Level come in here</a></h2>
-                        <ul>
-                        	<li><a href="#">Nav Item Level 3 Nav Item Level 3 Nav Item Level 3</a></li>
-                        	<li><a href="#">Nav Item Level 3</a></li>
-                        	<li><a href="#">Nav Item Level 3</a></li>
-                        	<li><a href="#">Nav Item Level 3</a></li>
-                        </ul>                    
+            </li>
+            <li><a href="#" class="level-1">The Tea List</a>
+            	<div class="megaDropDown">
+                	<div class="megaDropSubDiv">
+                    	<h2><a href="#" class="level-2">The Tea List 1</a></h2>                    
                     </div>
                     <div class="megaDropSubDiv">
-                    	<h2><a href="#">Nav Item Level 2</a></h2>
-                        <ul>
-                        	<li><a href="#">Nav Item Level 3</a></li>
-                        	<li><a href="#">Nav Item Level 3</a></li>
-                        </ul>                    
+                    	<h2><a href="#" class="level-2">The Tea List 2</a></h2>                    
                     </div>
-                    <div class="megaDropSubDiv lastDropSubDiv">
-                    	<h2><a href="#">Nav Item Level 2</a></h2>
-                        <ul>
-                        	<li><a href="#">Nav Item Level 3</a></li>
-                        	<li><a href="#">Nav Item Level 3</a></li>
-                        	<li><a href="#">Nav Item Level 3</a></li>
-                        </ul>                    
+                	<div class="megaDropSubDiv">
+                    	<h2><a href="#" class="level-2">The Tea List 3</a></h2>                    
                     </div>
-                    <div class="megaDropSubDivWithImage">
-                        <div class="imagery">
-                            <img src="images/preview-image-4.jpg" width="125" />
-                        </div>
-                        <div class="copy">
-                            <p>GIR (voiced by Rosearik Rikki Simons) is a malfunctioning and dimwitted robot</p>
-                        </div>
+                    <div class="megaDropSubDiv">
+                    	<h2><a href="#" class="level-2">The Tea List 4</a></h2>                    
                     </div>
-                                        
+                    <div class="megaDropSubDiv">
+                    	<h2><a href="#" class="level-2">The Tea List 5</a></h2>                    
+                    </div>
                 </div>
-            </div>
-        	<div id="mainNavOption5" class="megaDropDiv">
-            	<div class="padding">
-                	
-                    <div class="megaDropSubDiv">
-                    	<h2><a href="#">News Item Level 2</a></h2>
-                        <ul>
-                        	<li><a href="#">Nav Item Level 3</a></li>
-                        	<li><a href="#">Nav Item Level 3</a></li>
-                        	<li><a href="#">Nav Item Level 3</a></li>
-                        	<li><a href="#">Nav Item Level 3</a></li>
-                        </ul>                    
+            </li>
+            <li><a href="#" class="level-1">News</a>
+            	<div class="megaDropDown">
+                	<div class="megaDropSubDiv">
+                    	<h2><a href="#" class="level-2">News 1</a></h2>                    
                     </div>
                     <div class="megaDropSubDiv">
-                    	<h2><a href="#">News Item Level 2</a></h2>
-                        <ul>
-                        	<li><a href="#">Nav Item Level 3</a></li>
-                        	<li><a href="#">Nav Item Level 3</a></li>
-                        </ul>                    
+                    	<h2><a href="#" class="level-2">News 2</a></h2>                    
+                    </div>
+                	<div class="megaDropSubDiv">
+                    	<h2><a href="#" class="level-2">News 3</a></h2>                    
                     </div>
                     <div class="megaDropSubDiv">
-                    	<h2><a href="#">News Item Level 2</a></h2>
-                        <ul>
-                        	<li><a href="#">Nav Item Level 3</a></li>
-                        	<li><a href="#">Nav Item Level 3</a></li>
-                        	<li><a href="#">Nav Item Level 3</a></li>
-                        </ul>                    
-                    </div>                    
-                    <div class="megaDropSubDiv lastDropSubDiv">
-                    	<h2><a href="#">More News Item Level 2</a></h2>
-                        <ul>
-                        	<li><a href="#">Nav Item Level 3 Nav Item Level 3</a></li>
-                        	<li><a href="#">Nav Item Level Nav Item Level 3m Level 3</a></li>
-                        	<li><a href="#">Nav Item Level 3</a></li>
-                        </ul>                    
+                    	<h2><a href="#" class="level-2">News 4</a></h2>                    
                     </div>
-                    <div class="megaDropSubDivWithImage">
-                        <div class="imagery">
-                            <img src="images/preview-image-5.jpg" width="125" />
-                        </div>
-                        <div class="copy">
-                            <p>That's right, it's Johnny Cash, looking directly at you, yes you Rob!</p>
-                        </div>
-                    </div>
-                                        
                 </div>
-            </div>
-            
+            </li>
+        </ul>
+        
+        <div id="mobile-nav-btn"><a href="#">menu</a></div>        
+        
         </div>
-                 
-    </div>

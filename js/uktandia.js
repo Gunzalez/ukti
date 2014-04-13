@@ -452,242 +452,106 @@ Date: 08.03.2014
 	uktandia.megadropdown = {
 		
 		/* properties */
-		timer: '',
-		isBusy: false,
-		$links: $('.main-nav a'),
-		$megaDropDivs: $('.megaDropDiv'),
-		$megaDropDown: $('#megaDropDown'),
+		resetLeft: '-999em',
+		$links: $('.main-nav > li'),
 		
-		resize: function(){
+		resize: function(){	
 			
-			var self = this;
+			var self = this;			
+						
+			$('.megaDropDown').css('left',  self.resetLeft);
 			
-			self._adjustMegaDivHeights();
+			self.$links.removeClass('active');			
 			
 		},
 		
-		_adjustMegaDivHeights: function(){
-						
+		
+		_hideMegaDropDownForThisLink: function(obj){
+			
 			var self = this;			
 			
-			var megaDropDownHeight = $('#header').height() > 130 ? $('#header').height() - 1 : 130
-			self.$megaDropDown.css({
-				top : megaDropDownHeight,
-				height: 0
-			});
+			$('.megaDropDown', $(obj)).css('left', self.resetLeft);
 			
-			self.$megaDropDivs.each(function(index, obj){
-				
-				$(obj).css('top','-'+$(obj).height()+'px');	
-							
-			});
-			
-			self.$links.removeClass('active');
+			$(obj).removeClass('active');
 			
 		},
 		
-		_switchMegaDropDownForTheseLinks: function($curLink, $newLink){
-						
-			var self = this;			
-			
-			var curMegaDropDiv = $curLink.attr('data-mega-drop'),
-				curHeight = $('#'+curMegaDropDiv).height(),
-				newMegaDropDiv =  $newLink.attr('data-mega-drop'),
-				newHeight = $('#'+newMegaDropDiv).height();
-			
-			self.$links.removeClass('active');
-			
-			$newLink.addClass('active');
-			
-			$('#'+newMegaDropDiv).fadeOut();	
-			
-			$('#'+curMegaDropDiv).fadeOut(function(){
-				
-				self.$megaDropDown.animate({
-					height: newHeight
-				}, 50, function(){
-					
-					$('#'+newMegaDropDiv).css('top',0).fadeIn();
-					
-					$('#'+curMegaDropDiv).css('top', '-'+curHeight+'px').fadeIn();
-					
-					self.isBusy = false;
-					
-				});
-			});
-			
-		},
 		
-		_showMegaDropDownForThisLink: function($link){
-						
-			var self = this,
-				megaDropDivId = $link.attr('data-mega-drop');
+		_showMegaDropDownForThisLink: function(obj){
 			
-			$link.addClass('active');
-												
-			self.$megaDropDown.animate({
-				height: $('#'+megaDropDivId).height()
-			}, 250);
+			var megaWidth = $('#header').width(),
+				megaLeft = $('#header').offset().left - $(obj).offset().left;
+				
+			$(obj).addClass('active');
 			
-			$('#'+megaDropDivId).animate({
-				top: 0	
-			}, 250, function(){
+			if( megaWidth < 940 ) {
 				
-				self.isBusy = false;
-				
-			});
-						
-		},		
-		
-		_hideMegaDropDownForThisLink: function($link){
-						
-			var self = this,
-				megaDropDivId = $link.attr('data-mega-drop');
-				
-			self.$megaDropDown.animate({
-				height: 0
-			}, 250);
-			
-			$('#'+megaDropDivId).animate({									
-				top: '-'+$('#'+megaDropDivId).height()+'px'									
-			}, 250, function(){
-				
-				$link.removeAttr('class');
-				
-				self.isBusy = false;
-				
-			});
-			
-		},
-		
-		_startMegaDropDownShutDown: function($link){
-			
-			//console.log('_startMegaDropDownShutDown')
-			
-			var self = this;
-			
-			var $curActiveItem = $('.active', self.$links.parent()),
-				curDropDivId = $curActiveItem.attr('data-mega-drop');
-				
-			if( typeof curDropDivId !== 'undefined' ){									
-										
+				$('.main-nav').addClass('notFullWidth');
 				
 			} else {
 				
-				self._hideMegaDropDownForThisLink($link);
-																				
-				clearInterval(self.timer);
+				$('.main-nav').removeClass('notFullWidth');
 				
-			}		
+			}	
+								
+			$('.megaDropDown', $(obj)).css({
+				width : megaWidth,
+				left : megaLeft + 'px'
+			});
 			
 		},
 		
+		
 		init: function(){
-				
+			
 			var self = this;
 			
-/*			if(uktandia.properties.isMobile){*/
+			if(!uktandia.properties.isMobile) {
 			
-				self.$links.each(function(index, obj){
+				self.$links.each(function(index, obj){				
 					
-					$(obj).on('click',function(evt){					
-					
-						var megaDropDivId = $(this).attr('data-mega-drop');
-						if (typeof megaDropDivId !== 'undefined' && megaDropDivId !== false) {						
-							
-							evt.preventDefault();
-							
-							if(!self.isBusy){
-								
-								self.isBusy = true;
-								
-								if(!$(this).hasClass('active')){
-									
-									var $curActiveItem = $('.active', self.$links.parent()),
-										curDropDivId = $curActiveItem.attr('data-mega-drop');
-										
-									if( typeof curDropDivId !== 'undefined' ){									
-										
-										self._switchMegaDropDownForTheseLinks($curActiveItem, $(this));																		
-										
-									} else {
-										
-										self._showMegaDropDownForThisLink($(this));
-										
-									}
-									
-								} else {
-									
-									self._hideMegaDropDownForThisLink($(this));
-									
-								}
-								
-							}
-							
-						}
+					$(obj).on('mouseenter',function(){
+						
+						self._showMegaDropDownForThisLink(obj);						
+						
+					}).on('mouseleave',function(){
+						
+						self._hideMegaDropDownForThisLink(obj);
 						
 					});
-				
+					
 				});
+			
+			} else {
 				
-/*			} else {			
-				
-				self.$links.each(function(index, obj){
+				self.$links.each(function(index, obj){				
 					
 					$(obj).on('click',function(evt){
 						
 						evt.preventDefault();
 						
-					});
-					
-					$(obj).on('mouseenter',function(){
-						
-						if(!self.isBusy){
+						if($(obj).hasClass('active')){
 							
-							self.isBusy = true;
+							self._hideMegaDropDownForThisLink(obj);
 							
-							if(!$(this).hasClass('active')){
-								
-								var $curActiveItem = $('.active', self.$links.parent()),
-									curDropDivId = $curActiveItem.attr('data-mega-drop'),
-									$thisLink = $(this);
-									
-								if( typeof curDropDivId !== 'undefined' ){									
-									
-									self._switchMegaDropDownForTheseLinks($curActiveItem, $thisLink);																		
-									
-								} else {
-									
-									self._showMegaDropDownForThisLink($thisLink);
-									
-									self.timer = setInterval(function(){
-										
-										self._startMegaDropDownShutDown($thisLink);	
-										
-									}, 500);
-									
-								}								
-								
-							}
+						} else {														
+						
+							$('.megaDropDown').css('left',  self.resetLeft);
 							
-						}
+							self.$links.removeClass('active');
+							
+							self._showMegaDropDownForThisLink(obj);
 						
-					});
-					
-					$(obj).on('mouseleave',function(){
+						}								
 						
-						$(obj).removeClass('active');
-						
-					});
-					
+					})
 					
 				});
 				
-			}*/
+			}
 			
-			self._adjustMegaDivHeights();
+		}
 			
-		}	
 	} /* mega drop down end */
 	
 	uktandia.setGlobalVariable = function(){
