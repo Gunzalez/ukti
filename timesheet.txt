@@ -19,20 +19,19 @@ Image maps page / start - 4hrs
 Maps page and form validation - 4hrs
 Builds Venue listing page - 3hrs
 Builds results page, responsive and everything - 3hrs
+Desktop nav and tablet, now on hover and iPhone window reszie bug - 4hrs
+
+
 
 
 TODO:
 ---------------------
 Text shadow on navigation
 Fancy box attachment
-iPhone window reszie bug (suddenly vanished, hmm)
-
-
 
 
 TODO - priority:
 ---------------------
-Desktop nav
 Mobile nav
 
 
@@ -40,7 +39,6 @@ Questions mark
 ---------------------
 Tablet header area, including aux nav and search
 Tea facts imagery for different screens
-
 
 
 Tech query
