@@ -1051,6 +1051,9 @@ h3, h4, h5  {
 	background: rgba(255, 255, 255, 0.8);
 }
 
+.list .section.gallery ul li a.click-me span:hover {
+	text-decoration: underline;
+}
 
 .list .side-bar {
 	float: right;
@@ -1942,7 +1945,7 @@ h3, h4, h5  {
 	}
 	
 	.list .section .heading h2 {
-		font-size: 1.4em;
+		font-size: 1.3em;
 		font-weight: normal;
 	}
 	

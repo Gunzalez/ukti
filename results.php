@@ -47,7 +47,7 @@
                 	<div class="heading">
                     	<h2>Claridge's</h2>
                         <div class="action">
-                        	<a href="result.php" class="show-more">Full details</a>
+                        	<a href="result.php" class="show-more">Read&nbsp;more</a>
                         </div>
                     </div>
                     <div class="details">               
@@ -57,7 +57,7 @@
                         London W1K 4HR.                     
                         </address> 
                         <h3>Introduction</h3>
-                        <p>Vestibulum tortor quam, feugiat vita lorn rocks! Lentesque habitant morbi tr. ultricies eget, tempor sit amet, ante. <a href="result.php" class="show-more">Full&nbsp;details</a></p>
+                        <p>Vestibulum tortor quam, feugiat vita lorn rocks! Lentesque habitant morbi tr. ultricies eget, tempor sit amet, ante. <a href="result.php" class="show-more">Read&nbsp;more</a></p>
                     </div>
                     <div class="imagery">
                          <a href="result.php"><img src="images/logo-claridges.jpg" alt="Claridge's" width="174" height="65" /></a>
@@ -69,7 +69,7 @@
                 	<div class="heading">
                     	<h2>Cup</h2>
                         <div class="action">
-                        	<a href="#" class="show-more">Full details</a>
+                        	<a href="#" class="show-more">Read&nbsp;more</a>
                         </div>
                     </div>
                     <div class="details">               
@@ -79,7 +79,7 @@
                         G12 8UQ.                     
                         </address> 
                         <h3>Introduction</h3>
-                        <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. <a href="#" class="show-more">Full&nbsp;details</a></p>
+                        <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. <a href="#" class="show-more">Read&nbsp;more</a></p>
                     </div>
                     <div class="imagery">
                          <a href="#"><img src="images/logo-cup.jpg" alt="Cup" width="139" height="141" /></a>
@@ -92,7 +92,7 @@
                 	<div class="heading">
                     	<h2>Abbey Cottage Tea Rooms</h2>
                         <div class="action">
-                        	<a href="#" class="show-more">Full details</a>
+                        	<a href="#" class="show-more">Read&nbsp;more</a>
                         </div>
                     </div>
                     <div class="details">               
@@ -102,7 +102,7 @@
                         DG2 8BY.                     
                         </address> 
                         <h3>Introduction</h3>
-                        <p>Cum sociis natoque penatibus et magnis dis parturient monte mus. In condimentum turpis eget  pharetra eget et  A better way! apibus eleifend pulvinar. Duis eu risus ut urna varius blandit. Cras congue diam mauris, fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. <a href="#" class="show-more">Full&nbsp;details</a></p>
+                        <p>Cum sociis natoque penatibus et magnis dis parturient monte mus. In condimentum turpis eget  pharetra eget et  A better way! apibus eleifend pulvinar. Duis eu risus ut urna varius blandit. Cras congue diam mauris, fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. <a href="#" class="show-more">Read&nbsp;more</a></p>
                     </div>
                     <div class="imagery">
                          <a href="#"><img src="images/photo-result.jpg" alt="Abbey Cottage Tea Rooms" width="120" height="120" /></a>
