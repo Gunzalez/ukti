@@ -362,9 +362,11 @@ Date: 08.03.2014
 							if($(obj).parent('h2').hasClass('haslist'))	{
 							
 								var $clonedLink = $(obj).clone(),
-									$clonedList = $(obj).parents('.megaDropSubDiv').find('ul').clone();								
+									$clonedList = $(obj).parents('.megaDropSubDiv').find('ul').clone(),
+									$linkContainer = $('<div class="linkContainer clearfix"></div>'),
+									$subMenuButton = $('<span class="subMenuButton"></span>');
 								
-								$clonedLink.on('click',function(evt){
+								$subMenuButton.on('click',function(evt){
 									
 									evt.preventDefault();
 									
@@ -411,7 +413,9 @@ Date: 08.03.2014
 									
 								});
 								
-								$mobileMegaDropDownDiv.append($clonedLink);								
+								$linkContainer.append($clonedLink).append($subMenuButton);
+								
+								$mobileMegaDropDownDiv.append($linkContainer);								
 								
 							} else {
 								

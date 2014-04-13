@@ -410,8 +410,29 @@ megaDropSubDiv a,
 }
 
 
+.linkContainer {
+	background-color: #fff;
+	background: rgb(255, 255, 255);
+	background: rgba(255, 255, 255, 0.1);
+	margin: 1px 12px 2px 12px;
+	padding: 10px 12px;
+}
 
+#mobileMegaDropDownDiv .linkContainer a {
+	float: left;
+	background: none;
+	padding: 0;
+	margin: 0 30px 0 0;
+}
 
+.linkContainer .subMenuButton {
+	float: right;
+	width: 40px;
+	height: 35px;
+	margin: -10px -12px -10px 0;
+	background: url(../images/mobile-sub-nav-btn.png) 8px center no-repeat;
+}
+/* ends - used by JS */
 
 
 
