@@ -1,5 +1,3 @@
-
-
 body {
 	margin: 0;
 	padding: 0;
@@ -406,9 +404,8 @@ megaDropSubDiv a,
 	background-color: #fff;
 	background: rgb(255, 255, 255);
 	background: rgba(255, 255, 255, 0.1);
-	margin: 1px 12px;	
+	margin: 2px 12px;	
 }
-
 
 .linkContainer {
 	background-color: #fff;
@@ -417,7 +414,6 @@ megaDropSubDiv a,
 	margin: 1px 12px 2px 12px;
 	padding: 10px 12px;
 }
-
 #mobileMegaDropDownDiv .linkContainer a {
 	float: left;
 	background: none;
@@ -432,6 +428,16 @@ megaDropSubDiv a,
 	margin: -10px -12px -10px 0;
 	background: url(../images/mobile-sub-nav-btn.png) 8px center no-repeat;
 }
+
+#mobileMegaDropDownDiv a.active,
+.linkContainer.active,
+#megaDropSubDiv ul li a.active,
+#mobile-nav-list .main-nav a.active {
+	background-color: #fff;
+	background: rgb(255, 255, 255);
+	background: rgba(255, 255, 255, 0.3);
+}
+
 /* ends - used by JS */
 
 

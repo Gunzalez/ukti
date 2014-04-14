@@ -1,5 +1,5 @@
 /* 
-AUTHOR: Segun Konbire
+AUTHOR: Segun Konibire
 Date: 08.03.2014
 */
 
@@ -350,6 +350,8 @@ Date: 08.03.2014
 								}, self.slideSpeed, self.easing, function(){
 									
 										$mobileMegaDropDownDiv.remove();
+										
+										$(obj).removeClass('active');
 									
 									});
 											
@@ -368,10 +370,13 @@ Date: 08.03.2014
 								
 								$subMenuButton.on('click',function(evt){
 									
-									evt.preventDefault();
+									evt.preventDefault();				
 									
-									var $megaDropSubDiv = $('<div id="megaDropSubDiv"></div>'),
+									var $subMenuBtn = $(this);
+										$megaDropSubDiv = $('<div id="megaDropSubDiv"></div>'),
 										$header = $('<div class="header">'+ $clonedLink.html() +'</div>');
+										
+									$subMenuBtn.parent().addClass('active');
 										
 									$header.on('click', function(){
 									
@@ -382,12 +387,20 @@ Date: 08.03.2014
 										}, self.slideSpeed, self.easing, function(){
 											
 												$megaDropSubDiv.remove();
+												
+												$subMenuBtn.parent().removeClass('active');
 											
 											});
 													
 									});	
 									
 									$megaDropSubDiv.append($header);
+									
+									$('a', $clonedList).on('click', function(){
+				
+										$(this).addClass('active');
+										
+									});
 									
 									$megaDropSubDiv.append($clonedList);
 									
@@ -413,6 +426,12 @@ Date: 08.03.2014
 									
 								});
 								
+								$clonedLink.on('click', function(){
+				
+									$clonedLink.parent().addClass('active');
+										
+								});
+								
 								$linkContainer.append($clonedLink).append($subMenuButton);
 								
 								$mobileMegaDropDownDiv.append($linkContainer);								
@@ -420,6 +439,12 @@ Date: 08.03.2014
 							} else {
 								
 								var $clonedLink = $(obj).clone();
+								
+								$clonedLink.on('click', function(){
+				
+									$clonedLink.addClass('active');
+										
+								});
 								
 								$mobileMegaDropDownDiv.append($clonedLink);	
 								
@@ -461,7 +486,19 @@ Date: 08.03.2014
 							
 			});	
 			
-			$mobileNav.append($header);			
+			$('a', $clonedNav).on('click', function(){
+				
+				$(this).addClass('active');
+				
+			});
+			
+			$('.subMenuButton', $clonedNav).on('click', function(){
+				
+				console.log('Tada: ' + $(this).parents('.linkContainer'));
+				
+			});
+			
+			$mobileNav.append($header);
 			
 			$mobileNav.append($clonedNav);
 			
