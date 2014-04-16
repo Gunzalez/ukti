@@ -1,3 +1,5 @@
+
+
 body {
 	margin: 0;
 	padding: 0;
@@ -43,33 +45,33 @@ p { margin: 0; padding: 0 0 15px 0; }
 
 @font-face {
     font-family: 'rock_saltregular';
-    src: url('fonts/rocksalt-webfont.eot');
-    src: url('fonts/rocksalt-webfont.eot?#iefix') format('embedded-opentype'),
-         url('fonts/rocksalt-webfont.woff') format('woff'),
-         url('fonts/rocksalt-webfont.ttf') format('truetype'),
-         url('fonts/rocksalt-webfont.svg#rock_saltregular') format('svg');
+    src: url('/css/fonts/rocksalt-webfont.eot');
+    src: url('/css/fonts/rocksalt-webfont.eot?#iefix') format('embedded-opentype'),
+		url('/css/fonts/rocksalt-webfont.woff') format('woff'),
+		url('/css/fonts/rocksalt-webfont.ttf') format('truetype'),
+		url('/css/fonts/rocksalt-webfont.svg#rock_saltregular') format('svg');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'time_romannormal';
-    src: url('fonts/time_roman-webfont.eot');
-    src: url('fonts/time_roman-webfont.eot?#iefix') format('embedded-opentype'),
-         url('fonts/time_roman-webfont.woff') format('woff'),
-         url('fonts/time_roman-webfont.ttf') format('truetype'),
-         url('fonts/time_roman-webfont.svg#time_romannormal') format('svg');
+    src: url('/css/fonts/time_roman-webfont.eot');
+    src: url('/css/fonts/time_roman-webfont.eot?#iefix') format('embedded-opentype'),
+		url('/css/fonts/time_roman-webfont.woff') format('woff'),
+		url('/css/fonts/time_roman-webfont.ttf') format('truetype'),
+		url('/css/fonts/time_roman-webfont.svg#time_romannormal') format('svg');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Sri-TSCRegular';
-    src: url('fonts/sri-tsc-webfont.eot');
-    src: url('fonts/sri-tsc-webfont.eot?#iefix') format('embedded-opentype'),
-         url('fonts/sri-tsc-webfont.woff') format('woff'),
-         url('fonts/sri-tsc-webfont.ttf') format('truetype'),
-         url('fonts/sri-tsc-webfont.svg#Sri-TSCRegular') format('svg');
+    src: url('/css/fonts/sri-tsc-webfont.eot');
+    src: url('/css/fonts/sri-tsc-webfont.eot?#iefix') format('embedded-opentype'),
+		url('/css/fonts/sri-tsc-webfont.woff') format('woff'),
+		url('/css/fonts/sri-tsc-webfont.ttf') format('truetype'),
+		url('/css/fonts/sri-tsc-webfont.svg#Sri-TSCRegular') format('svg');
     font-weight: normal;
     font-style: normal;
 }
@@ -116,7 +118,7 @@ h3, h4, h5  {
 	position: absolute;
 	top: 0;
 	right: 0;
-	background: url(../images/bg-top-nav.png) 0 0 no-repeat #fff;
+	background: url(/images/bg-top-nav.png) 0 0 no-repeat #fff;
 	width: 523px;
 	height: 23px;
 	text-align: right;
@@ -164,7 +166,7 @@ h3, h4, h5  {
 	font-family: arial, verdana;
 	font-size: 0.9em;
 	color: #79714f;
-	padding: 3px 6px;	
+	padding: 4px 6px;	
 	margin: 0;
 	border: 0;
 	outline: 0;
@@ -176,7 +178,7 @@ h3, h4, h5  {
 	height: 18px;
 	text-indent: -9000px;
 	border: 0;
-	background: url(../images/bg-search-button.png) center center no-repeat;
+	background: url(/images/bg-search-button.png) center center no-repeat;
 	cursor: pointer;	
 }
 
@@ -221,7 +223,7 @@ h3, h4, h5  {
 
 #header .main-nav li {
 	float: left;
-	border-left: 1px solid #ccc;
+	border-left: 1px solid #7a7250;
 	position: relative;
 }
 
@@ -243,13 +245,13 @@ h3, h4, h5  {
 
 .megaDropDown {
 	position: absolute;
-	background-color: #7a7250;
 	z-index: 3;
 	width: 940px;
 	left: -999em;
 	-webkit-box-shadow: inset 0px 3px 2px 0px rgba(51,51,51,0.17);
 	-moz-box-shadow: inset 0px 3px 2px 0px rgba(51,51,51,0.17);
-	box-shadow: inset 0px 3px 2px 0px rgba(51,51,51,0.17);
+	box-shadow: inset 0px 3px 2px 0px rgba(51,51,51,0.17);	
+	background: url(/images/mega-drop.png) right top repeat-y #7a7250;
 }
 
 #header .main-nav .megaDropDown a {
@@ -259,10 +261,29 @@ h3, h4, h5  {
 }
 
 .megaDropSubDiv {
+	width: 172px;
+	padding-top: 8px;
+	padding-bottom: 0;
 	float: left;
+}
+
+.main-nav-item-3 .megaDropSubDiv {
+	width: 144px;
+}
+
+.main-nav-item-4 .megaDropSubDiv {
+	width: 141px;
+}
+
+.main-nav-item-5 .megaDropSubDiv {
+	width: 133px;
+}
+
+.fullWidthDropDown .megaDropSubDiv {
 	width: 156px;
 	padding-top: 8px;
 	padding-bottom: 12px;
+	margin: 0;
 }
 
 .megaDropSubDiv h2 {
@@ -305,6 +326,15 @@ h3, h4, h5  {
 	width: 125px;
 	margin-right: 20px;
 	margin-top: 10px;
+	padding-bottom: 20px;
+}
+
+.megaDropSubDivWithImage h2 a {
+	font-size: 0.80em;
+	padding-bottom: 2px;
+	line-height: 130%;
+	font-family: arial, verdana;
+	padding: 5px 0;
 }
 
 .megaDropSubDivWithImage img {
@@ -317,9 +347,7 @@ h3, h4, h5  {
 	color: #fff;
 }
 
-.hasImage {
-	background: url(../images/mega-drop.png) 748px top repeat-y #7a7250;	
-}
+
 
 .notFullWidth .hasImage {
 	background-image: none;
@@ -337,7 +365,13 @@ h3, h4, h5  {
 }
 
 .notFullWidth .megaDropDown {
-	padding-bottom: 10px;
+	padding-bottom: 4px;
+	background: #7a7250;
+}
+
+.notFullWidth .megaDropSubDiv a {	
+	line-height: 140%;
+	padding: 4px 8px;
 }
 
 
@@ -355,8 +389,16 @@ h3, h4, h5  {
 }
 
 
-#megaDropSubDiv ul li a,
 #mobile-nav-list .main-nav a {
+	color: #fff;
+	text-transform: uppercase;
+	font-weight: bold;
+	text-decoration: none;
+	float: left;
+	padding: 0;
+}
+
+#megaDropSubDiv ul li a {
 	color: #fff;
 	text-transform: uppercase;
 	font-weight: bold;
@@ -367,6 +409,7 @@ h3, h4, h5  {
 	background: rgb(255, 255, 255);
 	background: rgba(255, 255, 255, 0.1);
 }
+
 
 /* used by JS */
 #megaDropSubDiv,
@@ -390,7 +433,7 @@ h3, h4, h5  {
 	font-weight: bold;
 	padding: 10px 12px;
 	margin: 1px 12px;
-	background: url(../images/xmarksthespot.png) center right no-repeat;
+	background: url(/images/xmarksthespot.png) center right no-repeat;
 }
 
 megaDropSubDiv a,
@@ -404,16 +447,23 @@ megaDropSubDiv a,
 	background-color: #fff;
 	background: rgb(255, 255, 255);
 	background: rgba(255, 255, 255, 0.1);
-	margin: 2px 12px;	
+	margin: 1px 12px;	
 }
+
 
 .linkContainer {
 	background-color: #fff;
 	background: rgb(255, 255, 255);
 	background: rgba(255, 255, 255, 0.1);
+	margin: 0;
+	padding: 10px 12px;
+}
+
+#mobileMegaDropDownDiv .linkContainer {
 	margin: 1px 12px 2px 12px;
 	padding: 10px 12px;
 }
+
 #mobileMegaDropDownDiv .linkContainer a {
 	float: left;
 	background: none;
@@ -426,7 +476,11 @@ megaDropSubDiv a,
 	width: 40px;
 	height: 35px;
 	margin: -10px -12px -10px 0;
-	background: url(../images/mobile-sub-nav-btn.png) 8px center no-repeat;
+	background: url(/images/mobile-sub-nav-btn-level-1.png) 0px center no-repeat;
+}
+
+#mobileMegaDropDownDiv .linkContainer .subMenuButton {
+	background: url(/images/mobile-sub-nav-btn.png) 0px center no-repeat;
 }
 
 #mobileMegaDropDownDiv a.active,
@@ -437,7 +491,6 @@ megaDropSubDiv a,
 	background: rgb(255, 255, 255);
 	background: rgba(255, 255, 255, 0.3);
 }
-
 /* ends - used by JS */
 
 
@@ -589,11 +642,19 @@ megaDropSubDiv a,
 	margin-right: 20px;
 }
 
+.side-bar > .content-block {
+	width: 300px;
+	height: 258px;
+	float: left;
+        margin-right: 0;
+	margin-bottom: 20px;
+}
+
 .content-row h2 {
 	margin: 0;
 	padding: 0;
 	font-weight: normal;
-	background: url(../images/bg-block-h2.png) right 11px no-repeat;
+	background: url(/images/bg-block-h2.png) right 11px no-repeat;
 	line-height: 36px;
 }
 
@@ -607,7 +668,7 @@ megaDropSubDiv a,
 /* Homepage */
 .tea-news {
 	height: 258px;
-	background: url(../images/bg-block-tea-news.jpg) center  0 no-repeat;
+	background: url(/images/bg-block-tea-news.jpg) center  0 no-repeat;
 	position: relative;
 }
 
@@ -616,7 +677,7 @@ megaDropSubDiv a,
 	text-decoration: none;
 	color: #fff;
 	padding: 0 10px;
-	background: url(../images/bg-block-h2.png) right 11px no-repeat #CC4949;
+	background: url(/images/bg-block-h2.png) right 11px no-repeat #CC4949;
 }
 
 .tea-news h2 a:hover {
@@ -639,7 +700,7 @@ megaDropSubDiv a,
 	padding: 10px;
 	color: #555;
 	border-bottom: 1px solid #cc4949;
-	background: url(../images/bg-block-li-a.png) center right no-repeat #f7f7f7;
+	background: url(/images/bg-block-li-a.png) center right no-repeat #f7f7f7;
 	-webkit-transition: background-color 0.5s;
   	-moz-transition: background-color 0.5s;
   	-o-transition: background-color 0.5s;
@@ -676,7 +737,7 @@ megaDropSubDiv a,
 	text-decoration: none;
 	display: block;
 	height: 258px;
-	background: url(../images/bg-block-tea-facts-square.jpg) center center no-repeat #ff790d;
+	background: url(/images/bg-block-tea-facts-square.jpg) center center no-repeat #ff790d;
 	-webkit-border-radius: 0px 0px 0px 25px;
 	-moz-border-radius: 0px 0px 0px 25px;
 	border-radius: 0px 0px 0px 25px;
@@ -689,11 +750,15 @@ megaDropSubDiv a,
 
 .tea-list {
 	height: 258px;
-	background: url(../images/bg-block-tea-list-square.jpg) center right no-repeat #bcc140;
+	background: url(/images/bg-block-tea-list-square.jpg) center right no-repeat #bcc140;
 	color: #fff;
 	-webkit-border-radius: 0px 0px 0px 25px;
 	-moz-border-radius: 0px 0px 0px 25px;
 	border-radius: 0px 0px 0px 25px;
+}
+
+.tea-list a {
+    color: #fff;
 }
 
 .tea-list h2 {
@@ -832,6 +897,7 @@ megaDropSubDiv a,
 .article .title-block h1 {
 	font-size: 2.5em;
 	color: #bcc240;
+        margin-bottom: 20px;
 }
 
 .article .title-block .main-image {
@@ -843,7 +909,7 @@ megaDropSubDiv a,
 	width: 300px;
 	margin: 0;
 	padding: 0 0 0 20px;
-	list-style-image: url(../images/bg-bullet-points.png);	
+	list-style-image: url(/images/bg-bullet-points.png);	
 }
 
 .article .title-block .main-list li {
@@ -875,7 +941,7 @@ megaDropSubDiv a,
 }
 
 .article .side-bar ul {
-	margin: 0;
+	margin: 0 0 25px 0;
 	padding: 0;
 	list-style: none;
 }
@@ -889,12 +955,14 @@ megaDropSubDiv a,
 	font-size: 1.1em;
 	margin: 0;
 	color: #555;
+        background-color: #f7f7f7;
 	text-decoration: none;
 	display: block;
 }
 
 .article .side-bar ul li a:hover {
-	color: #000;
+	color: #fff;
+        background-color: #ccc;
 }
 
 .article .side-bar ul li .title {
@@ -903,7 +971,7 @@ megaDropSubDiv a,
 
 .article .share-this-article {
 	text-align: right;
-	padding: 80px 10px 5px 10px;
+	padding: 5px 10px;
 }
 
 .article .share-this-article p {
@@ -941,8 +1009,9 @@ megaDropSubDiv a,
 .list .feature .heading {
 	width: 620px;
 	float: left;
-	border-bottom: 1px solid #79714f;
-	padding-bottom: 5px;
+	border-top: 1px solid #b8b8b8;
+        border-bottom: 1px solid #b8b8b8;
+	padding: 5px 0;
 	margin-bottom: 10px;
 }
 
@@ -966,14 +1035,12 @@ megaDropSubDiv a,
 	color: #bcc240;
 }
 
-.article .heading,
 .list .maps .heading {
 	border-bottom: 1px solid #79714f;
 	padding-bottom: 5px;
 	margin-bottom: 10px;
 }
 
-.article .heading,
 .list .maps.venues .heading {
 	border-bottom: 1px solid #bcc240;
 }
@@ -1007,8 +1074,8 @@ megaDropSubDiv a,
 
 .list .feature .main-image {
 	width: 300px;
-	height: 258px;
-	margin-bottom: 10px;
+	height: 260px;
+	margin-bottom: 20px;
 	position: relative;
 }
 
@@ -1039,8 +1106,9 @@ megaDropSubDiv a,
 
 .list .section .heading {
 	line-height: 30px;
-	background: url(../images/bg-section-heading.png) bottom left no-repeat #fff;
-	border-bottom: none;
+	/*background: url(../images/bg-section-heading.png) bottom left no-repeat #fff;*/
+	border-bottom: 1px solid #bdbdbd;
+        padding: 5px 0;
 	margin-bottom: 10px;
 }
 
@@ -1056,7 +1124,7 @@ megaDropSubDiv a,
 	margin-bottom: 10px;
 }
 
-.list .section h2 { background: url(../images/bg-list-sectons.png) 0 0 no-repeat; }
+.list .section h2 { background: url(/images/bg-list-sectons.png) 0 0 no-repeat; }
 .list .section.gallery h2 { background-position: 0 0; }
 .list .section.introduction h2 { background-position: 0 -35px; }
 .list .section.afternoon-tea h2 { background-position: 0 -70px; }
@@ -1151,8 +1219,8 @@ megaDropSubDiv a,
 	padding: 0 0 10px 0;
 }
 
-.accordion .action .show-more {
-	background: url(../images/accordion-open-close.png) right 9px no-repeat #fff;
+.accordion .action .show-more, .results .action .show-more {
+	background: url(/images/accordion-open-close.png) right 9px no-repeat #fff;
 	padding-right: 26px;
 	display: block;
 }
@@ -1234,28 +1302,30 @@ megaDropSubDiv a,
 
 /* results page */
 .results .story > .heading {
-	border-bottom: 1px solid #79714f;
-	padding-bottom: 5px;
+	border-top: 1px solid #b8b8b8;
+        border-bottom: 1px solid #b8b8b8;
+	padding: 5px 0;
 	margin-bottom: 10px;
 }
 
+/* rac
 .results .story .result .heading {
 	background: url(../images/bg-section-heading.png) -60px bottom no-repeat #fff;
 }
-
+*/
 .results .story .heading h2 {
 	background: none;
 	padding-left: 0;
 }
-
+/* rac
 .results .action .show-more {
 	background: url(../images/new-page.png) right center no-repeat #fff;
 	padding-right: 26px;
 	display: block;
 }
-
+*/
 .result {
-	border-bottom: 1px solid #f7f7f7;
+	border-bottom: 1px solid #bdbdbd;
 }
 
 .result address {
@@ -1393,7 +1463,7 @@ megaDropSubDiv a,
 }
 
 #formListings .hint {
-	background: url(../images/bg-hint.jpg) top right no-repeat;
+	background: url(/images/bg-hint.jpg) top right no-repeat;
 	padding-top: 10px;
 }
 
@@ -1509,7 +1579,7 @@ megaDropSubDiv a,
 /* media queries */
 @media only screen and (max-width: 1000px)  {
 	#carousel .owl-carousel .item .slide-link {
-		padding: 13px 18px;
+		padding: 11px 18px;
 	}
 	
 	#wrapper {
@@ -1557,7 +1627,8 @@ megaDropSubDiv a,
 	}
 	
 	#carousel .controls a.button {
-		background: #ccc;
+		background-image: none !important;
+		background: #ccc !important;
 		height: 14px;
 		width: 14px;
 		-moz-border-radius: 7px;
@@ -1571,7 +1642,8 @@ megaDropSubDiv a,
 	}
 	
 	#carousel .controls a.button.active {
-		background: #F87108;	
+		background-image: none !important;
+		background: #F87108 !important;	
 		border: none;		
 		-webkit-transition: background 0.2s ease-in-out;
 		-moz-transition: background 0.2s ease-in-out;
@@ -1930,7 +2002,7 @@ megaDropSubDiv a,
 	
 	.content-block-2 .tea-facts a {
 		height: 160px;
-		background: url(../images/bg-block-tea-facts-small.jpg) center center no-repeat #ff790d;
+		background: url(/images/bg-block-tea-facts-small.jpg) center center no-repeat #ff790d;
 		-webkit-border-radius: 0px 0px 0px 12px;
 		-moz-border-radius: 0px 0px 0px 12px;
 		border-radius: 0px 0px 0px 12px;
@@ -2098,16 +2170,16 @@ megaDropSubDiv a,
 		display: block;
 	}
 	
-	.accordion .action .show-more {
-		background: url(../images/mobile-accordion-open-close.png) right top no-repeat #fff;
+	.accordion .action .show-more, .results .action .show-more {
+		background: url(/images/mobile-accordion-open-close.png) right top no-repeat #fff;
 	}
-	
+/*	
 	.results .action .show-more {
 		background: url(../images/mobile-new-page.png) right center no-repeat #fff;
 		padding-right: 26px;
 		display: block;
 	}	
-	
+*/
 	#wrapper {		
 		-webkit-transition: margin 0.5s;
 		-moz-transition: margin 0.5s;
@@ -2169,7 +2241,7 @@ megaDropSubDiv a,
 }
 
 #mobile-nav-btn a {
-	background: url(../images/mobile-nav-btn.png) 0 0 no-repeat;
+	background: url(/images/mobile-nav-btn.png) 0 0 no-repeat;
 	display: block;
 	width: 24px;
 	height: 20px;

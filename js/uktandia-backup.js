@@ -323,11 +323,14 @@ Date: 08.03.2014
 				$mobileNav = $('#mobile-nav-list'),			
 				$clonedNav = $('.main-nav').clone();
 				
-			$('.level-1', $clonedNav).each(function(index, obj){
+			$('.level-1', $clonedNav).each(function(index, obj){				
 				
-				$(obj).on('click', function(evt){
+				var $linkContainer = $('<div class="linkContainer clearfix"></div>'),
+					$subMenuButton = $('<span class="subMenuButton"></span>');
 					
-					evt.preventDefault();					
+				$(obj).parent('li').append($linkContainer);				
+				
+				$subMenuButton.on('click', function(evt){					
 					
 					if(self.isBusy){
 						
@@ -474,11 +477,13 @@ Date: 08.03.2014
 					
 					}
 					
-				})
+				});
+				
+				$linkContainer.append($(obj).append($subMenuButton));
 				
 			});
 			
-			$header = $('<div class="header">Menu</div>');
+			$header = $('<div class="header">&nbsp;</div>');
 									
 			$header.on('click', function(){
 			

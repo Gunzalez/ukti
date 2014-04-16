@@ -1,18 +1,18 @@
 /* 
-AUTHOR: Segun Konibire
+AUTHOR: Segun Konbire
 Date: 08.03.2014
 */
 
 (function ($, window, document) {
-		
-	window.uktandia = {};
+	
+	window.uktandia = {}
 	
 	uktandia.properties = {
 		
 		/* global properties */
 		isMobile: false,
 		isIE: false	
-	};
+	}
 	
 	uktandia.carousel = {
 		
@@ -32,18 +32,18 @@ Date: 08.03.2014
 		init: function(){
 			
 			if(!$('#carousel').length>0){
-				
 				return false;
-				
 			}
 			
 			var self = this; // scope
   
-			$(".owl-carousel", this.$html).owlCarousel({				
+			$(".owl-carousel", this.$html).owlCarousel({
+				
 				navigation : false,
 				slideSpeed : 300,
 				paginationSpeed : 400,
-				singleItem : true				
+				singleItem : true
+				
 			});
 			
 			self.$buttons.on('click',function(e){
@@ -64,7 +64,6 @@ Date: 08.03.2014
 					var curIndex = self.$buttons.index($('.button.active'));
 					
 					curIndex++;
-					
 					var newIndex = curIndex > 2 ? 0 : curIndex;	
 									
 					$(".owl-carousel", self.$html).trigger('owl.goTo', newIndex);
@@ -99,9 +98,7 @@ Date: 08.03.2014
 		init: function(){
 			
 			if(!$('.accordion').length>0){
-				
 				return false;
-				
 			}			
 			
 			var self = this; // scope		
@@ -144,13 +141,13 @@ Date: 08.03.2014
 				});
 								
 			});
-				
+			
 			self.$section.each(function(i, obj){
 				
 				var clipLinks = $('.clip .show-more', $(obj));
 				
-				clipLinks.on('click', function(){
-										
+				clipLinks.on('click', function(e){
+
 					$(this).parents('.accordion').find('.heading').trigger('click');
 					
 				});
@@ -169,9 +166,7 @@ Date: 08.03.2014
 		init: function(){
 			
 			if(!$('.result').length>0){
-				
 				return false;
-				
 			}			
 			
 			var self = this; // scope			
@@ -201,9 +196,7 @@ Date: 08.03.2014
 		init: function(){
 			
 			if(!$('.gallery').length>0){
-				
 				return false;
-				
 			}			
 			
 			var self = this; // scope			
@@ -217,11 +210,8 @@ Date: 08.03.2014
 				
 				
 			$('a', self.$gallery).on('click',function(){
-				
 				$('.click-to-enlarge').remove();
-				
 				$('.click-me').removeClass('click-me');
-				
 			});
 			
 		}	
@@ -249,7 +239,7 @@ Date: 08.03.2014
 				$slidingContainer = $('<div id="sliding-container" />'),
 				stageWidth = $(window).width(),
 				stageHeight = $(window).height(),
-				peakThrough = 46;				
+				peakThrough = 48;				
 				
 			$theStage.css({
 				width: stageWidth,
@@ -333,11 +323,14 @@ Date: 08.03.2014
 				$mobileNav = $('#mobile-nav-list'),			
 				$clonedNav = $('.main-nav').clone();
 				
-			$('.level-1', $clonedNav).each(function(index, obj){
+			$('.level-1', $clonedNav).each(function(index, obj){				
 				
-				$(obj).on('click', function(evt){
+				var $linkContainer = $('<div class="linkContainer clearfix"></div>'),
+					$subMenuButton = $('<span class="subMenuButton"></span>');
 					
-					evt.preventDefault();					
+				$(obj).parent('li').append($linkContainer);				
+				
+				$subMenuButton.on('click', function(evt){					
 					
 					if(self.isBusy){
 						
@@ -347,7 +340,9 @@ Date: 08.03.2014
 					
 						self.isBusy = true;
 						
-						var $mobileMegaDropDown = $(obj).parent('li').find('.megaDropDown'),
+						$(this).parent().addClass('active');
+						
+						var $mobileMegaDropDown = $(obj).parents('li').find('.megaDropDown'),
 							$mobileMegaDropDownDiv = $('<div id="mobileMegaDropDownDiv"></div>'),
 							$header = $('<div class="header">'+ $(obj).html() +'</div>');
 							
@@ -361,7 +356,7 @@ Date: 08.03.2014
 									
 										$mobileMegaDropDownDiv.remove();
 										
-										$(obj).removeClass('active');
+										$('.linkContainer', $clonedNav).removeClass('active');
 									
 									});
 											
@@ -378,7 +373,9 @@ Date: 08.03.2014
 									$linkContainer = $('<div class="linkContainer clearfix"></div>'),
 									$subMenuButton = $('<span class="subMenuButton"></span>');
 								
-								$subMenuButton.on('click',function(evt){			
+								$subMenuButton.on('click',function(evt){
+									
+									evt.preventDefault();
 									
 									var $subMenuBtn = $(this),
 										$megaDropSubDiv = $('<div id="megaDropSubDiv"></div>'),
@@ -412,10 +409,12 @@ Date: 08.03.2014
 									
 									$megaDropSubDiv.append($clonedList);
 									
-									$megaDropSubDiv.css({								
+									$megaDropSubDiv.css({
+								
 										height: $mobileNav.height(),
 										width: $mobileNav.width(),
-										left: $mobileNav.width()+'px'										
+										left: $mobileNav.width()+'px'
+										
 									});
 																
 									$mobileNav.append($megaDropSubDiv);
@@ -458,10 +457,12 @@ Date: 08.03.2014
 							
 						});
 						
-						$mobileMegaDropDownDiv.css({							
+						$mobileMegaDropDownDiv.css({
+							
 							height: $mobileNav.height(),
 							width: $mobileNav.width(),
-							left: $mobileNav.width()+'px'							
+							left: $mobileNav.width()+'px'
+							
 						});
 						
 						$mobileNav.append($mobileMegaDropDownDiv);
@@ -478,26 +479,27 @@ Date: 08.03.2014
 					
 					}
 					
-				})
+				});
+				
+				$(obj).on('click',function(){
+					
+					$(this).parent().addClass('active');
+					
+				});
+				
+				$linkContainer.append($(obj)).append($subMenuButton);
 				
 			});
 			
-			$header = $('<div class="header">Menu</div>');
+			$header = $('<div class="header">&nbsp;</div>');
 									
 			$header.on('click', function(){
 			
 				$('#mobile-nav-btn a').trigger('click');
 							
-			});	
-			
-			$('a', $clonedNav).on('click', function(){
-				
-				$(this).addClass('active');
-				
 			});
-
 			
-			$mobileNav.append($header);
+			$mobileNav.append($header);			
 			
 			$mobileNav.append($clonedNav);
 			
@@ -598,9 +600,7 @@ Date: 08.03.2014
 			var self = this;
 			
 			if(!$('#formListings').length>0){
-				
 				return false;
-				
 			}
 			
 			$('[href="#"]', self.$map).each(function(index, obj){
@@ -637,9 +637,7 @@ Date: 08.03.2014
 				var isValid = self._checkIfThisFormIsValid();
 
 				if(!isValid){
-					
-					return false;
-						
+					return false;	
 				}
 				
 			});
@@ -689,16 +687,61 @@ Date: 08.03.2014
 				
 				$('.main-nav').addClass('notFullWidth');
 				
+				$('#header .megaDropDown').removeAttr('style');				
+				
+				$('.megaDropDown', $(obj)).css({
+					width : megaWidth,
+					left : megaLeft + 'px'
+				});
+				
 			} else {
 				
 				$('.main-nav').removeClass('notFullWidth');
 				
-			}	
-								
-			$('.megaDropDown', $(obj)).css({
-				width : megaWidth,
-				left : megaLeft + 'px'
-			});
+				var index = $('#header .main-nav > li').index($(obj));
+			
+				switch(index)
+				{
+				case 0:
+					$('.megaDropDown', $(obj)).css({
+						width : megaWidth,
+						right : 'inherit',
+						left : megaLeft + 'px'
+					});
+					break;
+				case 1:
+					$('.megaDropDown', $(obj)).css({
+						width : '332px',
+						right : 'inherit',
+						left : '-1px',
+					});			  
+					break;
+				case 2:
+					$('.megaDropDown', $(obj)).css({
+						width : '302px',
+						right : 'inherit',
+						left : '-1px',
+					});			  
+					break;
+				case 3:
+					$('.megaDropDown', $(obj)).css({
+						width : '300px',
+						left : 'inherit',
+						right: '-1px'
+					});			  
+					break;
+				case 4:
+					$('.megaDropDown', $(obj)).css({
+						width : '290px',
+						left : 'inherit',
+						right: 0
+					});			  
+					break;
+				default:
+				  
+				}
+				
+			}
 			
 		},
 		
@@ -787,7 +830,7 @@ Date: 08.03.2014
 		
 		$(window).on('resize',function(){
 			
-			var theWidthNow = $(window).width();
+			var theWidthNow = $(window).width()
 			
 			if(uktandia.properties.width != theWidthNow){
 			
