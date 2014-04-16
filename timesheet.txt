@@ -23,13 +23,15 @@ Desktop nav and tablet, now on hover and iPhone window reszie bug - 4hrs
 Mobile nav - 4hrs
 Mobile nav, tweaks (now with landing pages) - 1hr
 
+Fixes as requested by Rob/Al
+Nav amends - 3hrs
+
 
 
 TODO:
 ---------------------
 Text shadow on navigation
 Fancy box attachment (Rob wants to do this)
-
 
 
 Questions mark
