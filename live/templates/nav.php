@@ -30,6 +30,7 @@
                         	<li><a href="<?=site_url('tea-processing-and-blending')?>" class="level-3">Processing &amp; Blending</a></li>
                         	<li><a href="<?=site_url('tea-packaging-distribution-and-trading')?>" class="level-3">Packaging &amp; Distribution</a></li>
                         	<li><a href="<?=site_url('sustainability-bulk-handling-of-tea')?>" class="level-3">Sustainability / Bulk Handling of Tea</a></li>
+                                <li><a href="<?=site_url('make-a-perfect-brew')?>" title="Make a Perfect Brew" class="level-3">How to make a Perfect Brew</a></li>
                         </ul>                    
                     </div>
                     <div class="megaDropSubDiv">
@@ -54,12 +55,12 @@
                     </div>
                     
                     <div class="megaDropSubDivWithImage">
-                    	<!--<h2><a href="<?=site_url('make-a-perfect-brew')?>" class="level-2">The Perfect Brew</a></h2> -->
+                        <a href="<?=site_url('about-tea')?>">About Tea</a>
                         <div class="imagery">
-                            <a href="<?=site_url('make-a-perfect-brew')?>"><img src="<?=site_url('images/preview-image-1.jpg')?>" /></a>
+                            <a href="<?=site_url('about-tea')?>"><img src="<?=site_url('images/preview-image-1.jpg')?>" /></a>
                         </div>
                         <div class="copy">
-                            <p>Summary copy about this section goes here. <a href="<?=site_url('make-a-perfect-brew')?>" title="Make a Perfect Brew">How to make a Perfect Brew</a></p>
+                            <p>Summary copy about this section goes here.</p>
                         </div>
                     </div>
                     
@@ -68,14 +69,14 @@
             
             <li class="main-nav-item-2"><a href="<?=site_url('about-us')?>" class="level-1">About Us</a>
                 <div class="megaDropDown">  
-                                                
-                    <div class="megaDropSubDivWithImage">
-                    	<!--<h2><a href="<?=site_url('make-a-perfect-brew')?>" class="level-2">The Perfect Brew</a></h2> -->
+ 
+                     <div class="megaDropSubDivWithImage">
+                        <a href="<?=site_url('about-us')?>">About Us</a>
                         <div class="imagery">
-                            <a href="<?=site_url('make-a-perfect-brew')?>"><img src="<?=site_url('images/preview-image-1.jpg')?>" /></a>
+                            <a href="<?=site_url('about-us')?>"><img src="<?=site_url('images/preview-image-1.jpg')?>" /></a>
                         </div>
                         <div class="copy">
-                            <p>Summary copy about this section goes here. <a href="<?=site_url('make-a-perfect-brew')?>" title="Make a Perfect Brew">How to make a Perfect Brew</a></p>
+                            <p>Summary copy about this section goes here.</p>
                         </div>
                     </div>
                     
@@ -90,6 +91,7 @@
                     <div class="megaDropSubDiv">
                         <h2><a href='<?php echo site_url('member-area')?>' title='Members Area' class="level-2">Members Area</a></h2>
                     </div>
+                    
                 </div>
             </li>
             
@@ -97,12 +99,12 @@
             	<div class="megaDropDown">
                     
                     <div class="megaDropSubDivWithImage">
-                    	<!--<h2><a href="<?=site_url('make-a-perfect-brew')?>" class="level-2">The Perfect Brew</a></h2> -->
+                        <a href="<?=site_url('health')?>">Health</a>
                         <div class="imagery">
-                            <a href="<?=site_url('make-a-perfect-brew')?>"><img src="<?=site_url('images/preview-image-1.jpg')?>" /></a>
+                            <a href="<?=site_url('health')?>"><img src="<?=site_url('images/preview-image-1.jpg')?>" /></a>
                         </div>
                         <div class="copy">
-                            <p>Summary copy about this section goes here. <a href="<?=site_url('make-a-perfect-brew')?>" title="Make a Perfect Brew">How to make a Perfect Brew</a></p>
+                            <p>Summary copy about this section goes here.</p>
                         </div>
                     </div>
                     
@@ -116,12 +118,12 @@
             	<div class="megaDropDown">
                     
                     <div class="megaDropSubDivWithImage">
-                    	<!--<h2><a href="<?=site_url('make-a-perfect-brew')?>" class="level-2">The Perfect Brew</a></h2> -->
+                        <a href="<?=site_url('tea-list')?>">The Tea List</a>
                         <div class="imagery">
-                            <a href="<?=site_url('make-a-perfect-brew')?>"><img src="<?=site_url('images/preview-image-1.jpg')?>" /></a>
+                            <a href="<?=site_url('tea-list')?>"><img src="<?=site_url('images/preview-image-1.jpg')?>" /></a>
                         </div>
                         <div class="copy">
-                            <p>Summary copy about this section goes here. <a href="<?=site_url('make-a-perfect-brew')?>" title="Make a Perfect Brew">How to make a Perfect Brew</a></p>
+                            <p>Summary copy about this section goes here.</p>
                         </div>
                     </div>
                     
@@ -139,12 +141,12 @@
             	<div class="megaDropDown">
                 
                     <div class="megaDropSubDivWithImage">
-                    	<!--<h2><a href="<?=site_url('make-a-perfect-brew')?>" class="level-2">The Perfect Brew</a></h2> -->
+                        <a href="<?=site_url('news')?>">News</a>
                         <div class="imagery">
-                            <a href="<?=site_url('make-a-perfect-brew')?>"><img src="<?=site_url('images/preview-image-1.jpg')?>" /></a>
+                            <a href="<?=site_url('news')?>"><img src="<?=site_url('images/preview-image-1.jpg')?>" /></a>
                         </div>
                         <div class="copy">
-                            <p>Summary copy about this section goes here. <a href="<?=site_url('make-a-perfect-brew')?>" title="Make a Perfect Brew">How to make a Perfect Brew</a></p>
+                            <p>Summary copy about this section goes here.</p>
                         </div>
                     </div>
                     

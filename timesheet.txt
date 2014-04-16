@@ -26,24 +26,23 @@ Mobile nav, tweaks (now with landing pages) - 1hr
 Fixes as requested by Rob/Al
 Nav amends - 3hrs
 Further mobile nav fixes - 2hrs
+Fancy box attachment (Rob has done this)
+Landing page link and other tweaks and fixes - 2hrs
 
 
 
 TODO:
 ---------------------
 Text shadow on navigation
-Fancy box attachment (Rob wants to do this)
+Make orange box responsive, Rob has slapped this everywhere now. !!
 
 
 Questions mark
 ---------------------
-Tablet header area, including aux nav and search
+Tablet header area, including aux nav and search (being discussed)
 Tea facts imagery for different screens
 
 
-Tech query
--------------------
-Use of 2 UL elements in gallery, may not work with fancy box.
 
 
 

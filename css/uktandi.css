@@ -223,7 +223,7 @@ h3, h4, h5  {
 
 #header .main-nav li {
 	float: left;
-	border-left: 1px solid #7a7250;
+	border-left: 1px solid #e0e0e0;
 	position: relative;
 }
 
@@ -248,12 +248,11 @@ h3, h4, h5  {
 	z-index: 3;
 	width: 940px;
 	left: -999em;
-	-webkit-box-shadow: inset 0px 3px 2px 0px rgba(51,51,51,0.17);
-	-moz-box-shadow: inset 0px 3px 2px 0px rgba(51,51,51,0.17);
-	box-shadow: inset 0px 3px 2px 0px rgba(51,51,51,0.17);	
 	background: url(/images/mega-drop.png) right top repeat-y #7a7250;
 }
 
+
+#header .megaDropSubDivWithImage > a,
 #header .main-nav .megaDropDown a {
 	color: #fff;
 	text-decoration: none;
@@ -267,6 +266,10 @@ h3, h4, h5  {
 	float: left;
 }
 
+.main-nav-item-2 .megaDropSubDiv {
+        width: 255px;
+}
+
 .main-nav-item-3 .megaDropSubDiv {
 	width: 144px;
 }
@@ -276,7 +279,7 @@ h3, h4, h5  {
 }
 
 .main-nav-item-5 .megaDropSubDiv {
-	width: 133px;
+	width: 113px;
 }
 
 .fullWidthDropDown .megaDropSubDiv {
@@ -290,11 +293,23 @@ h3, h4, h5  {
 	margin: 0 8px;
 }
 
+#header .megaDropSubDivWithImage > a,
 .megaDropSubDiv h2 a {
 	font-size: 0.80em;
 	padding-bottom: 2px;
 	line-height: 130%;
 	font-family: arial, verdana;
+}
+
+#header .megaDropSubDivWithImage > a {
+	font-size: 1.0em;
+	font-weight: bold;
+	padding: 3px 6px;
+	margin-bottom: 1px;
+}
+
+#header .megaDropSubDivWithImage > a:hover {
+	background: #958e73;
 }
 
 .megaDropSubDiv .haslist a {
@@ -325,7 +340,7 @@ h3, h4, h5  {
 	float: right;
 	width: 125px;
 	margin-right: 20px;
-	margin-top: 10px;
+	margin-top: 8px;
 	padding-bottom: 20px;
 }
 
@@ -436,7 +451,6 @@ h3, h4, h5  {
 	background: url(/images/xmarksthespot.png) center right no-repeat;
 }
 
-megaDropSubDiv a,
 #mobileMegaDropDownDiv a {
 	color: #fff;
 	text-transform: uppercase;
@@ -447,7 +461,7 @@ megaDropSubDiv a,
 	background-color: #fff;
 	background: rgb(255, 255, 255);
 	background: rgba(255, 255, 255, 0.1);
-	margin: 1px 12px;	
+	margin: 1px 12px 2px 12px;	
 }
 
 
@@ -492,7 +506,6 @@ megaDropSubDiv a,
 	background: rgba(255, 255, 255, 0.3);
 }
 /* ends - used by JS */
-
 
 
 
@@ -1502,19 +1515,20 @@ megaDropSubDiv a,
 
 /* footer */
 .footer {
-	padding-bottom: 30px !important;
+	padding-bottom: 0 !important;
 }
 
-.footer .footer-nav {
+.footer .footer-nav, .footer .secondary-nav {
 	margin: 0;
 	padding: 0 0 10px 0;
 	list-style: none;
 	float: right;
+        clear: right;
 }
 
-.footer .footer-nav li {
+.footer .footer-nav li, .footer .secondary-nav li  {
 	float: left;
-	border-left: 1px solid #ccc;
+        border-left: 1px solid #e0e0e0;
 }
 
 .footer .footer-nav li a {
@@ -1527,16 +1541,28 @@ megaDropSubDiv a,
 	font-family: 'Sri-TSCRegular';
 }
 
-.footer .footer-nav li a:hover,
-.footer .footer-nav li a.active {
-	color: #333;
+.footer .secondary-nav li a {
+	font-size: 11px;
+	text-decoration: none;
+	padding: 3px 5px;
+	color: #79714f;
 }
 
-.footer .footer-nav li:last-child a {
+.footer .footer-nav li a:hover,
+.footer .footer-nav li a:active, 
+.footer .secondary-nav li a:hover, 
+.footer .secondary-nav li a:active {
+	color: #333;
+        text-decoration: underline;
+}
+
+.footer .footer-nav li:last-child a, 
+.footer .secondary-nav li:last-child a {
 	padding-right: 0;
 }
 
-.footer .footer-nav li:first-child {
+.footer .footer-nav li:first-child,
+.footer .secondary-nav li:first-child {
 	padding-right: 0;
 	border-left: none;
 }
@@ -1563,6 +1589,21 @@ megaDropSubDiv a,
 }
 
 
+.shaker {
+    font-size: 11px;
+    text-align:center;
+    color: #000;
+    margin: 10px auto 20px auto;
+}
+
+.shaker a {
+    background: url('/images/sugarshaker.png') no-repeat center left;
+    height: 16px;
+    margin: 0;
+    padding: 5px 0px 5px 21px;
+    color: #000;
+    font-weight:normal;
+}
 
 
 /* misc */

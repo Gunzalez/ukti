@@ -711,30 +711,30 @@ Date: 08.03.2014
 					break;
 				case 1:
 					$('.megaDropDown', $(obj)).css({
-						width : '332px',
+						width : '410px',
 						right : 'inherit',
-						left : '-1px',
+						left : '0',
 					});			  
 					break;
 				case 2:
 					$('.megaDropDown', $(obj)).css({
-						width : '302px',
+						width : '301px',
 						right : 'inherit',
-						left : '-1px',
+						left : '0',
 					});			  
 					break;
 				case 3:
 					$('.megaDropDown', $(obj)).css({
-						width : '300px',
+						width : '301px',
 						left : 'inherit',
-						right: '-1px'
+						right: '-78px' 
 					});			  
 					break;
 				case 4:
 					$('.megaDropDown', $(obj)).css({
-						width : '290px',
+						width : '270px',
 						left : 'inherit',
-						right: 0
+						right: '0'
 					});			  
 					break;
 				default:
@@ -768,9 +768,11 @@ Date: 08.03.2014
 			
 			} else {
 				
-				self.$links.each(function(index, obj){				
+				self.$links.each(function(index, obj){
+
+					var $link = $('.level-1', $(obj));
 					
-					$(obj).on('click',function(evt){
+					$link.on('click',function(evt){
 						
 						evt.preventDefault();
 						
@@ -788,7 +790,7 @@ Date: 08.03.2014
 						
 						}								
 						
-					})
+					});
 					
 				});
 				
