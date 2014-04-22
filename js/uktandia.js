@@ -191,23 +191,20 @@ Date: 08.03.2014
 	uktandia.gallery = {
 		
 		/* properties */
-		$gallery: $('.gallery'),		
+		$gallery: $('.gallery'),
 		
 		init: function(){
 			
 			if(!$('.gallery').length>0){
 				return false;
-			}			
-			
-			var self = this; // scope			
-				
-			var $clipImages  = $('.gallery .clip a'),
-				ranNum = Math.floor(Math.random() * $clipImages.length) + 1,
-				$hinLi = $('li', $clipImages.parents('.clip')).eq(ranNum-1),
-				$hintText = $('<span class="click-to-enlarge">Click images to enlarge</span>');
-				
-			$('a', $hinLi).append($hintText).addClass('click-me');
-				
+			}
+
+			var self = this,
+				$hintText = $('<span class="click-to-enlarge">Click to enlarge</span>');
+
+			var $clip = $('.clip', self.$gallery);	
+
+			$('a', $clip).append($hintText).addClass('click-me');			
 				
 			$('a', self.$gallery).on('click',function(){
 				$('.click-to-enlarge').remove();
@@ -227,6 +224,8 @@ Date: 08.03.2014
 		slideSpeed: 250,
 		easing: 'swing',		
 		$mobileNavBtn: $('#mobile-nav-btn'),
+		$mobileSearchBtn: $('#mobile-search-btn'),
+		$mobileSearchDiv: $('#mobile-search-div'),
 		
 		/* methods */
 		_launchMobileNav: function(){
@@ -514,6 +513,8 @@ Date: 08.03.2014
 				$('#mobile-nav-btn a').on('click',function(evt){
 					
 					evt.preventDefault();
+
+
 					
 					if($('#the-stage').length > 0){
 						
@@ -530,8 +531,75 @@ Date: 08.03.2014
 				self._cloneNavigation();
 					
 			}
+
+
+			if($('#mobile-search-btn').length > 0){
+				
+				self.$mobileSearchBtn.on('click',function(evt){
+					
+					evt.preventDefault();
+
+					if($('#fake-wrapper').length > 0) {
+
+						$('#mobile-nav-btn a').trigger('click');
+
+					} else {
+
+						if(!self.$mobileSearchDiv.hasClass('opened')){							
+
+							if( !$('form', self.$mobileSearchDiv).length > 0 ) {
+
+								var $searchForm = $('.top-nav .search-form form').clone();
+
+								self.$mobileSearchDiv.append($searchForm);
+
+								$($searchForm).on('submit', function(){
+
+									if($.trim($('.text', $searchForm).val()).length < 1){
+
+										$('.text', $searchForm).focus();
+
+										return false;
+
+									}
+
+								});
+
+							}
+
+							self.$mobileSearchDiv.css({
+								display: 'block',
+								'margin-top': '-40px',
+								height: '40px'
+							}).animate({
+								'margin-top': '0'
+							}, 250, 'swing', function(){
+
+								self.$mobileSearchDiv.addClass('opened');
+
+							});
+
+						} else {
+
+							self.$mobileSearchDiv.animate({
+								'margin-top': '-40px'
+							}, 250, 'swing', function(){
+
+								self.$mobileSearchDiv.removeClass('opened').css( 'display', 'none');
+
+							});
+
+						};
+
+					}
+										
+				});	
+					
+			}
 			
 		},
+
+
 		
 		resize: function(){
 						
@@ -649,6 +717,7 @@ Date: 08.03.2014
 		
 		/* properties */
 		fullWidth: 940,
+		tabletThreshold: 805,
 		resetLeft: '-999em',
 		$links: $('.main-nav > li'),
 		
@@ -676,27 +745,36 @@ Date: 08.03.2014
 		
 		_showMegaDropDownForThisLink: function(obj){
 			
-			var self = this;			
-			
-			var megaWidth = $('#header').width(),
-				megaLeft = $('#header').offset().left - $(obj).offset().left;
-				
+			var self = this,
+				megaWidth = $('#header').width(),
+				megaLeft = $('#header').offset().left - $(obj).offset().left;			
+
 			$(obj).addClass('active');
 			
-			if( megaWidth < self.fullWidth ) {
+			if( megaWidth < self.tabletThreshold ) {
 				
-				$('.main-nav').addClass('notFullWidth');
+				$('.main-nav').addClass('notFullWidth').removeClass('tabletLandscape');
 				
 				$('#header .megaDropDown').removeAttr('style');				
 				
 				$('.megaDropDown', $(obj)).css({
 					width : megaWidth,
-					left : megaLeft + 'px'
+					left : (megaLeft - 1) + 'px'
 				});
 				
 			} else {
 				
 				$('.main-nav').removeClass('notFullWidth');
+
+				if( megaWidth < self.fullWidth ){
+
+					$('.main-nav').addClass('tabletLandscape');					
+
+				} else {
+
+					$('.main-nav').removeClass('tabletLandscape');
+
+				}
 				
 				var index = $('#header .main-nav > li').index($(obj));
 			
@@ -740,6 +818,7 @@ Date: 08.03.2014
 				default:
 				  
 				}
+
 				
 			}
 			
@@ -832,7 +911,7 @@ Date: 08.03.2014
 		
 		$(window).on('resize',function(){
 			
-			var theWidthNow = $(window).width()
+			var theWidthNow = $(window).width();
 			
 			if(uktandia.properties.width != theWidthNow){
 			

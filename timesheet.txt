@@ -25,25 +25,28 @@ Mobile nav, tweaks (now with landing pages) - 1hr
 
 Fixes as requested by Rob/Al
 Nav amends - 3hrs
-Further mobile nav fixes - 2hrs
+Further mobile nav amends - 2hrs
 Fancy box attachment (Rob has done this)
-Landing page link and other tweaks and fixes - 2hrs
-
-
+Landing page link and other tweaks and fixes
+Created no image version for list pages, made 'click to enlarge' feature work on hover for desktop - 2hrs
+3 green widgets story, fixed
+News page responsive, fixed
+Tablet and mobile search - 3hrs
 
 TODO:
 ---------------------
-Text shadow on navigation
 Make orange box responsive, Rob has slapped this everywhere now. !!
-
 
 Questions mark
 ---------------------
-Tablet header area, including aux nav and search (being discussed)
-Tea facts imagery for different screens
+Tea facts imagery for different screens (same as orange box story)
 
 
 
+
+http://dev.tea.sugarshaker.com/
+user: teatime
+password: dY6wbAA3
 
 
 
