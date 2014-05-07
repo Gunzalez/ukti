@@ -42,11 +42,17 @@ Questions mark
 Tea facts imagery for different screens (same as orange box story)
 
 
-
-
 http://dev.tea.sugarshaker.com/
 user: teatime
 password: dY6wbAA3
+
+Amends
+---------
+Map form = 
+point 2 on email - Changed JS validation. 
+point 3 on email - Changed region highlighting feature. 
+point 4 on email - Incorporated 'International' region
+Total of 1.5hr
 
 
 

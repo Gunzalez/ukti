@@ -18,7 +18,7 @@ Date: 08.03.2014
 		
 		/* properties */		
 		timer: '',
-		delay: 12000,
+		delay: 5000,
 		$html : $('#carousel'),
 		$buttons: $('.controls a', this.$html),
 		
@@ -40,8 +40,8 @@ Date: 08.03.2014
 			$(".owl-carousel", this.$html).owlCarousel({
 				
 				navigation : false,
-				slideSpeed : 300,
-				paginationSpeed : 400,
+				slideSpeed : 800,
+				paginationSpeed : 800,
 				singleItem : true
 				
 			});
@@ -514,7 +514,6 @@ Date: 08.03.2014
 					
 					evt.preventDefault();
 
-
 					
 					if($('#the-stage').length > 0){
 						
@@ -606,6 +605,8 @@ Date: 08.03.2014
 			var self = this;
 						
 			self._destroyMobileNav();
+
+			self.$mobileSearchDiv.css('margin-top','-40px').removeClass('opened').css( 'display', 'none');
 			
 		}
 		
@@ -615,18 +616,21 @@ Date: 08.03.2014
 		
 		$form: $('#formListings'),
 		$map: $('.map-image', this.$form),
+		locationWithoutMaps : ['international'],		
 		
 		_checkIfThisFormIsValid: function(){
 			
 			var self = this
 			
-			if($('#category', self.$form).val() == 'null' || $('#location', self.$form).val() == 'null'){
+			if($('#category', self.$form).val() == '' || $('#location', self.$form).val() == ''){
 
-				self.$form.addClass('error');
+				$('.map_error').show();
 				
 				return false;
 				
 			} else {
+
+				$('.map_error').hide();
 				
 				return true;
 				
@@ -657,9 +661,11 @@ Date: 08.03.2014
 		_unSetMapAnyLocation: function(){
 						
 			var self = this,
-				resetSrc = $('img', self.$map).attr('data-location-reset');
+				resetSrc = $('img', self.$map).attr('data-location-reset');				
+							
+                $('.selected', self.$map).removeClass('selected');        
 				
-			$('img', self.$map).attr('src', resetSrc);
+                $('img', self.$map).attr('src', resetSrc);
 			
 		},		
 		
@@ -681,22 +687,19 @@ Date: 08.03.2014
 					
 					$('#location', self.$form).val(pickedLocation).trigger('change');
 					
-					$('#submit', self.$form).trigger('click');
+					self._unSetMapAnyLocation();
 					
-				})
-				
-				if(!uktandia.properties.isMobile){
+					if( self.locationWithoutMaps.indexOf(pickedLocation) < 0 ){
 					
-					$(obj).on('mouseenter',function(){
-						
 						self._setMapToThisLocation($(obj));
+					
+					} else {
 						
-					}).on('mouseleave',function(){
-						
-						self._unSetMapAnyLocation();
-						
-					});
-				}
+						$(obj).addClass('selected');
+							
+					}
+					
+				});
 				
 			});
 			
@@ -911,7 +914,7 @@ Date: 08.03.2014
 		
 		$(window).on('resize',function(){
 			
-			var theWidthNow = $(window).width();
+			var theWidthNow = $(window).width()
 			
 			if(uktandia.properties.width != theWidthNow){
 			
