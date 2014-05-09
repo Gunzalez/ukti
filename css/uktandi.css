@@ -4,7 +4,7 @@ body {
 	margin: 0;
 	padding: 0;
 	font-size: 12px;
-	font-family: arial, verdana;
+	font-family: Verdana, Arial;
 	color: #555;
 	-webkit-text-size-adjust: none;
 }
@@ -175,7 +175,7 @@ h3, h4, h5  {
 }
 
 #header .top-nav li form .text {
-	font-family: arial, verdana;
+	font-family: Verdana, Arial;
 	font-size: 0.9em;
 	color: #79714f;
 	padding: 4px 6px;	
@@ -336,7 +336,7 @@ h3, h4, h5  {
 	font-size: 0.80em;
 	padding-bottom: 2px;
 	line-height: 130%;
-	font-family: arial, verdana;
+	font-family: Arial, Verdana;
 }
 
 #header .megaDropSubDivWithImage > a {
@@ -386,7 +386,7 @@ h3, h4, h5  {
 	font-size: 0.80em;
 	padding-bottom: 2px;
 	line-height: 130%;
-	font-family: arial, verdana;
+	font-family: Arial, Verdana;
 	padding: 5px 0;
 }
 
@@ -820,7 +820,7 @@ Colours should be content managed
 
 .widget.tea-facts .intro {
     position: relative;
-    padding: 170px 5px 10px 20px;
+    padding: 160px 5px 10px 20px;
     margin: 0;
     bottom: 0;
     color: #fff;
@@ -855,7 +855,7 @@ Colours should be content managed
 }
 
 .tea-list form .select {
-	font-family: arial, verdana;
+	font-family: Verdana, Arial;
 	font-size: 1.0em;
 	color: #79714f;
 	padding: 3px 6px;
@@ -895,11 +895,11 @@ Colours should be content managed
 
 .widget.tap {
 	display: block;
-        position: relative;
-        width: 301px;
+	position: relative;
+	width: 301px;
 	height: 258px;
-        background: url(/images/bg-block-widget-tap.png) bottom right no-repeat #edecd7 !important;
-        -webkit-border-radius: 0px 0px 0px 25px;
+	background: url(/images/bg-block-widget-tap.png) bottom right no-repeat #edecd7 !important;
+	-webkit-border-radius: 0px 0px 0px 25px;
 	-moz-border-radius: 0px 0px 0px 25px;
 	border-radius: 0px 0px 0px 25px;
 }
@@ -934,6 +934,12 @@ Colours should be content managed
 .side-bar .content-block {
 	height: auto;
 }
+
+.side-bar .content-block .widget.tap,
+.side-bar .content-block .widget.history {
+	width: auto;
+}
+
 
 
 
@@ -1011,6 +1017,7 @@ Colours should be content managed
 	display: block; 
 	height: 0; 
 	clear: both;
+	padding-bottom: 10px;
 }
 
 .article .title-block h1 {
@@ -1291,7 +1298,7 @@ Colours should be content managed
 
 .list.news .section .heading h2 {
     font-size: 1.3em;
-    font-family: arial, verdana;
+    font-family: Verdana, Arial;
     line-height: 120%;
 }
 
@@ -1558,6 +1565,7 @@ Colours should be content managed
 	width: 303px;
 	height: 473px;
 	margin: 0 auto;
+	margin-bottom: 15px;
 }
 
 .map-image a {
@@ -1585,7 +1593,6 @@ Colours should be content managed
 .map-image a.north-east { left: 195px; top: 185px; }
 .map-image a.south-west { left: -15px; top: 380px; }
 .map-image a.international { left: 0; top: 450px; }
-
 .map-image a.selected { text-decoration: underline; }
 
 #formListings .row-1 {
@@ -1620,7 +1627,7 @@ Colours should be content managed
 }
 
 #formListings select {
-	font-family: arial, verdana;
+	font-family: Verdana, Arial;
 	font-size: 1.0em;
 	color: #79714f;
 	padding: 3px 6px;
@@ -1676,10 +1683,18 @@ Colours should be content managed
 	padding-bottom: 0 !important;
 }
 
-.footer .col {
-    width: 50%;
+.footer .col.left {
+    width: 30%;
     float: left;
     position: relative;
+}
+
+
+.footer .col.right {
+    width: 70%;
+    float: left;
+    position: relative;
+    text-align: right;
 }
 
 .footer ul.subscribe-nav {
@@ -1694,13 +1709,13 @@ Colours should be content managed
 	padding: 0 0 10px 0;
 	list-style: none;
 	float: right;
-        clear: right;
+    clear: right;
 }
 
 .footer .footer-nav li, 
 .footer .secondary-nav li  {
 	float: left;
-        border-left: 1px solid #e0e0e0;
+    border-left: 1px solid #e0e0e0;
 }
 
 .footer .footer-nav li a,
@@ -1714,7 +1729,6 @@ Colours should be content managed
 	font-family: 'Sri-TSCRegular';
 }
 
-
 .footer .secondary-nav li a {
 	font-size: 11px;
 	text-decoration: none;
@@ -1727,7 +1741,7 @@ Colours should be content managed
 .footer .secondary-nav li a:hover, 
 .footer .secondary-nav li a:active {
 	color: #333;
-    text-decoration: underline;
+        text-decoration: underline;
 }
 
 .footer .footer-nav li:last-child a, 
@@ -1748,16 +1762,6 @@ Colours should be content managed
     background-color: #79714f;
 }
 
-.footer .subscribe-nav li a {
-    color: #fff;
-    background-color: #79714f;	
-}
-
-.footer .subscribe-nav li a:hover {
-    color: #333;
-    background-color: #ccc;	
-}
-
 .footer #subscribe {
     color: #fff;
     background-color: #79714f;
@@ -1770,7 +1774,7 @@ Colours should be content managed
 }
 
 .footer form .text {
-	font-family: arial, verdana;
+	font-family: Verdana, Arial;
 	font-size: 0.9em;
 	color: #79714f;
 	padding: 4px 6px;
@@ -1858,6 +1862,20 @@ Colours should be content managed
 
 /* media queries */
 @media only screen and (max-width: 1000px)  {
+
+
+	.article .story .summary.short p {
+		margin-right: 0
+	}
+
+	.article .title-block .summary.short {
+		width: auto;
+	}
+
+
+
+
+
 	#carousel .owl-carousel .item .slide-link {
 		padding: 11px 18px;
 	}
@@ -2000,10 +2018,14 @@ Colours should be content managed
 		display: none;
 	}
 	
-	.article .title-block .main-list, .article .title-block .summary {
+	.article .title-block .main-list, 
+	.article .title-block .summary {
 		float: none;
 		width: auto;
 	}
+
+
+
 	
 	.article .story p,
 	.article .story > div {
@@ -2100,6 +2122,11 @@ Colours should be content managed
 		width: 290px;
 		float: left;
 	}
+
+	/* widget */
+	.widget.tap {
+		width: auto;
+	}
 	
 }
 
@@ -2114,7 +2141,7 @@ Colours should be content managed
 	}
 	
 	#header .top-nav {
-		width: 360px;
+		width: 380px;
 	}
 	
 	#header .tea-count {
@@ -2194,6 +2221,14 @@ Colours should be content managed
 	.article .share-this-article {
 		padding: 5px 10px;
 	}
+
+	.article .share-this-article:after { 
+	   content: "."; 
+	   visibility: hidden; 
+	   display: block; 
+	   height: 0; 
+	   clear: both;
+	}
 	
 	/*
 	.story,  
@@ -2260,7 +2295,6 @@ Colours should be content managed
 	
 	.widget.tea-list {
 		float: none;
-		height: 180px;
 		background-color: #bcc140;
 		background-position: center right;
 		-webkit-border-radius: 0px 0px 0px 12px;
@@ -2283,9 +2317,6 @@ Colours should be content managed
 		float: none;
 	}
 
-	.footer .footer-nav li:last-child a {
-		padding-right: 18px;
-	}
 
 	.footer .footer-nav,
 	.footer .secondary-nav {
@@ -2297,6 +2328,31 @@ Colours should be content managed
 }
 
 @media only screen and (max-width: 700px)  {
+
+
+	.footer .col.left {
+	    width: 60%;
+	    float: none;
+	    margin: 0 auto;
+	    margin-bottom: 12px;
+	}
+
+	.footer .col.right {
+	    width: 100%;
+	    float: none;
+	    position: relative;
+	    text-align: center;
+	}
+
+	.footer .footer-copy {
+		text-align: center;
+	}
+
+
+
+	.footer .footer-nav li:last-child a {
+		padding-right: 18px;
+	}
 	
 	#header h1 a img {
 		width: 240px;
@@ -2344,7 +2400,7 @@ Colours should be content managed
 	}
 	
 	.widget.tea-facts, .widget.tap, .widget.tea-list, .widget.history {
-		height: 180px;
+		
                 width: auto;
 		-webkit-border-radius: 0px 0px 0px 12px;
 		-moz-border-radius: 0px 0px 0px 12px;
@@ -2404,6 +2460,10 @@ Colours should be content managed
 
 
 @media only screen and (max-width: 600px)  {
+
+	.footer .col.left {
+	    width: 100%;
+	}
 	
 	
 	/* homepage */
@@ -2497,7 +2557,7 @@ Colours should be content managed
 	/* news */	
 	.side-bar .content-block-1,
 	.side-bar .content-block-2,
-        .side-bar .content-block-3 {
+    .side-bar .content-block-3 {
 		width: 100%;
 	}
 
@@ -2646,7 +2706,7 @@ Colours should be content managed
 
 	/* footer */
 	.footer .footer-nav li a {
-		font-family: arial, verdana;
+		font-family: Verdana, Arial;
 		padding: 2px 5px !important;
 		font-size: 0.9em;
 	}
@@ -2697,7 +2757,7 @@ Colours should be content managed
 
 #mobile-search-div form .text {
 	padding: 4px 6px;
-	font-family: arial, verdana;
+	font-family: Verdana, Arial;
 	border: none;
 	margin: 0;
 	font-size: 1.0em;
@@ -2735,7 +2795,15 @@ Colours should be content managed
     margin: 15px 15px 0 0;
 }
 
+.fr {
+    float: right;
+    margin: 15px 0 0 15px;
+}
 
+.fl {
+    float: left;
+    margin: 15px 15px 0 0;
+}
 
 
 form#register_form p {
@@ -2748,7 +2816,7 @@ form#register_form label {
 	border: solid 1px #eee;
 	padding: 2px 7px;
 	margin: 0 10px 0 0;
-	width: 100px;
+	width: 120px;
 }
 
 form#register_form .text {

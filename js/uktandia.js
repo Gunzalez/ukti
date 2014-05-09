@@ -110,12 +110,23 @@ Date: 08.03.2014
 				heading.on('click', function(){
 					
 					if(!$(obj).hasClass('open')){	
+
+						console.log('clicked')
+
+						if ($(obj).siblings('.open').length > 0){
+
+							$(obj).siblings('.accordion').removeClass('open').find('.detail').slideUp(function(){
+								
+								$(obj).addClass('open').find('.detail').slideDown();	
+								
+							});
+
+						} else {
+
+							$(obj).addClass('open').find('.detail').slideDown();
+
+						}
 					
-						$(obj).siblings('.accordion').removeClass('open').find('.detail').slideUp(function(){
-							
-							$(obj).addClass('open').find('.detail').slideDown();	
-							
-						});						
 												
 					} else {
 										
@@ -614,23 +625,24 @@ Date: 08.03.2014
 	
 	uktandia.mapforms = {
 		
-		$form: $('#formListings'),
-		$map: $('.map-image', this.$form),
-		locationWithoutMaps : ['international'],		
+		$form : $('#formListings'),
+		$map : $('.map-image', this.$form),
+		mapResetSrc : '',
+
 		
 		_checkIfThisFormIsValid: function(){
 			
 			var self = this
 			
-			if($('#category', self.$form).val() == '' || $('#location', self.$form).val() == ''){
+			$('.map_error').hide();
+			
+			if($('#category', self.$form).val() == '' && $('#location', self.$form).val() == ''){
 
 				$('.map_error').show();
 				
 				return false;
 				
 			} else {
-
-				$('.map_error').hide();
 				
 				return true;
 				
@@ -638,14 +650,14 @@ Date: 08.03.2014
 			
 		},
 		
-		_setMapToThisLocation: function($obj){
+		_setMapToThisLocation: function($obj, didClick){
 						
 			var self = this,
 				srcArray = [],
-				location = $obj.attr('class'),
+				location = $obj.attr('class').split(' ')[0],
 				newImgSrc = 'map-'+location+'.png'
 				curSrc = $('img', self.$map).attr('src');
-			
+
 			srcArray = curSrc.split('/');
 			
 			srcArray.pop();
@@ -655,17 +667,21 @@ Date: 08.03.2014
 			var newImgSrc = srcArray.join('/');
 		
 			$('img', self.$map).attr('src', newImgSrc);
+	
+
+			if (didClick){
+
+				self.mapResetSrc = newImgSrc;
+
+			}	
 			
 		},
 		
 		_unSetMapAnyLocation: function(){
-						
-			var self = this,
-				resetSrc = $('img', self.$map).attr('data-location-reset');				
-							
-                $('.selected', self.$map).removeClass('selected');        
-				
-                $('img', self.$map).attr('src', resetSrc);
+
+			var self = this;
+			
+			$('img', self.$map).attr('src', self.mapResetSrc);
 			
 		},		
 		
@@ -673,9 +689,13 @@ Date: 08.03.2014
 						
 			var self = this;
 			
-			if(!$('#formListings').length>0){
+			if( !$('#formListings').length > 0 ){
+
 				return false;
+
 			}
+
+			self.mapResetSrc = $('img', self.$map).attr('data-location-reset');
 			
 			$('[href="#"]', self.$map).each(function(index, obj){
 				
@@ -683,34 +703,33 @@ Date: 08.03.2014
 					
 					evt.preventDefault();
 					
-					var pickedLocation = $(obj).attr('class');
+					var pickedLocation = $(obj).attr('class').split(' ')[0];
 					
 					$('#location', self.$form).val(pickedLocation).trigger('change');
-					
-					self._unSetMapAnyLocation();
-					
-					if( self.locationWithoutMaps.indexOf(pickedLocation) < 0 ){
-					
-						self._setMapToThisLocation($(obj));
-					
-					} else {
 						
-						$(obj).addClass('selected');
-							
-					}
+					self._setMapToThisLocation($(obj), true);
+
+					$('.selected', self.$map).removeClass('selected');
+
+					$('.'+ pickedLocation, self.$map).addClass('selected');
 					
 				});
 				
 			});
-			
-			$(self.$form).on('submit',function(){
-				
-				var isValid = self._checkIfThisFormIsValid();
 
-				if(!isValid){
-					return false;	
-				}
-				
+
+			$('[href="#"]', self.$map).each(function(index, obj){
+
+				$(obj).on('mouseenter', function(){
+
+					self._setMapToThisLocation($(obj), false);
+
+				}).on('mouseleave', function(){
+					
+					self._unSetMapAnyLocation();
+
+				});
+
 			});
 			
 		}		

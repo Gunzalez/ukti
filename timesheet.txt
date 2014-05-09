@@ -52,7 +52,11 @@ Map form =
 point 2 on email - Changed JS validation. 
 point 3 on email - Changed region highlighting feature. 
 point 4 on email - Incorporated 'International' region
-Total of 1.5hr
+Total of 2hrs - js clashing
+
+Removal for .short class = 0.5hr
+
+08-09 May, Final amends, (while Rob was out drinking with flat mate) total time taken  - = 3.5hrs
 
 
 
